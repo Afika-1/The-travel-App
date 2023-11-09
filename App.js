@@ -1,20 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, Text, View } from 'react-native';
+import { TailwindProvider } from 'tailwindcss-react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Finally Were in</Text>
+    <TailwindProvider>
+    <SafeAreaView >
+      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
+   </TailwindProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
