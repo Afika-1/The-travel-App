@@ -19,7 +19,7 @@ export default function Landing() {
   }
   return (
     <View style={{ flex:1,  justifyContent: 'center' }}>
-      <ImageBackground source={backgroundImg} style={{ padding: 10, flex: 1, alignItems: "center" }}>
+      <ImageBackground source={backgroundImg} style={{flex:1,height:'100%',alignItems: "center" }}>
         <View style={{ backgroundColor: 'black', marginTop: 480, width: 390, height:320, padding: 20, borderRadius: 20 }}>
           <Text style={{ color: "white", alignItems: 'center', justifyContent: 'center',fontFamily:'Inria-bold', fontSize: 35}}>Make Your Dream A Reality</Text>
           <Text style={{ color: 'white', marginTop: 20,marginBottom: 20, fontSize: 20, fontFamily:'inria-regular' }}>The perfect travel companion for your next trip.</Text>
