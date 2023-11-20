@@ -6,13 +6,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-const backgroundImg = require("./assets/ride.jpg")
+const backgroundImg = require("../assets/ride.jpg")
 
 export default function Landing() {
 
   const [isLoaded]= useFonts({
-    'Inria-bold': require('./assets/fonts/InriaSerif-Bold.ttf'),
-    'inria-regular': require('./assets/fonts/InriaSerif-Regular.ttf'),
+    'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
+    'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
   });
   if (!isLoaded){
     return null
