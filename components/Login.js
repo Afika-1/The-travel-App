@@ -5,7 +5,7 @@ function Login() {
     return (
         <SafeAreaView style={{ flex: 1, height: '100', }}>
             <Image source={login} style={styles.image} />
-            <View style={{ height: 500, width: '100%', alignItems:'center' }}>
+            <View style={{ height: 500, width: '100%', alignItems:'center', justifyContent:'center' }}>
 
 
                 <View style={{ flexDirection: 'row', width: '100%',alignItems:'center', justifyContent:'space-evenly', }}>
