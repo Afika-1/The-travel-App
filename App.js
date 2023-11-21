@@ -11,8 +11,9 @@ export default function App() {
       {/* <Text>Open up your app!</Text> */}
       <Landing />
       <Login/>
-      <Signin/>
+      <Signin/> 
       </ScrollView>
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );
