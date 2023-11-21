@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, Button, Touchab
 const login = require('../assets/images/chill.jpeg')
 function Login() {
     return (
-        <SafeAreaView style={{ flex: 1, height: '100', }}>
+        <SafeAreaView style={{ flex: 1, height: '100', backgroundColor:'#000000' }}>
             <Image source={login} style={styles.image} />
             <View style={{ height: 500, width: '100%', alignItems:'center', justifyContent:'center' }}>
 
