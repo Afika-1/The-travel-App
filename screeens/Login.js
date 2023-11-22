@@ -3,25 +3,25 @@ import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, Button, Touchab
 const login = require('../assets/images/chill.jpeg')
 function Login() {
     return (
-        <SafeAreaView style={{ flex: 1, height: '100', backgroundColor:'#000000' }}>
+        <SafeAreaView style={{ flex: 1, height: '100', backgroundColor:'#091834' }}>
             <Image source={login} style={styles.image} />
             <View style={{ height: 500, width: '100%', alignItems:'center', justifyContent:'center' }}>
 
 
                 <View style={{ flexDirection: 'row', width: '100%',alignItems:'center', justifyContent:'space-evenly', }}>
-                    <Text>Login</Text>
-                    <Text>Signin</Text>
+                    <Text style={{ color:'white'}}>Login</Text>
+                    <Text style={{ color:'white', height:50, backgroundColor:''}}>Signin</Text>
                 </View>
 
                 <TextInput style={styles.input} />
                 <TextInput style={styles.input} />
 
 
-                <View style={{ alignItems: 'center' }}>
-                    <Text>Or Continue with</Text>
+                <View style={{ alignItems: 'center',}}>
+                    <Text style={{ color:'white'}}>Or Continue with</Text>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                        <Text>FB </Text>
-                        <Text>  GB</Text>
+                        <Text style={{ color:'white'}}>FB </Text>
+                        <Text style={{ color:'white'}}>  GB</Text>
                     </View >
 
 
@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
         margin: 12,
         padding: 10,
         borderRadius: 30,
-        borderWidth: 1
+        borderWidth: 1,
+        borderColor:'white'
     },
     button:{
         height:50,
