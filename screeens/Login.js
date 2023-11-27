@@ -1,43 +1,58 @@
-import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 
-const login = require('../assets/images/chill.jpeg')
-function Login() {
+const Login = ({navigation}) => {
     return (
-        <SafeAreaView style={{ flex: 1, height: '100', backgroundColor:'#091834' }}>
-            <Image source={login} style={styles.image} />
-            <View style={{ height: 500, width: '100%', alignItems:'center', justifyContent:'center' }}>
+        <SafeAreaView style={styles.container}>
+            <View style={styles.contentContainer}>
+                <Image source={require('../assets/images/chill.jpeg')} style={styles.image} />
 
-
-                <View style={{ flexDirection: 'row', width: '100%',alignItems:'center', justifyContent:'space-evenly', }}>
-                    <Text style={{ color:'white'}}>Login</Text>
-                    <Text style={{ color:'white', height:50, backgroundColor:''}}>Signin</Text>
+                <View style={styles.tabContainer}>
+                    <Text style={styles.tabText}>Login</Text>
+                    <Text style={styles.tabText} onPress={() => navigation.navigate('Signup')}>Signin</Text>
                 </View>
 
-                <TextInput style={styles.input} />
-                <TextInput style={styles.input} />
+                <TextInput style={styles.input} placeholder="Username" />
+                <TextInput style={styles.input} placeholder="Password" secureTextEntry={true} />
 
-
-                <View style={{ alignItems: 'center',}}>
-                    <Text style={{ color:'white'}}>Or Continue with</Text>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                        <Text style={{ color:'white'}}>FB </Text>
-                        <Text style={{ color:'white'}}>  GB</Text>
-                    </View >
-
-
+                <View style={styles.orContainer}>
+                    <Text style={styles.orText}>Or Continue with</Text>
+                    <View style={styles.socialContainer}>
+                        <Text style={styles.socialText}>FB</Text>
+                        <Text style={styles.socialText}>GB</Text>
+                    </View>
                 </View>
 
                 <TouchableOpacity style={styles.button}><Text>Login</Text></TouchableOpacity>
             </View>
         </SafeAreaView>
-    )
+    );
 }
 
-export default Login
-
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        height: '100%',
+        backgroundColor: '#091834',
+    },
     image: {
-        width: '100%', height: 350
+        width: '100%',
+        height: 350,
+    },
+    contentContainer: {
+        height: 500,
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    tabContainer: {
+        flexDirection: 'row',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+    },
+    tabText: {
+        color: 'white',
     },
     input: {
         height: 50,
@@ -46,14 +61,29 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 30,
         borderWidth: 1,
-        borderColor:'white'
+        borderColor: 'white',
     },
-    button:{
-        height:50,
-backgroundColor:'gray',
-alignItems:'center',
-justifyContent:'center',
-width:'90%',
-borderRadius:10,
+    orContainer: {
+        alignItems: 'center',
     },
-})
+    orText: {
+        color: 'white',
+    },
+    socialContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+    },
+    socialText: {
+        color: 'white',
+    },
+    button: {
+        height: 50,
+        backgroundColor: 'gray',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '90%',
+        borderRadius: 10,
+    },
+});
+
+export default Login;
