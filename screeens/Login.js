@@ -17,8 +17,8 @@ function Signin({ navigation }) {
 
         <View style={styles.inputContainer}>
           {/* <TextInput placeholder='Username' style={styles.input} /> */}
-          <TextInput placeholder='Email Address' style={styles.input} />
-          <TextInput placeholder='Confirm Email Address' style={styles.input} />
+          <TextInput placeholder='Email Address'   placeholderTextColor='gray' style={styles.input} />
+          <TextInput placeholder='Confirm Email Address'   placeholderTextColor='gray' style={styles.input} />
         </View>
 
         <View style={styles.orContainer}>
@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#091834",
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    // top:350,
     height: 500,
     width: '100%',
     alignItems: 'center',
@@ -69,7 +68,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
+    paddingVertical:15,
+
   },
   inputContainer: {
     width: '100%',
@@ -82,6 +83,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderWidth: 1,
     borderColor: 'white',
+    color:'white',
   },
   orContainer: {
     alignItems: 'center',

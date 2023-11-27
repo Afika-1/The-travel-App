@@ -10,14 +10,14 @@ function Signin({ navigation }) {
       <View style={styles.contentContainer}>
         <View style={styles.tabContainer}>
           <Text style={styles.orText} onPress={() => navigation.navigate('Login')}>Login</Text>
-          <Text style={styles.orText}>Signin</Text>
+          <Text style={styles.orTextActive}>Sign up</Text>
         </View>
 
         <View style={styles.inputContainer}>
-          <TextInput placeholder='Full Name' style={styles.input} />
-          <TextInput placeholder='Username' style={styles.input} />
-          <TextInput placeholder='Email Address' style={styles.input} />
-          <TextInput placeholder='Confirm Email Address' style={styles.input} />
+          <TextInput placeholder='Full Name'  placeholderTextColor='gray' style={styles.input} />
+          <TextInput placeholder='Username'   placeholderTextColor='gray' style={styles.input} />
+          <TextInput placeholder='Email Address'  placeholderTextColor='gray' style={styles.input} />
+          <TextInput placeholder='Confirm Email Address'  placeholderTextColor='gray' style={styles.input} />
         </View>
 
         <View style={styles.orContainer}>
@@ -39,6 +39,8 @@ function Signin({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent:'flex-end',
+
   },
   image: {
    
@@ -48,9 +50,17 @@ const styles = StyleSheet.create({
     left: 0,
     width:'100%',
     zIndex: -1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   orText: {
-    color: 'white',
+    color: '#747474',
+   
+    fontSize: 24,
+  },
+  orTextActive:{
+    fontSize: 24,
+    color: '#ff9f1c',
+    textDecorationLine: 'underline',
   },
   contentContainer: {
     backgroundColor: "#091834",
@@ -73,19 +83,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
+    paddingVertical:15,
   },
   inputContainer: {
     width: '100%',
   },
   input: {
-    height: 50,
+    height: 45,
     width: '100%',
-    marginVertical: 12,
+    marginVertical: 8,
     padding: 10,
     borderRadius: 30,
     borderWidth: 1,
     borderColor: 'white',
+    color:'white',
+
   },
   orContainer: {
     alignItems: 'center',
