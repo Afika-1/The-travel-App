@@ -82,5 +82,6 @@ const styles = StyleSheet.create({
   },
   customButtonText: {
     color: 'white',
+    
   },
 });
