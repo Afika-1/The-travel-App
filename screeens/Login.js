@@ -11,7 +11,7 @@ function Signin({ navigation }) {
       <View style={styles.contentContainer}>
         <View style={styles.box}></View>
         <View style={styles.tabContainer}>
-          <Text style={styles.orText} >Login</Text>
+          <Text style={styles.orTextActive} >Login</Text>
           <Text style={styles.orText} onPress={() => navigation.navigate('Signup')}>Signin</Text>
         </View>
 
@@ -51,7 +51,13 @@ const styles = StyleSheet.create({
     zIndex: -1,
   },
   orText: {
-    color: 'white',
+    color: '#747474',
+    fontSize: 24,
+  },
+  orTextActive:{
+    fontSize: 24,
+    color: '#ff9f1c',
+    textDecorationLine: 'underline',
   },
   contentContainer: {
     backgroundColor: "#091834",

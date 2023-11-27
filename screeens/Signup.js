@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
   },
   orText: {
     color: '#747474',
-   
     fontSize: 24,
   },
   orTextActive:{
