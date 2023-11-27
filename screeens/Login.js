@@ -30,7 +30,7 @@ function Signin({ navigation }) {
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.customButtonText}>Sign in</Text>
+          <Text style={styles.customButtonText}>Login</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -80,16 +80,20 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: '100%',
+    alignItems:'center',
   },
   input: {
-    height: 50,
-    width: '100%',
+    // height: 50,
+    width: '95%',
+    padding:15,
     marginVertical: 12,
     padding: 10,
     borderRadius: 30,
     borderWidth: 1,
     borderColor: 'white',
     color:'white',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+
   },
   orContainer: {
     alignItems: 'center',
@@ -104,9 +108,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#D9D9D9',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '90%',
+    width: '95%',
     borderRadius: 10,
-    marginTop: 10,
+    marginTop: '30%',
   },
   customButtonText: {
     color: 'black',

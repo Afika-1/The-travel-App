@@ -97,6 +97,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'white',
     color:'white',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+
 
   },
   orContainer: {
