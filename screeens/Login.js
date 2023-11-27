@@ -31,7 +31,7 @@ function Signin({ navigation }) {
         </View>
 
         <View style={styles.orContainer}>
-          <Text style={styles.orText}>Or Continue with</Text>
+          <Text style={styles.socialsLabel}>Or Continue with</Text>
           <View style={styles.socialButtonContainer}>
             <Text>FB</Text>
             <Text>GB</Text>
@@ -64,6 +64,12 @@ const styles = StyleSheet.create({
     color: '#747474',
     fontSize: 24,
     fontFamily: 'Inria-bold',
+
+  },
+  socialsLabel:{
+    color: 'white',
+    fontSize: 20,
+    fontFamily: 'inria-regular',
 
   },
   orTextActive:{
@@ -101,7 +107,7 @@ const styles = StyleSheet.create({
     width: '95%',
     padding:15,
     marginVertical: 12,
-    padding: 10,
+    paddingHorizontal: 30,
     borderRadius: 30,
     borderWidth: 1,
     borderColor: 'white',
