@@ -1,10 +1,19 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, 
     Image, TextInput, TouchableOpacity } from 'react-native';
+    import { useFonts } from 'expo-font';
 
 const login = require('../assets/images/chill.jpeg');
 
 function Signin({ navigation }) {
+    const [isLoaded] = useFonts({
+        'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
+        'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
+      });
+    
+      if (!isLoaded) {
+        return null;
+      }
   return (
     <SafeAreaView style={styles.container}>
       <Image source={login} style={styles.image} />
@@ -37,6 +46,7 @@ function Signin({ navigation }) {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -53,11 +63,15 @@ const styles = StyleSheet.create({
   orText: {
     color: '#747474',
     fontSize: 24,
+    fontFamily: 'Inria-bold',
+
   },
   orTextActive:{
     fontSize: 24,
     color: '#ff9f1c',
     textDecorationLine: 'underline',
+    fontFamily: 'Inria-bold',
+
   },
   contentContainer: {
     backgroundColor: "#091834",
@@ -93,6 +107,8 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     color:'white',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    fontFamily: 'inria-regular',
+    fontSize:15,
 
   },
   orContainer: {
@@ -111,10 +127,13 @@ const styles = StyleSheet.create({
     width: '95%',
     borderRadius: 10,
     marginTop: '30%',
+
   },
   customButtonText: {
     color: 'black',
     fontSize: 20,
+    fontFamily: 'Inria-bold',
+
   },
   box:{
     width:"100%",
