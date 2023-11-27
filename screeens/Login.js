@@ -40,6 +40,7 @@ function Signin({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent:'flex-end'
   },
   image: {
     height: 380,
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#091834",
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    top:350,
+    // top:350,
     height: 500,
     width: '100%',
     alignItems: 'center',
