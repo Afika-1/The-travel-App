@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 
-const login = require('../assets/images/chill.jpeg');
+const login = require('../assets/images/loginImage.jpg');
 const facebook = require('../assets/icons/facebook.png');
 const google = require('../assets/icons/google.png');
 function Signin({ navigation }) {
