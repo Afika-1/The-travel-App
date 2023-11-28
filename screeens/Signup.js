@@ -3,7 +3,8 @@ import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacit
 import { useFonts } from 'expo-font';
 
 const login = require('../assets/images/chill.jpeg');
-const facebook = require('../assets/icon.png');
+const facebook = require('../assets/icons/facebook.png');
+const google = require('../assets/icons/google.png');
 function Signin({ navigation }) {
 
     const [isLoaded] = useFonts({
@@ -33,7 +34,7 @@ function Signin({ navigation }) {
         <View style={styles.orContainer}>
           <Text style={styles.socialsLabel}>Or Continue with</Text>
           <View style={styles.socialButtonContainer}>
-            <Image source={facebook} style={styles.socialIcon}/>
+            <Image source={google} style={styles.socialIcon}/>
             <Image source={facebook} style={styles.socialIcon}/>
                       </View>
         </View>
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     left: 0,
     width:'100%',
     zIndex: -1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   orText: {
     color: '#747474',

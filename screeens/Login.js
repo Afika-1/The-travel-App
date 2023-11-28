@@ -4,6 +4,8 @@ import { SafeAreaView, StyleSheet, Text, View,
     import { useFonts } from 'expo-font';
 
 const login = require('../assets/images/chill.jpeg');
+const facebook = require('../assets/icons/facebook.png');
+const google = require('../assets/icons/google.png');
 
 function Signin({ navigation }) {
     const [isLoaded] = useFonts({
@@ -33,8 +35,8 @@ function Signin({ navigation }) {
         <View style={styles.orContainer}>
           <Text style={styles.socialsLabel}>Or Continue with</Text>
           <View style={styles.socialButtonContainer}>
-            <Text>FB</Text>
-            <Text>GB</Text>
+          <Image source={google} style={styles.socialIcon}/>
+            <Image source={facebook} style={styles.socialIcon}/>
           </View>
         </View>
 
