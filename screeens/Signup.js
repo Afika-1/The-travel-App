@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
 
   },
   socialIcon:{
-    height:20,
-    width:20,
+    height:30,
+    width:30,
     borderRadius:50,
   },
   orTextActive:{

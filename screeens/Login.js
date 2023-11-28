@@ -127,6 +127,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
+  socialIcon:{
+    height:30,
+    width:30,
+    borderRadius:50,
+  },
   button: {
     height: 50,
     backgroundColor: '#D9D9D9',
