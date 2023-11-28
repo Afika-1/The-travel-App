@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   image: {
    
-    height: 380,
+    height: 410,
     position: 'absolute',
     top: 0,
     left: 0,
