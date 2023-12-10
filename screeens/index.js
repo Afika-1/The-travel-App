@@ -9,5 +9,5 @@ export{
     Login,
     Landing,
     Signup,
-    // HomePage,
+    HomePage,
 }
