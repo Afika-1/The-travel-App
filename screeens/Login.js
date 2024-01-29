@@ -29,7 +29,7 @@ function Signin({ navigation }) {
         <View style={styles.inputContainer}>
           {/* <TextInput placeholder='Username' style={styles.input} /> */}
           <TextInput placeholder='Email Address'   placeholderTextColor='gray' style={styles.input} />
-          <TextInput placeholder='Confirm Email Address'   placeholderTextColor='gray' style={styles.input} />
+          <TextInput placeholder='Email Address'   placeholderTextColor='gray' style={styles.input} />
         </View>
 
         <View style={styles.orContainer}>
@@ -124,8 +124,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   socialButtonContainer: {
+    display:'flex',
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    gap:20,
+    paddingTop:5,
   },
   socialIcon:{
     height:30,

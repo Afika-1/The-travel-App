@@ -20,7 +20,7 @@ function Signin({ navigation }) {
       <Image source={login} style={styles.image} />
       <View style={styles.contentContainer}>
         <View style={styles.tabContainer}>
-          <Text style={styles.orText} onPress={() => navigation.navigate('Login')}>Login</Text>
+          <Text style={styles.orText} onPress={() => navigation.navigate('Login')} >Login</Text>
           <Text style={styles.orTextActive}>Sign up</Text>
         </View>
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 1,
     shadowRadius: 4,
-    elevation: 4, // This is for Android elevation
+    elevation: 4,
     height: 494,
     width: 393,
     height: 500,
@@ -136,6 +136,8 @@ const styles = StyleSheet.create({
   socialButtonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    gap:20,
+    paddingTop:5,
   },
   button: {
     height: 50,
