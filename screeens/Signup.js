@@ -26,9 +26,9 @@ function Signin({ navigation }) {
 
         <View style={styles.inputContainer}>
           <TextInput placeholder='Full Name'  placeholderTextColor='gray' style={styles.input} />
-          <TextInput placeholder='Username'   placeholderTextColor='gray' style={styles.input} />
           <TextInput placeholder='Email Address'  placeholderTextColor='gray' style={styles.input} />
-          <TextInput placeholder='Confirm Email Address'  placeholderTextColor='gray' style={styles.input} />
+          <TextInput placeholder='Password'   placeholderTextColor='gray' style={styles.input} />
+          <TextInput placeholder='Confirm Password'  placeholderTextColor='gray' style={styles.input} />
         </View>
 
         <View style={styles.orContainer}>
