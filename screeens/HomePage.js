@@ -17,7 +17,9 @@ export default function HomePage({navigation}) {
       
   return (
     <SafeAreaView>
-        <View>Home</View>
+        <View>
+          <Text onPress={() => navigation.navigate('Login')} >Home</Text>
+          </View>
     </SafeAreaView>
   )
 }

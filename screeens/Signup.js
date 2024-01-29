@@ -39,8 +39,8 @@ function Signin({ navigation }) {
                       </View>
         </View>
 
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.customButtonText}>Sign in</Text>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
+          <Text style={styles.customButtonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
