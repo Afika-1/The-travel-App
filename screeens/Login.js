@@ -7,7 +7,7 @@ const login = require('../assets/images/loginImage.jpg');
 const facebook = require('../assets/icons/facebook.png');
 const google = require('../assets/icons/google.png');
 
-function Signin({ navigation }) {
+function Login({ navigation }) {
     const [isLoaded] = useFonts({
         'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
         'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
@@ -23,7 +23,7 @@ function Signin({ navigation }) {
         <View style={styles.box}></View>
         <View style={styles.tabContainer}>
           <Text style={styles.orTextActive} >Login</Text>
-          <Text style={styles.orText} onPress={() => navigation.navigate('Signup')}>Signin</Text>
+          <Text style={styles.orText} onPress={() => navigation.navigate('Signup')}>Signup</Text>
         </View>
 
         <View style={styles.inputContainer}>
@@ -162,4 +162,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Signin;
+export default Login;

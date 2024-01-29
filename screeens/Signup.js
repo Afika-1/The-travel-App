@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 
 const login = require('../assets/images/loginImage.jpg');
 const facebook = require('../assets/icons/facebook.png');
 const google = require('../assets/icons/google.png');
-function Signin({ navigation }) {
+
+function Signup({ navigation }) {
 
     const [isLoaded] = useFonts({
         'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
@@ -15,6 +16,8 @@ function Signin({ navigation }) {
       if (!isLoaded) {
         return null;
       }
+
+      
   return (
     <SafeAreaView style={styles.container}>
       <Image source={login} style={styles.image} />
@@ -156,4 +159,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Signin;
+export default Signup;

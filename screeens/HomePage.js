@@ -18,7 +18,7 @@ export default function HomePage({navigation}) {
   return (
     <SafeAreaView>
         <View>
-          <Text onPress={() => navigation.navigate('Login')} >Home</Text>
+          <Text style={{marginTop:150}} onPress={() => navigation.navigate('Login')} >Home</Text>
           </View>
     </SafeAreaView>
   )
