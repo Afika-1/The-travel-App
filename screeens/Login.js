@@ -1,47 +1,134 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View, 
-    Image, TextInput, TouchableOpacity } from 'react-native';
-    import { useFonts } from 'expo-font';
+// import React from 'react';
+// import { SafeAreaView, StyleSheet, Text, View, 
+//     Image, TextInput, TouchableOpacity } from 'react-native';
+//     import { useFonts } from 'expo-font';
+
+// const login = require('../assets/images/loginImage.jpg');
+// const facebook = require('../assets/icons/facebook.png');
+// const google = require('../assets/icons/google.png');
+
+// function Login({ navigation }) {
+//     const [isLoaded] = useFonts({
+//         'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
+//         'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
+//       });
+    
+//       if (!isLoaded) {
+//         return null;
+//       }
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <Image source={login} style={styles.image} />
+//       <View style={styles.contentContainer}>
+//         <View style={styles.box}></View>
+//         <View style={styles.tabContainer}>
+//           <Text style={styles.orTextActive} >Login</Text>
+//           <Text style={styles.orText} onPress={() => navigation.navigate('Signup')}>Signup</Text>
+//         </View>
+
+//         <View style={styles.inputContainer}>
+//           {/* <TextInput placeholder='Username' style={styles.input} /> */}
+//           <TextInput placeholder='Email Address'   placeholderTextColor='gray' style={styles.input} />
+//           <TextInput placeholder='password'   placeholderTextColor='gray' style={styles.input} />
+//         </View>
+
+//         <View style={styles.orContainer}>
+//           <Text style={styles.socialsLabel}>Or Continue with</Text>
+//           <View style={styles.socialButtonContainer}>
+//           <Image source={google} style={styles.socialIcon}/>
+//             <Image source={facebook} style={styles.socialIcon}/>
+//           </View>
+//         </View>
+
+//         <TouchableOpacity style={styles.button}>
+//           <Text style={styles.customButtonText} onPress={() => navigation.navigate('HomePage')}>Login</Text>
+//         </TouchableOpacity>
+//       </View>
+//     </SafeAreaView>
+//   );
+// }
+
+import React, { useState } from 'react';
+import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import { useFonts } from 'expo-font';
 
 const login = require('../assets/images/loginImage.jpg');
 const facebook = require('../assets/icons/facebook.png');
 const google = require('../assets/icons/google.png');
 
 function Login({ navigation }) {
-    const [isLoaded] = useFonts({
-        'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
-        'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
-      });
-    
-      if (!isLoaded) {
-        return null;
-      }
+  const [isLoaded] = useFonts({
+    'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
+    'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
+  });
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState(false);
+
+  // Regular expression for email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Update state and validate email on input change
+  const handleEmailChange = (text) => {
+    setEmail(text);
+    setIsEmailValid(emailRegex.test(text));
+  };
+
+  // Update state and validate password on input change
+  const handlePasswordChange = (text) => {
+    setPassword(text);
+    setIsPasswordValid(text.length >= 6);
+  };
+
+  // Check if both email and password are valid
+  const isFormValid = isEmailValid && isPasswordValid;
+
+  if (!isLoaded) {
+    return null;
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <Image source={login} style={styles.image} />
       <View style={styles.contentContainer}>
         <View style={styles.box}></View>
         <View style={styles.tabContainer}>
-          <Text style={styles.orTextActive} >Login</Text>
-          <Text style={styles.orText} onPress={() => navigation.navigate('Signup')}>Signup</Text>
+          <Text style={styles.orTextActive}>Login</Text>
+          <Text style={styles.orText} onPress={() => navigation.navigate('Signup')}>
+            Signup
+          </Text>
         </View>
 
         <View style={styles.inputContainer}>
-          {/* <TextInput placeholder='Username' style={styles.input} /> */}
-          <TextInput placeholder='Email Address'   placeholderTextColor='gray' style={styles.input} />
-          <TextInput placeholder='Email Address'   placeholderTextColor='gray' style={styles.input} />
+          <TextInput
+            placeholder="Email Address"
+            placeholderTextColor="gray"
+            style={styles.input}
+            value={email}
+            onChangeText={handleEmailChange}
+          />
+          <TextInput
+            placeholder="Password"
+            placeholderTextColor="gray"
+            style={styles.input}
+            secureTextEntry
+            value={password}
+            onChangeText={handlePasswordChange}
+          />
         </View>
 
         <View style={styles.orContainer}>
           <Text style={styles.socialsLabel}>Or Continue with</Text>
           <View style={styles.socialButtonContainer}>
-          <Image source={google} style={styles.socialIcon}/>
-            <Image source={facebook} style={styles.socialIcon}/>
+            <Image source={google} style={styles.socialIcon} />
+            <Image source={facebook} style={styles.socialIcon} />
           </View>
         </View>
 
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.customButtonText} onPress={() => navigation.navigate('HomePage')}>Login</Text>
+        <TouchableOpacity style={styles.button} disabled={!isFormValid}  onPress={() => navigation.navigate('HomePage')}>
+          <Text style={isFormValid ? styles.customButtonText : styles.disabledButtonText}>Login </Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -49,7 +136,14 @@ function Login({ navigation }) {
 }
 
 
+
+
+
 const styles = StyleSheet.create({
+  disabledButtonText: {
+    color: 'gray',
+    fontSize: 18},
+
   container: {
     flex: 1,
     justifyContent:'flex-end'

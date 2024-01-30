@@ -1,4 +1,57 @@
-import React, { useState, useEffect }  from 'react';
+// import React, { useState, useEffect }  from 'react';
+// import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+// import { useFonts } from 'expo-font';
+
+// const login = require('../assets/images/loginImage.jpg');
+// const facebook = require('../assets/icons/facebook.png');
+// const google = require('../assets/icons/google.png');
+
+// function Signup({ navigation }) {
+
+//     const [isLoaded] = useFonts({
+//         'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
+//         'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
+//       });
+    
+//       if (!isLoaded) {
+//         return null;
+//       }
+
+      
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <Image source={login} style={styles.image} />
+//       <View style={styles.contentContainer}>
+//         <View style={styles.tabContainer}>
+//           <Text style={styles.orText} onPress={() => navigation.navigate('Login')} >Login</Text>
+//           <Text style={styles.orTextActive}>Sign up</Text>
+//         </View>
+
+//         <View style={styles.inputContainer}>
+//           <TextInput placeholder='Full Name'  placeholderTextColor='gray' style={styles.input} />
+//           <TextInput placeholder='Email Address'  placeholderTextColor='gray' style={styles.input} />
+//           <TextInput placeholder='Password'   placeholderTextColor='gray' style={styles.input} />
+//           <TextInput placeholder='Confirm Password'  placeholderTextColor='gray' style={styles.input} />
+//         </View>
+
+//         <View style={styles.orContainer}>
+//           <Text style={styles.socialsLabel}>Or Continue with</Text>
+//           <View style={styles.socialButtonContainer}>
+//             <Image source={google} style={styles.socialIcon}/>
+//             <Image source={facebook} style={styles.socialIcon}/>
+//                       </View>
+//         </View>
+
+//         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
+//           <Text style={styles.customButtonText}>Sign up</Text>
+//         </TouchableOpacity>
+//       </View>
+//     </SafeAreaView>
+//   );
+// }
+
+
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 
@@ -7,48 +60,102 @@ const facebook = require('../assets/icons/facebook.png');
 const google = require('../assets/icons/google.png');
 
 function Signup({ navigation }) {
+  const [isLoaded] = useFonts({
+    'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
+    'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
+  });
 
-    const [isLoaded] = useFonts({
-        'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
-        'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
-      });
-    
-      if (!isLoaded) {
-        return null;
-      }
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [isValidEmail, setIsValidEmail] = useState(true);
+  const [isValidPassword, setIsValidPassword] = useState(true);
 
-      
+  useEffect(() => {
+    // Validate email using regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setIsValidEmail(emailRegex.test(email));
+
+    // Validate password length
+    setIsValidPassword(password.length >= 6);
+  }, [email, password]);
+
+  if (!isLoaded) {
+    return null;
+  }
+
+  const handleSignup = () => {
+    // Perform signup logic if validation passes
+    if (isValidEmail && isValidPassword) {
+      // Your signup logic here
+      console.log('Signup successful');
+    } else {
+      // Display an error message or handle it in your UI
+      console.log('Invalid email or password');
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Image source={login} style={styles.image} />
       <View style={styles.contentContainer}>
         <View style={styles.tabContainer}>
-          <Text style={styles.orText} onPress={() => navigation.navigate('Login')} >Login</Text>
+          <Text style={styles.orText} onPress={() => navigation.navigate('Login')}>
+            Login
+          </Text>
           <Text style={styles.orTextActive}>Sign up</Text>
         </View>
 
         <View style={styles.inputContainer}>
-          <TextInput placeholder='Full Name'  placeholderTextColor='gray' style={styles.input} />
-          <TextInput placeholder='Email Address'  placeholderTextColor='gray' style={styles.input} />
-          <TextInput placeholder='Password'   placeholderTextColor='gray' style={styles.input} />
-          <TextInput placeholder='Confirm Password'  placeholderTextColor='gray' style={styles.input} />
+          <TextInput
+            placeholder="Full Name"
+            placeholderTextColor="gray"
+            style={styles.input}
+            value={fullName}
+            onChangeText={(text) => setFullName(text)}
+          />
+          <TextInput
+            placeholder="Email Address"
+            placeholderTextColor="gray"
+            style={[styles.input, !isValidEmail && styles.invalidInput]}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+          />
+          <TextInput
+            placeholder="Password"
+            placeholderTextColor="gray"
+            style={[styles.input, !isValidPassword && styles.invalidInput]}
+            secureTextEntry
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
+          <TextInput
+            placeholder="Confirm Password"
+            placeholderTextColor="gray"
+            style={[styles.input, !isValidPassword && styles.invalidInput]}
+            secureTextEntry
+            value={confirmPassword}
+            onChangeText={(text) => setConfirmPassword(text)}
+          />
         </View>
 
         <View style={styles.orContainer}>
           <Text style={styles.socialsLabel}>Or Continue with</Text>
           <View style={styles.socialButtonContainer}>
-            <Image source={google} style={styles.socialIcon}/>
-            <Image source={facebook} style={styles.socialIcon}/>
-                      </View>
+            <Image source={google} style={styles.socialIcon} />
+            <Image source={facebook} style={styles.socialIcon} />
+          </View>
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
-          <Text style={styles.customButtonText}>Sign up</Text>
+        <TouchableOpacity style={styles.button} onPress={handleSignup} disabled={!isValidEmail || !isValidPassword}>
+          <Text style={isFormValid ? styles.customButtonText : styles.disabledButtonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -56,6 +163,10 @@ const styles = StyleSheet.create({
     justifyContent:'flex-end',
 
   },
+  disabledButtonText: {
+    color: 'gray',
+    fontSize: 18},
+    
   image: {
    
     height: 360,
