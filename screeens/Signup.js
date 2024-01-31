@@ -52,7 +52,15 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import { useFonts } from 'expo-font';
 
 const login = require('../assets/images/loginImage.jpg');
@@ -69,32 +77,24 @@ function Signup({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [isValidEmail, setIsValidEmail] = useState(true);
-  const [isValidPassword, setIsValidPassword] = useState(true);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   useEffect(() => {
-    // Validate email using regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setIsValidEmail(emailRegex.test(email));
+    // Validation logic
+    const isFullNameValid = fullName.trim() !== '';
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPasswordValid = password.length >= 6;
+    const isConfirmPasswordValid = confirmPassword === password;
 
-    // Validate password length
-    setIsValidPassword(password.length >= 6);
-  }, [email, password]);
+    // Update the disabled status of the button
+    setIsButtonDisabled(
+      !isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
+    );
+  }, [fullName, email, password, confirmPassword]);
 
   if (!isLoaded) {
     return null;
   }
-
-  const handleSignup = () => {
-    // Perform signup logic if validation passes
-    if (isValidEmail && isValidPassword) {
-      // Your signup logic here
-      console.log('Signup successful');
-    } else {
-      // Display an error message or handle it in your UI
-      console.log('Invalid email or password');
-    }
-  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -118,14 +118,14 @@ function Signup({ navigation }) {
           <TextInput
             placeholder="Email Address"
             placeholderTextColor="gray"
-            style={[styles.input, !isValidEmail && styles.invalidInput]}
+            style={styles.input}
             value={email}
             onChangeText={(text) => setEmail(text)}
           />
           <TextInput
             placeholder="Password"
             placeholderTextColor="gray"
-            style={[styles.input, !isValidPassword && styles.invalidInput]}
+            style={styles.input}
             secureTextEntry
             value={password}
             onChangeText={(text) => setPassword(text)}
@@ -133,7 +133,7 @@ function Signup({ navigation }) {
           <TextInput
             placeholder="Confirm Password"
             placeholderTextColor="gray"
-            style={[styles.input, !isValidPassword && styles.invalidInput]}
+            style={styles.input}
             secureTextEntry
             value={confirmPassword}
             onChangeText={(text) => setConfirmPassword(text)}
@@ -148,25 +148,36 @@ function Signup({ navigation }) {
           </View>
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={handleSignup} disabled={!isValidEmail || !isValidPassword}>
-          <Text style={isFormValid ? styles.customButtonText : styles.disabledButtonText}>Sign up</Text>
+        <TouchableOpacity
+          style={[styles.button, isButtonDisabled ? styles.disabledButton : null]}
+          onPress={() => {
+            // Perform signup logic if validation passes
+            if (!isButtonDisabled) {
+              // Your signup logic here
+              // For now, navigate to the login screen
+              navigation.navigate('Login');
+            }
+          }}
+          disabled={isButtonDisabled}
+        >
+          <Text style={[styles.customButtonText, isButtonDisabled ? styles.disabledButton : null]}>Sign up</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
 }
-
-
+ 
 const styles = StyleSheet.create({
+
+  disabledButton: {
+    color: 'gray',
+    fontSize: 18},
+
   container: {
     flex: 1,
     justifyContent:'flex-end',
 
   },
-  disabledButtonText: {
-    color: 'gray',
-    fontSize: 18},
-    
   image: {
    
     height: 360,
@@ -230,7 +241,8 @@ const styles = StyleSheet.create({
     paddingVertical:'5%',
   },
   input: {
-    height: 45,
+    // height: 55,
+    padding:10,
     width: '100%',
     marginVertical: 8,
     paddingHorizontal: 30,
