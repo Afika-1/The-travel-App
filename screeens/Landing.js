@@ -25,7 +25,6 @@ export default function Landing({ navigation }) {
           <Text style={styles.titleText}>Make Your Dream A Reality</Text>
           <Text style={styles.subtitleText}>The perfect travel companion for your next trip.</Text>
           <View style={styles.buttonContainer}>
-            {/* <Button title='Get Started' color='darkblue'onPress={() => navigation.navigate('Login')} /> */}
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.customButton}>
               <Text style={styles.customButtonText}>Get Started</Text>
             </TouchableOpacity>
