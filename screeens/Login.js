@@ -67,22 +67,18 @@ function Login({ navigation }) {
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isPasswordValid, setIsPasswordValid] = useState(false);
 
-  // Regular expression for email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Update state and validate email on input change
   const handleEmailChange = (text) => {
     setEmail(text);
     setIsEmailValid(emailRegex.test(text));
   };
 
-  // Update state and validate password on input change
   const handlePasswordChange = (text) => {
     setPassword(text);
     setIsPasswordValid(text.length >= 6);
   };
 
-  // Check if both email and password are valid
   const isFormValid = isEmailValid && isPasswordValid;
 
   if (!isLoaded) {
@@ -141,8 +137,11 @@ function Login({ navigation }) {
 
 const styles = StyleSheet.create({
   disabledButtonText: {
-    color: 'gray',
-    fontSize: 18},
+    color: 'grey',
+    fontSize: 18,
+    fontFamily: 'Inria-bold'
+  },
+    
 
   container: {
     flex: 1,

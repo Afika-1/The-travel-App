@@ -12,12 +12,12 @@
 //         'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
 //         'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
 //       });
-    
+
 //       if (!isLoaded) {
 //         return null;
 //       }
 
-      
+
 //   return (
 //     <SafeAreaView style={styles.container}>
 //       <Image source={login} style={styles.image} />
@@ -148,43 +148,50 @@ function Signup({ navigation }) {
           </View>
         </View>
 
+    
         <TouchableOpacity
-          style={[styles.button, isButtonDisabled ? styles.disabledButton : null]}
+          style={[
+            styles.button,
+            isButtonDisabled ? styles.disabledButton : null,
+            { pointerEvents: isButtonDisabled ? 'none' : undefined },
+          ]}
           onPress={() => {
-            // Perform signup logic if validation passes
             if (!isButtonDisabled) {
-              // Your signup logic here
-              // For now, navigate to the login screen
+              // Perform signup logic here
               navigation.navigate('Login');
             }
           }}
           disabled={isButtonDisabled}
         >
-          <Text style={[styles.customButtonText, isButtonDisabled ? styles.disabledButton : null]}>Sign up</Text>
+          <Text style={[styles.customButtonText, isButtonDisabled ? styles.disabledButtonText : null]}>
+            Sign up
+          </Text>
         </TouchableOpacity>
+
       </View>
     </SafeAreaView>
   );
 }
- 
+
 const styles = StyleSheet.create({
 
   disabledButton: {
-    color: 'gray',
-    fontSize: 18},
+    color: 'grey',
+    fontSize: 18
+  },
 
   container: {
     flex: 1,
-    justifyContent:'flex-end',
+    justifyContent: 'flex-end',
 
   },
   image: {
-   
+
     height: 360,
     position: 'absolute',
     top: 0,
     left: 0,
-    width:'100%',
+    width: '100%',
     zIndex: -1,
     // backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
@@ -194,18 +201,18 @@ const styles = StyleSheet.create({
     fontFamily: 'Inria-bold',
 
   },
-  socialsLabel:{
+  socialsLabel: {
     color: 'white',
     fontSize: 20,
     fontFamily: 'inria-regular',
 
   },
-  socialIcon:{
-    height:30,
-    width:30,
-    borderRadius:50,
+  socialIcon: {
+    height: 30,
+    width: 30,
+    borderRadius: 50,
   },
-  orTextActive:{
+  orTextActive: {
     fontSize: 24,
     color: '#ff9f1c',
     textDecorationLine: 'underline',
@@ -234,22 +241,22 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical:15,
+    paddingVertical: 15,
   },
   inputContainer: {
     width: '100%',
-    paddingVertical:'5%',
+    paddingVertical: '5%',
   },
   input: {
     // height: 55,
-    padding:10,
+    padding: 10,
     width: '100%',
     marginVertical: 8,
     paddingHorizontal: 30,
     borderRadius: 30,
     borderWidth: 1,
     borderColor: 'white',
-    color:'white',
+    color: 'white',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     fontFamily: 'inria-regular',
 
@@ -262,8 +269,8 @@ const styles = StyleSheet.create({
   socialButtonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    gap:20,
-    paddingTop:5,
+    gap: 20,
+    paddingTop: 5,
   },
   button: {
     height: 50,
@@ -273,6 +280,7 @@ const styles = StyleSheet.create({
     width: '95%',
     borderRadius: 10,
     marginTop: 10,
+
   },
   customButtonText: {
     color: 'black',
