@@ -1,56 +1,3 @@
-// import React, { useState, useEffect }  from 'react';
-// import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
-// import { useFonts } from 'expo-font';
-
-// const login = require('../assets/images/loginImage.jpg');
-// const facebook = require('../assets/icons/facebook.png');
-// const google = require('../assets/icons/google.png');
-
-// function Signup({ navigation }) {
-
-//     const [isLoaded] = useFonts({
-//         'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
-//         'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
-//       });
-
-//       if (!isLoaded) {
-//         return null;
-//       }
-
-
-//   return (
-//     <SafeAreaView style={styles.container}>
-//       <Image source={login} style={styles.image} />
-//       <View style={styles.contentContainer}>
-//         <View style={styles.tabContainer}>
-//           <Text style={styles.orText} onPress={() => navigation.navigate('Login')} >Login</Text>
-//           <Text style={styles.orTextActive}>Sign up</Text>
-//         </View>
-
-//         <View style={styles.inputContainer}>
-//           <TextInput placeholder='Full Name'  placeholderTextColor='gray' style={styles.input} />
-//           <TextInput placeholder='Email Address'  placeholderTextColor='gray' style={styles.input} />
-//           <TextInput placeholder='Password'   placeholderTextColor='gray' style={styles.input} />
-//           <TextInput placeholder='Confirm Password'  placeholderTextColor='gray' style={styles.input} />
-//         </View>
-
-//         <View style={styles.orContainer}>
-//           <Text style={styles.socialsLabel}>Or Continue with</Text>
-//           <View style={styles.socialButtonContainer}>
-//             <Image source={google} style={styles.socialIcon}/>
-//             <Image source={facebook} style={styles.socialIcon}/>
-//                       </View>
-//         </View>
-
-//         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
-//           <Text style={styles.customButtonText}>Sign up</Text>
-//         </TouchableOpacity>
-//       </View>
-//     </SafeAreaView>
-//   );
-// }
-
-
 import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
@@ -79,8 +26,9 @@ function Signup({ navigation }) {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
+  const [errorMessage, setErrorMessage] = useState('');
+
   useEffect(() => {
-    // Validation logic
     const isFullNameValid = fullName.trim() !== '';
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isPasswordValid = password.length >= 6;
@@ -148,7 +96,12 @@ function Signup({ navigation }) {
           </View>
         </View>
 
-    
+        {errorMessage && (
+  <Text style={{ color: 'red', marginBottom: 10 }}>
+    {errorMessage}
+  </Text>
+)}
+
         <TouchableOpacity
           style={[
             styles.button,
@@ -158,8 +111,15 @@ function Signup({ navigation }) {
           onPress={() => {
             if (!isButtonDisabled) {
               // Perform signup logic here
+
+              setErrorMessage("Signup failed. Please check your credentials.");
+      setTimeout(() => {
+        setErrorMessage(""); // Clear the error message after a few seconds
+      }, 3000);
+
               navigation.navigate('Login');
             }
+            
           }}
           disabled={isButtonDisabled}
         >
@@ -175,7 +135,7 @@ function Signup({ navigation }) {
 
 const styles = StyleSheet.create({
 
-  disabledButton: {
+  disabledButtonText: {
     color: 'grey',
     fontSize: 18
   },
