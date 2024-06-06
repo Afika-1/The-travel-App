@@ -29,7 +29,7 @@ import React from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const HomePage = () => {
+export default function HomePage(){
   return (
     <View style={styles.container}>
       {/* Top Section */}
@@ -182,4 +182,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomePage;
