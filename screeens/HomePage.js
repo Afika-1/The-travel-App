@@ -27,7 +27,7 @@
 
 import React from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons'; // Ensure you have installed react-native-vector-icons
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const HomePage = () => {
   return (
