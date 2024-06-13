@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
     fontSize: 22,
+    color:'#BDBFE8',
   },
   trendImages: {
     flexDirection: 'row',
@@ -183,6 +184,7 @@ const styles = StyleSheet.create({
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
+    color:'#BDBFE8',
   },
 });
 
