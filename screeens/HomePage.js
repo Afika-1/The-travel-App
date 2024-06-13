@@ -26,10 +26,17 @@
 
 
 import React from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function HomePage(){
+  const menuItems = [
+    { id: 'home', icon: 'home', label: 'Home' },
+    { id: 'calendar', icon: 'calendar', label: 'Calendar' },
+    { id: 'search', icon: 'search', label: 'Search' },
+    { id: 'favorites', icon: 'heart', label: 'Favorites' },
+    { id: 'settings', icon: 'settings', label: 'Settings' },
+  ];
   return (
     <View style={styles.container}>
       {/* Top Section */}
@@ -93,6 +100,21 @@ export default function HomePage(){
           <Text>Trend 2 Info</Text>
         </View>
       </View>
+
+      <View style={styles.bottomMenu}>
+        <FlatList
+          horizontal
+          data={menuItems}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <TouchableOpacity onPress={() => console.log(item.label)}>
+              <Icon name={item.icon} size={30} color="gray" />
+            </TouchableOpacity>
+          )}
+          showsHorizontalScrollIndicator={false}
+        />
+      </View>
+
     </View>
   );
 };
@@ -141,6 +163,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 22,
     color:'#BDBFE8',
+    fontStyle:'bold'
   },
   menuIcons: {
     flexDirection: 'row',
@@ -184,7 +207,22 @@ const styles = StyleSheet.create({
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    color:'#BDBFE8',
+    // color:'#BDBFE8',
+  },
+  bottomMenu: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 60, // Adjust the height as needed
+    backgroundColor: '#091834',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
 
