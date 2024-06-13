@@ -100,7 +100,7 @@ export default function HomePage(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'grey',
   },
   topSection: {
     flexDirection: 'row',
@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginHorizontal: 20,
     marginTop: 10,
+    color:'#091834',
   },
   popularDestinationTitle: {
     marginHorizontal: 20,
