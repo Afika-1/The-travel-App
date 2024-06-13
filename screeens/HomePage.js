@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
   location: {
     marginHorizontal: 20,
     marginTop: 10,
+    color:'#BDBFE8',
   },
   searchBar: {
     height: 40,
@@ -139,6 +140,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
     fontSize: 22,
+    color:'#BDBFE8',
   },
   menuIcons: {
     flexDirection: 'row',
@@ -150,6 +152,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
     fontSize: 22,
+    color:'#BDBFE8',
   },
   destinationImages: {
     flexDirection: 'row',
@@ -160,6 +163,7 @@ const styles = StyleSheet.create({
   destinationInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
+    color:'#BDBFE8',
   },
   imageStyle: {
     width: 100,
