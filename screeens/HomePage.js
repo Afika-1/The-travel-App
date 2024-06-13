@@ -55,16 +55,16 @@ export default function HomePage(){
       {/* Menu Icons */}
       <View style={styles.menuIcons}>
         <TouchableOpacity onPress={() => console.log('Food')}>
-          <Icon name="fast-food" size={30} color="#900" />
+          <Icon name="fast-food" size={30} color="#091834" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Hotels')}>
-          <Icon name="hotel" size={30} color="#900" />
+          <Icon name="hotel" size={30} color="#091834" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Transport')}>
-          <Icon name="airplane" size={30} color="#900" />
+          <Icon name="airplane" size={30} color="#091834" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Fun')}>
-          <Icon name="entertainment" size={30} color="#900" />
+          <Icon name="entertainment" size={30} color="#091834" />
         </TouchableOpacity>
       </View>
 
@@ -100,7 +100,7 @@ export default function HomePage(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'grey',
+    backgroundColor: '#BDBFE8',
   },
   topSection: {
     flexDirection: 'row',
@@ -145,7 +145,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginHorizontal: 20,
     marginTop: 10,
-    color:'#091834',
   },
   popularDestinationTitle: {
     marginHorizontal: 20,
