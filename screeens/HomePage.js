@@ -25,11 +25,15 @@
 // }
 
 
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function HomePage(){
+
+  const [activeMenuItem, setActiveMenuItem] = useState('home'); // Default active item
+
   const menuItems = [
     { id: 'home', icon: 'home', label: 'Home' },
     { id: 'calendar', icon: 'calendar', label: 'Calendar' },
@@ -37,6 +41,12 @@ export default function HomePage(){
     { id: 'favorites', icon: 'heart', label: 'Favorites' },
     { id: 'settings', icon: 'settings', label: 'Settings' },
   ];
+
+  // Example function to simulate changing the active menu item
+  const changeActiveItem = (id) => {
+    setActiveMenuItem(id);
+  };
+
   return (
     <View style={styles.container}>
       {/* Top Section */}
@@ -100,14 +110,16 @@ export default function HomePage(){
           <Text>Trend 2 Info</Text>
         </View>
       </View>
-
       <View style={styles.bottomMenu}>
         <FlatList
           horizontal
           data={menuItems}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => console.log(item.label)}>
+            <TouchableOpacity
+              onPress={() => changeActiveItem(item.id)}
+              style={[styles.menuItem, activeMenuItem === item.id && styles.active]}
+            >
               <Icon name={item.icon} size={30} color="gray" />
             </TouchableOpacity>
           )}
@@ -214,15 +226,21 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 60, // Adjust the height as needed
+    height: 60,
     backgroundColor: '#091834',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 20,
     paddingVertical: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-even',
     alignItems: 'center',
+  },
+  menuItem: {
+    marginRight: 15,
+  },
+  active: {
+    color: '#FF9F1C',
   },
 });
 
