@@ -58,15 +58,12 @@ export default function HomePage(){
         <Image source={{ uri: 'https://example.com/user-image.jpg' }} style={styles.userImage} />
       </View>
 
-      {/* Location */}
       <Text style={styles.location}>Location</Text>
 
-      {/* Search Bar */}
       <View style={styles.searchBar}>
         <TextInput placeholder="Search..." />
       </View>
 
-      {/* Categories Title */}
       <Text style={styles.categoriesTitle}>Categories</Text>
 
       {/* Menu Icons */}
@@ -98,7 +95,6 @@ export default function HomePage(){
         </View>
       </View>
 
-      {/* Food Trends */}
       <Text style={styles.foodTrendsTitle}>Food Trends</Text>
       <View style={styles.trendImages}>
         <View style={styles.trendInfo}>
