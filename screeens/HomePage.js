@@ -69,12 +69,13 @@ export default function HomePage(){
 
       {/* Menu Icons */}
       <View style={styles.menuIcons}>
-        <TouchableOpacity onPress={() => console.log('Food')}>
-          <Icon name="cutlery" size={30} color="#091834" />
+        <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Food')}>
+          <Icon name="cutlery" size={30} color="#fff" />
           <Text>Transport</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Hotels')}>
           <Icon name="bed" size={30} color="#091834" />
+          <Text>Transport</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Transport')}>
           <Icon name="plane" size={30} color="#091834" />
@@ -82,6 +83,7 @@ export default function HomePage(){
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Fun')}>
           <Icon name="smile-o" size={30} color="#091834" />
+          <Text>Transport</Text>
         </TouchableOpacity>
       </View>
 
@@ -180,6 +182,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginHorizontal: 20,
     marginTop: 10,
+  },
+
+  menuIconsContainer:{
+    borderRadius:50,
+    backgroundColor:'white',
   },
   popularDestinationTitle: {
     marginHorizontal: 20,
