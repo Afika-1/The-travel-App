@@ -10,11 +10,11 @@
 //         'Inria-bold': require('../assets/fonts/InriaSerif-Bold.ttf'),
 //         'inria-regular': require('../assets/fonts/InriaSerif-Regular.ttf'),
 //       });
-    
+
 //       if (!isLoaded) {
 //         return null;
 //       }
-      
+
 //   return (
 //     <SafeAreaView>
 //         <View>
@@ -31,7 +31,7 @@ import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList } 
 import Icon from 'react-native-vector-icons/FontAwesome';
 // import Icon from 'react-native-vector-icons/Ionicons';
 
-export default function HomePage(){
+export default function HomePage() {
 
   const [activeMenuItem, setActiveMenuItem] = useState('home'); // Default active item
 
@@ -69,22 +69,39 @@ export default function HomePage(){
 
       {/* Menu Icons */}
       <View style={styles.menuIcons}>
-        <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Food')}>
-          <Icon name="cutlery" size={30} color="#fff" />
+
+        <View style={styles.menuItems}>
+          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Food')}>
+            <Icon name="cutlery" size={30} color="#fff" />
+
+          </TouchableOpacity>
           <Text>Transport</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => console.log('Hotels')}>
-          <Icon name="bed" size={30} color="#091834" />
+        </View>
+        <View style={styles.menuItems}>
+          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
+            <Icon name="bed" size={30} color="#fff" />
+
+          </TouchableOpacity>
+          <Text>Hotels</Text>
+        </View>
+
+        <View style={styles.menuItems}>
+          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
+            <Icon name="plane" size={30} color="#fff" />
+
+          </TouchableOpacity>
           <Text>Transport</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => console.log('Transport')}>
-          <Icon name="plane" size={30} color="#091834" />
-          <Text>Transport</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => console.log('Fun')}>
-          <Icon name="smile-o" size={30} color="#091834" />
-          <Text>Transport</Text>
-        </TouchableOpacity>
+        </View>
+
+        <View style={styles.menuItems}>
+          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
+            <Icon name="plane" size={30} color="#fff" />
+
+          </TouchableOpacity>
+          <Text>Fun</Text>
+        </View>
+
+
       </View>
 
       {/* Popular Destination */}
@@ -162,7 +179,7 @@ const styles = StyleSheet.create({
   location: {
     marginHorizontal: 20,
     marginTop: 10,
-    color:'#BDBFE8',
+    color: '#091834',
   },
   searchBar: {
     height: 40,
@@ -175,7 +192,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
     fontSize: 22,
-    color:'#BDBFE8',
+    color: '#091834',
+     fontWeight: 'bold'
   },
   menuIcons: {
     flexDirection: 'row',
@@ -183,16 +201,26 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 10,
   },
+  menuItems: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 
-  menuIconsContainer:{
-    borderRadius:50,
-    backgroundColor:'white',
+  menuIconsContainer: {
+    borderRadius: 50,
+    backgroundColor: '#091834',
+    height: 60,
+    width: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+
   },
   popularDestinationTitle: {
     marginHorizontal: 20,
     marginTop: 20,
     fontSize: 22,
-    color:'#BDBFE8',
+    color: '#091834',
+     fontWeight: 'bold'
   },
   destinationImages: {
     flexDirection: 'row',
@@ -212,7 +240,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
     fontSize: 22,
-    color:'#BDBFE8',
+    color: '#091834',
+     fontWeight: 'bold'
   },
   trendImages: {
     flexDirection: 'row',
