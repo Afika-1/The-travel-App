@@ -28,7 +28,8 @@
 // import React from 'react';
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function HomePage(){
 
@@ -39,7 +40,7 @@ export default function HomePage(){
     { id: 'calendar', icon: 'calendar', label: 'Calendar' },
     { id: 'search', icon: 'search', label: 'Search' },
     { id: 'favorites', icon: 'heart', label: 'Favorites' },
-    { id: 'settings', icon: 'settings', label: 'Settings' },
+    { id: 'settings', icon: 'cog', label: 'Settings' },
   ];
 
   // Example function to simulate changing the active menu item
@@ -69,16 +70,18 @@ export default function HomePage(){
       {/* Menu Icons */}
       <View style={styles.menuIcons}>
         <TouchableOpacity onPress={() => console.log('Food')}>
-          <Icon name="fast-food" size={30} color="#091834" />
+          <Icon name="cutlery" size={30} color="#091834" />
+          <Text>Transport</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Hotels')}>
-          <Icon name="hotel" size={30} color="#091834" />
+          <Icon name="bed" size={30} color="#091834" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Transport')}>
-          <Icon name="airplane" size={30} color="#091834" />
+          <Icon name="plane" size={30} color="#091834" />
+          <Text>Transport</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('Fun')}>
-          <Icon name="entertainment" size={30} color="#091834" />
+          <Icon name="smile-o" size={30} color="#091834" />
         </TouchableOpacity>
       </View>
 
@@ -171,7 +174,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 22,
     color:'#BDBFE8',
-    fontStyle:'bold'
   },
   menuIcons: {
     flexDirection: 'row',
@@ -194,7 +196,6 @@ const styles = StyleSheet.create({
   destinationInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    color:'#BDBFE8',
   },
   imageStyle: {
     width: 100,
@@ -215,7 +216,6 @@ const styles = StyleSheet.create({
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    // color:'#BDBFE8',
   },
   bottomMenu: {
     position: 'absolute',
