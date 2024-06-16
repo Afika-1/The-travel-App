@@ -29,7 +29,8 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-// import Icon from 'react-native-vector-icons/Ionicons';
+const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
+// import Icon from 'react-native-vector-icons/Ionicons';  pexels-paulo-marcelo-martins-2412606
 
 export default function HomePage() {
 
@@ -53,10 +54,10 @@ export default function HomePage() {
       {/* Top Section */}
       <View style={styles.topSection}>
         <View style={styles.userInfo}>
-          <Text style={styles.name}>Hi</Text>
+          <Text style={styles.name}>Hi,</Text>
           <Text style={styles.userGreeting}>Name</Text>
         </View>
-        <Image source={{ uri: 'https://example.com/user-image.jpg' }} style={styles.userImage} />
+        <Image source={profile} style={styles.userImage} />
       </View>
 
       <Text style={styles.location}>Location</Text>
@@ -161,6 +162,7 @@ export default function HomePage() {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop:30,
     flex: 1,
     backgroundColor: '#BDBFE8',
   },
@@ -183,14 +185,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
 
     marginLeft: 10,
-    fontSize: 18,
+    fontSize: 24,
   },
   userImage: {
     width: 50,
     height: 50,
     borderRadius: 25,
     borderColor:'#FF9F1C',
-    borderWidth: 2,
+    borderWidth: 5,
   },
   location: {
     marginHorizontal: 20,
