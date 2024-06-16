@@ -260,8 +260,9 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   imageStyle: {
-    width: 100,
+    width: 150,
     height: 100,
+    borderRadius:20,
   },
   foodTrendsTitle: {
     marginHorizontal: 20,
@@ -273,20 +274,26 @@ const styles = StyleSheet.create({
   trendImages: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    alignItems:'center',
+    justifyContent: 'space-around',
     marginHorizontal: 20,
     marginTop: 10,
+    
 
   },
-  trendRow: {
-    flexDirection: 'row',
-    width: '48%', // Adjust based on your design needs
-  },
+  // trendRow: {
+  //   flexDirection: 'row',
+  //   width: '48%', // Adjust based on your design needs
+  // },
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
     width:150,
-    height:100,
+    height:150,
+    marginTop:10,
+    marginBottom:20,
+    backgroundColor:'rgba(0,0,0,0.2)',
+    borderRadius:20,
   },
   bottomMenu: {
     position: 'absolute',
