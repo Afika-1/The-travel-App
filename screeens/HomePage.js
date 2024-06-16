@@ -29,8 +29,12 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
 
+const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
+const popular1 = require('../assets/images/pexels-photo-2901215.jpeg')
+const popular2 = require('../assets/images/chill.jpeg')
+const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
+const trendingFood2 = require('../assets/images/pexels-gustavo-peres-7144272.jpg')
 
 export default function HomePage({ navigation }) {
 
@@ -64,7 +68,7 @@ export default function HomePage({ navigation }) {
       <Text style={styles.location}>Location</Text>
 
       <View style={styles.searchBar}>
-        <TextInput placeholder="Search..." />
+        <TextInput placeholder="Search..."/>
       </View>
       <ScrollView>
         <Text style={styles.categoriesTitle}>Categories</Text>
@@ -77,7 +81,7 @@ export default function HomePage({ navigation }) {
               <Icon name="cutlery" size={30} color="#fff" />
 
             </TouchableOpacity>
-            <Text>Transport</Text>
+            <Text>Food</Text>
           </View>
           <View style={styles.menuItems}>
             <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
@@ -110,11 +114,11 @@ export default function HomePage({ navigation }) {
         <Text style={styles.popularDestinationTitle}>Popular Destination</Text>
         <View style={styles.destinationImages}>
           <View style={styles.destinationInfo}>
-            <Image source={{ uri: 'https://example.com/popular1.jpg' }} style={styles.imageStyle} />
+            <Image source={popular1} style={styles.imageStyle} />
             <Text>Destination 1 Info</Text>
           </View>
           <View style={styles.destinationInfo}>
-            <Image source={{ uri: 'https://example.com/popular2.jpg' }} style={styles.imageStyle} />
+            <Image source={popular2} style={styles.imageStyle} />
             <Text>Destination 2 Info</Text>
           </View>
         </View>
@@ -122,20 +126,20 @@ export default function HomePage({ navigation }) {
         <Text style={styles.foodTrendsTitle}>Food Trends</Text>
         <View style={styles.trendImages}>
           <View style={styles.trendInfo}>
-            <Image source={{ uri: 'https://example.com/trend1.jpg' }} style={styles.imageStyle} />
+            <Image source={trend1} style={styles.imageStyle} />
             <Text>Trend 1 Info</Text>
           </View>
           <View style={styles.trendInfo}>
-            <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
+            <Image source={trendingFood2} style={styles.imageStyle} />
             <Text>Trend 2 Info</Text>
           </View>
 
           <View style={styles.trendInfo}>
-            <Image source={{ uri: 'https://example.com/trend1.jpg' }} style={styles.imageStyle} />
+            <Image source={trendingFood2} style={styles.imageStyle} />
             <Text>Trend 3 Info</Text>
           </View>
           <View style={styles.trendInfo}>
-            <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
+            <Image source={trend1} style={styles.imageStyle} />
             <Text>Trend 4 Info</Text>
           </View>
         </View>
@@ -193,7 +197,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 25,
     borderColor: '#FF9F1C',
-    borderWidth: 5,
+    borderWidth: 2,
   },
   location: {
     marginHorizontal: 20,
@@ -204,8 +208,12 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: '#000',
     borderWidth: 1,
+    borderRadius:20,
     marginHorizontal: 20,
     marginTop: 10,
+    backgroundColor:'#fff',
+    paddingLeft:20,
+   
   },
   categoriesTitle: {
     marginHorizontal: 20,
