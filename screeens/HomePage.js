@@ -27,14 +27,15 @@
 
 // import React from 'react';
 import React, { useState } from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
-// import Icon from 'react-native-vector-icons/Ionicons';  pexels-paulo-marcelo-martins-2412606
 
-export default function HomePage() {
 
-  const [activeMenuItem, setActiveMenuItem] = useState('home'); // Default active item
+export default function HomePage({ navigation }) {
+
+
+  const [activeMenuItem, setActiveMenuItem] = useState('home');
 
   const menuItems = [
     { id: 'home', icon: 'home', label: 'Home' },
@@ -50,14 +51,14 @@ export default function HomePage() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* Top Section */}
       <View style={styles.topSection}>
         <View style={styles.userInfo}>
           <Text style={styles.name}>Hi,</Text>
           <Text style={styles.userGreeting}>Name</Text>
         </View>
-        <Image source={profile} style={styles.userImage} />
+        <Image source={profile} style={styles.userImage} onPress={() => navigation.navigate('Login')} />
       </View>
 
       <Text style={styles.location}>Location</Text>
@@ -65,80 +66,80 @@ export default function HomePage() {
       <View style={styles.searchBar}>
         <TextInput placeholder="Search..." />
       </View>
+      <ScrollView>
+        <Text style={styles.categoriesTitle}>Categories</Text>
 
-      <Text style={styles.categoriesTitle}>Categories</Text>
+        {/* Menu Icons */}
+        <View style={styles.menuIcons}>
 
-      {/* Menu Icons */}
-      <View style={styles.menuIcons}>
+          <View style={styles.menuItems}>
+            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Food')}>
+              <Icon name="cutlery" size={30} color="#fff" />
 
-        <View style={styles.menuItems}>
-          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Food')}>
-            <Icon name="cutlery" size={30} color="#fff" />
+            </TouchableOpacity>
+            <Text>Transport</Text>
+          </View>
+          <View style={styles.menuItems}>
+            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
+              <Icon name="bed" size={30} color="#fff" />
 
-          </TouchableOpacity>
-          <Text>Transport</Text>
-        </View>
-        <View style={styles.menuItems}>
-          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
-            <Icon name="bed" size={30} color="#fff" />
+            </TouchableOpacity>
+            <Text>Hotels</Text>
+          </View>
 
-          </TouchableOpacity>
-          <Text>Hotels</Text>
-        </View>
+          <View style={styles.menuItems}>
+            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
+              <Icon name="plane" size={30} color="#fff" />
 
-        <View style={styles.menuItems}>
-          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
-            <Icon name="plane" size={30} color="#fff" />
+            </TouchableOpacity>
+            <Text>Transport</Text>
+          </View>
 
-          </TouchableOpacity>
-          <Text>Transport</Text>
-        </View>
+          <View style={styles.menuItems}>
+            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
+              <Icon name="plane" size={30} color="#fff" />
 
-        <View style={styles.menuItems}>
-          <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
-            <Icon name="plane" size={30} color="#fff" />
-
-          </TouchableOpacity>
-          <Text>Fun</Text>
-        </View>
+            </TouchableOpacity>
+            <Text>Fun</Text>
+          </View>
 
 
-      </View>
-
-      {/* Popular Destination */}
-      <Text style={styles.popularDestinationTitle}>Popular Destination</Text>
-      <View style={styles.destinationImages}>
-        <View style={styles.destinationInfo}>
-          <Image source={{ uri: 'https://example.com/popular1.jpg' }} style={styles.imageStyle} />
-          <Text>Destination 1 Info</Text>
-        </View>
-        <View style={styles.destinationInfo}>
-          <Image source={{ uri: 'https://example.com/popular2.jpg' }} style={styles.imageStyle} />
-          <Text>Destination 2 Info</Text>
-        </View>
-      </View>
-
-      <Text style={styles.foodTrendsTitle}>Food Trends</Text>
-      <View style={styles.trendImages}>
-        <View style={styles.trendInfo}>
-          <Image source={{ uri: 'https://example.com/trend1.jpg' }} style={styles.imageStyle} />
-          <Text>Trend 1 Info</Text>
-        </View>
-        <View style={styles.trendInfo}>
-          <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
-          <Text>Trend 2 Info</Text>
         </View>
 
-        <View style={styles.trendInfo}>
-          <Image source={{ uri: 'https://example.com/trend1.jpg' }} style={styles.imageStyle} />
-          <Text>Trend 3 Info</Text>
+        {/* Popular Destination */}
+        <Text style={styles.popularDestinationTitle}>Popular Destination</Text>
+        <View style={styles.destinationImages}>
+          <View style={styles.destinationInfo}>
+            <Image source={{ uri: 'https://example.com/popular1.jpg' }} style={styles.imageStyle} />
+            <Text>Destination 1 Info</Text>
+          </View>
+          <View style={styles.destinationInfo}>
+            <Image source={{ uri: 'https://example.com/popular2.jpg' }} style={styles.imageStyle} />
+            <Text>Destination 2 Info</Text>
+          </View>
         </View>
-        <View style={styles.trendInfo}>
-          <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
-          <Text>Trend 4 Info</Text>
+
+        <Text style={styles.foodTrendsTitle}>Food Trends</Text>
+        <View style={styles.trendImages}>
+          <View style={styles.trendInfo}>
+            <Image source={{ uri: 'https://example.com/trend1.jpg' }} style={styles.imageStyle} />
+            <Text>Trend 1 Info</Text>
+          </View>
+          <View style={styles.trendInfo}>
+            <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
+            <Text>Trend 2 Info</Text>
+          </View>
+
+          <View style={styles.trendInfo}>
+            <Image source={{ uri: 'https://example.com/trend1.jpg' }} style={styles.imageStyle} />
+            <Text>Trend 3 Info</Text>
+          </View>
+          <View style={styles.trendInfo}>
+            <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
+            <Text>Trend 4 Info</Text>
+          </View>
         </View>
-      </View>
-      
+      </ScrollView>
       <View style={styles.bottomMenu}>
         <FlatList
           horizontal
@@ -156,13 +157,13 @@ export default function HomePage() {
         />
       </View>
 
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop:30,
+    paddingTop: 30,
     flex: 1,
     backgroundColor: '#BDBFE8',
   },
@@ -179,19 +180,19 @@ const styles = StyleSheet.create({
   name: {
     fontWeight: 'bold',
 
-    fontSize: 24,
+    fontSize: 35,
   },
   userGreeting: {
     fontWeight: 'bold',
 
     marginLeft: 10,
-    fontSize: 24,
+    fontSize: 35,
   },
   userImage: {
     width: 50,
     height: 50,
     borderRadius: 25,
-    borderColor:'#FF9F1C',
+    borderColor: '#FF9F1C',
     borderWidth: 5,
   },
   location: {
@@ -209,9 +210,9 @@ const styles = StyleSheet.create({
   categoriesTitle: {
     marginHorizontal: 20,
     marginTop: 20,
-    fontSize: 22,
+    fontSize: 24,
     color: '#091834',
-     fontWeight: 'bold'
+    fontWeight: 'bold'
   },
   menuIcons: {
     flexDirection: 'row',
@@ -236,9 +237,9 @@ const styles = StyleSheet.create({
   popularDestinationTitle: {
     marginHorizontal: 20,
     marginTop: 20,
-    fontSize: 22,
+    fontSize: 24,
     color: '#091834',
-     fontWeight: 'bold'
+    fontWeight: 'bold'
   },
   destinationImages: {
     flexDirection: 'row',
@@ -257,20 +258,27 @@ const styles = StyleSheet.create({
   foodTrendsTitle: {
     marginHorizontal: 20,
     marginTop: 20,
-    fontSize: 22,
+    fontSize: 24,
     color: '#091834',
-     fontWeight: 'bold'
+    fontWeight: 'bold'
   },
   trendImages: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
     marginHorizontal: 20,
     marginTop: 10,
-    
+
+  },
+  trendRow: {
+    flexDirection: 'row',
+    width: '48%', // Adjust based on your design needs
   },
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
+    width:150,
+    height:100,
   },
   bottomMenu: {
     position: 'absolute',
