@@ -127,7 +127,17 @@ export default function HomePage() {
           <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
           <Text>Trend 2 Info</Text>
         </View>
+
+        <View style={styles.trendInfo}>
+          <Image source={{ uri: 'https://example.com/trend1.jpg' }} style={styles.imageStyle} />
+          <Text>Trend 3 Info</Text>
+        </View>
+        <View style={styles.trendInfo}>
+          <Image source={{ uri: 'https://example.com/trend2.jpg' }} style={styles.imageStyle} />
+          <Text>Trend 4 Info</Text>
+        </View>
       </View>
+      
       <View style={styles.bottomMenu}>
         <FlatList
           horizontal
@@ -165,9 +175,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   name: {
+    fontWeight: 'bold',
+
     fontSize: 24,
   },
   userGreeting: {
+    fontWeight: 'bold',
+
     marginLeft: 10,
     fontSize: 18,
   },
@@ -175,6 +189,8 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
+    borderColor:'#FF9F1C',
+    borderWidth: 2,
   },
   location: {
     marginHorizontal: 20,
@@ -248,6 +264,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginHorizontal: 20,
     marginTop: 10,
+    
   },
   trendInfo: {
     flexDirection: 'column',
