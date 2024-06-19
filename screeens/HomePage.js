@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     flexDirection: 'row',
-    justifyContent: 'space-even',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
   menuItem: {
