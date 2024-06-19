@@ -258,9 +258,15 @@ const styles = StyleSheet.create({
   destinationInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
+    width:170,
+    height:150,
+    marginTop:10,
+    marginBottom:20,
+    backgroundColor:'rgba(0,0,0,0.2)',
+    borderRadius:20,
   },
   imageStyle: {
-    width: 150,
+    width:170,
     height: 100,
     borderRadius:20,
   },
@@ -275,20 +281,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems:'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     marginHorizontal: 20,
     marginTop: 10,
     
 
   },
-  // trendRow: {
-  //   flexDirection: 'row',
-  //   width: '48%', // Adjust based on your design needs
-  // },
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    width:150,
+    width:170,
     height:150,
     marginTop:10,
     marginBottom:20,
