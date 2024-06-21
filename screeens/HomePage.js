@@ -118,7 +118,7 @@ export default function HomePage({ navigation }) {
         </View>
       </ScrollView>
       <View style={styles.bottomMenu}>
-        <FlatList
+        {/* <FlatList
           horizontal
           data={menuItems}
           keyExtractor={(item) => item.id}
@@ -131,7 +131,14 @@ export default function HomePage({ navigation }) {
             </TouchableOpacity>
           )}
           showsHorizontalScrollIndicator={false}
-        />
+        /> */}
+        <TouchableOpacity><Icon name="home" size={30} color="grey" /></TouchableOpacity>
+        <TouchableOpacity><Icon name="calendar" size={30} color="grey" /></TouchableOpacity>
+        <View ><TouchableOpacity ><Icon name="search" size={30} color="grey" backgroundColor='#fff' style={[borderRadius='50', color='#fff', padding='10']}/></TouchableOpacity></View>
+        <TouchableOpacity><Icon name="heart" size={30} color="grey" /></TouchableOpacity>
+        <TouchableOpacity><Icon name="cog" size={30} color="grey" /></TouchableOpacity>
+
+
       </View>
 
     </SafeAreaView>
@@ -276,17 +283,20 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 60,
-    backgroundColor: '#091834',
+    // backgroundColor: '#091834',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    paddingHorizontal: 20,
+ 
     paddingVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+     flexDirection: 'row',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    
   },
   menuItem: {
     marginRight: 15,
+    paddingHorizontal: 20,
+   
   },
   active: {
     color: '#FF9F1C',
