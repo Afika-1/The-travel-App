@@ -121,7 +121,7 @@ export default function HomePage({ navigation }) {
      
         <TouchableOpacity><Icon name="home" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="calendar" size={30} color="grey" /></TouchableOpacity>
-        <View ><TouchableOpacity ><Icon name="search" size={30} color="grey" backgroundColor='#fff' style={[borderRadius='50', color='#fff', padding='10']}/></TouchableOpacity></View>
+        <View ><TouchableOpacity ><Icon name="search" size={30} color="#BDBFE8" backgroundColor='#fff' style={[borderRadius='50', color='#fff', padding='10']}/></TouchableOpacity></View>
         <TouchableOpacity><Icon name="heart" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="cog" size={30} color="grey" /></TouchableOpacity>
 
