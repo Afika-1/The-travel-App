@@ -118,20 +118,7 @@ export default function HomePage({ navigation }) {
         </View>
       </ScrollView>
       <View style={styles.bottomMenu}>
-        {/* <FlatList
-          horizontal
-          data={menuItems}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              onPress={() => changeActiveItem(item.id)}
-              style={[styles.menuItem, activeMenuItem === item.id && styles.active]}
-            >
-              <Icon name={item.icon} size={30} color="gray" />
-            </TouchableOpacity>
-          )}
-          showsHorizontalScrollIndicator={false}
-        /> */}
+     
         <TouchableOpacity><Icon name="home" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="calendar" size={30} color="grey" /></TouchableOpacity>
         <View ><TouchableOpacity ><Icon name="search" size={30} color="grey" backgroundColor='#fff' style={[borderRadius='50', color='#fff', padding='10']}/></TouchableOpacity></View>
