@@ -41,7 +41,7 @@ export default function HomePage({ navigation }) {
       <Text style={styles.location}>Location</Text>
 
       <View style={styles.searchBar}>
-        <TextInput placeholder="Search..."/>
+        <TextInput placeholder="Search..." />
       </View>
       <ScrollView>
         <Text style={styles.categoriesTitle}>Categories</Text>
@@ -118,10 +118,10 @@ export default function HomePage({ navigation }) {
         </View>
       </ScrollView>
       <View style={styles.bottomMenu}>
-     
+
         <TouchableOpacity><Icon name="home" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="calendar" size={30} color="grey" /></TouchableOpacity>
-        <View ><TouchableOpacity ><Icon name="search" size={30} color="#BDBFE8" backgroundColor='#fff' borderRadius='50' padding='10' style={[ color='#fff']}/></TouchableOpacity></View>
+        <TouchableOpacity ><Icon name="search" size={30} color="#BDBFE8" backgroundColor='#fff' borderRadius='50' padding='10' style={[color = '#000']} /></TouchableOpacity>
         <TouchableOpacity><Icon name="heart" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="cog" size={30} color="grey" /></TouchableOpacity>
 
@@ -175,12 +175,12 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: '#000',
     borderWidth: 1,
-    borderRadius:20,
+    borderRadius: 20,
     marginHorizontal: 20,
     marginTop: 10,
-    backgroundColor:'#fff',
-    paddingLeft:20,
-   
+    backgroundColor: '#fff',
+    paddingLeft: 20,
+
   },
   categoriesTitle: {
     marginHorizontal: 20,
@@ -225,17 +225,17 @@ const styles = StyleSheet.create({
   destinationInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    width:170,
-    height:150,
-    marginTop:10,
-    marginBottom:20,
-    backgroundColor:'rgba(0,0,0,0.2)',
-    borderRadius:20,
+    width: 170,
+    height: 150,
+    marginTop: 10,
+    marginBottom: 20,
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    borderRadius: 20,
   },
   imageStyle: {
-    width:170,
+    width: 170,
     height: 100,
-    borderRadius:20,
+    borderRadius: 20,
   },
   foodTrendsTitle: {
     marginHorizontal: 20,
@@ -247,22 +247,22 @@ const styles = StyleSheet.create({
   trendImages: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    alignItems:'center',
+    alignItems: 'center',
     justifyContent: 'space-between',
     marginHorizontal: 20,
     marginTop: 10,
-    
+
 
   },
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    width:170,
-    height:150,
-    marginTop:10,
-    marginBottom:20,
-    backgroundColor:'rgba(0,0,0,0.2)',
-    borderRadius:20,
+    width: 170,
+    height: 150,
+    marginTop: 10,
+    marginBottom: 20,
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    borderRadius: 20,
   },
   bottomMenu: {
     position: 'absolute',
@@ -273,17 +273,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#091834',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
- 
+
     paddingVertical: 10,
-     flexDirection: 'row',
+    flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    
+
   },
   menuItem: {
     marginRight: 15,
     paddingHorizontal: 20,
-   
+
   },
   active: {
     color: '#FF9F1C',
