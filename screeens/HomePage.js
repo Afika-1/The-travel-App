@@ -12,6 +12,16 @@ const trendingFood2 = require('../assets/images/pexels-gustavo-peres-7144272.jpg
 export default function HomePage({ navigation }) {
 
 
+  // const [activeMenuItem, setActiveMenuItem] = useState('home');
+
+  // const menuItems = [
+  //   { id: 'home', icon: 'home', label: 'Home' },
+  //   { id: 'calendar', icon: 'calendar', label: 'Calendar' },
+  //   { id: 'search', icon: 'search', label: 'Search' },
+  //   { id: 'favorites', icon: 'heart', label: 'Favorites' },
+  //   { id: 'settings', icon: 'cog', label: 'Settings' },
+  // ];
+
   const [activeMenuItem, setActiveMenuItem] = useState('home');
 
   const menuItems = [
@@ -22,10 +32,19 @@ export default function HomePage({ navigation }) {
     { id: 'settings', icon: 'cog', label: 'Settings' },
   ];
 
-  // Example function to simulate changing the active menu item
   const changeActiveItem = (id) => {
     setActiveMenuItem(id);
   };
+
+
+
+
+
+
+  // Example function to simulate changing the active menu item
+  // const changeActiveItem = (id) => {
+  //   setActiveMenuItem(id);
+  // };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -117,7 +136,7 @@ export default function HomePage({ navigation }) {
           </View>
         </View>
       </ScrollView>
-      <View style={styles.bottomMenu}>
+      {/* <View style={styles.bottomMenu}>
 
         <TouchableOpacity><Icon name="home" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="calendar" size={30} color="grey" /></TouchableOpacity>
@@ -128,6 +147,13 @@ export default function HomePage({ navigation }) {
         <TouchableOpacity><Icon name="cog" size={30} color="grey" /></TouchableOpacity>
 
 
+      </View> */}
+      <View style={styles.bottomMenu}>
+        {menuItems.map((item) => (
+          <TouchableOpacity key={item.id} onPress={() => changeActiveItem(item.id)} style={item.id === 'search'? styles.searchIconWrapper : {}}>
+            <Icon name={item.icon} size={item.id==='search'? 20:30} color={activeMenuItem === item.id? '#FF9F1C' : 'grey'}  backgroundColor={item.id==='search'? 'white':'transparent'} />
+          </TouchableOpacity>
+        ))}
       </View>
 
     </SafeAreaView>
