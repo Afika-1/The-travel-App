@@ -136,9 +136,12 @@ export default function HomePage({ navigation }) {
 
           <View style={styles.trendInfo}>
             <Image source={trendingFood2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
             <Text>Trend 3 Info</Text>
             <Text>Trend 3 Info</Text>
             <Text>Trend 3 Info</Text>
+            </View>
+            
           </View>
           <View style={styles.trendInfo}>
             <Image source={trend1} style={styles.imageStyle} />
@@ -173,6 +176,8 @@ const styles = StyleSheet.create({
   
   container: {
     paddingTop: 30,
+    paddingBottom: 60,
+
     flex: 1,
     backgroundColor: '#BDBFE8',
   },
@@ -302,6 +307,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.2)',
     borderRadius: 20,
   },
+imageContent:{
+paddingLeft:15,
+// fontSize:2,
+},
+
   bottomMenu: {
     position: 'absolute',
     bottom: 0,
@@ -322,9 +332,6 @@ const styles = StyleSheet.create({
     marginRight: 15,
     paddingHorizontal: 20,
 
-  },
-  active: {
-    color: '#FF9F1C',
   },
 });
 
