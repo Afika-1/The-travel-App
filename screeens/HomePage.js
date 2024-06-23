@@ -121,7 +121,9 @@ export default function HomePage({ navigation }) {
 
         <TouchableOpacity><Icon name="home" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="calendar" size={30} color="grey" /></TouchableOpacity>
-        <TouchableOpacity ><Icon name="search" size={30} color="#BDBFE8" backgroundColor='#fff' borderRadius='50' padding='10' style={[color = '#000']} /></TouchableOpacity>
+        <TouchableOpacity  style={styles.searchIconWrapper}>
+          <Icon name="search" size={20} color="navy" />
+        </TouchableOpacity>
         <TouchableOpacity><Icon name="heart" size={30} color="grey" /></TouchableOpacity>
         <TouchableOpacity><Icon name="cog" size={30} color="grey" /></TouchableOpacity>
 
@@ -133,6 +135,15 @@ export default function HomePage({ navigation }) {
 };
 
 const styles = StyleSheet.create({
+  searchIconWrapper: {
+    borderRadius: 100,
+    backgroundColor: '#fff',
+    height:40,
+    width:40,
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  
   container: {
     paddingTop: 30,
     flex: 1,
