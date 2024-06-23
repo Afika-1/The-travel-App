@@ -136,18 +136,7 @@ export default function HomePage({ navigation }) {
           </View>
         </View>
       </ScrollView>
-      {/* <View style={styles.bottomMenu}>
-
-        <TouchableOpacity><Icon name="home" size={30} color="grey" /></TouchableOpacity>
-        <TouchableOpacity><Icon name="calendar" size={30} color="grey" /></TouchableOpacity>
-        <TouchableOpacity  style={styles.searchIconWrapper}>
-          <Icon name="search" size={20} color="navy" />
-        </TouchableOpacity>
-        <TouchableOpacity><Icon name="heart" size={30} color="grey" /></TouchableOpacity>
-        <TouchableOpacity><Icon name="cog" size={30} color="grey" /></TouchableOpacity>
-
-
-      </View> */}
+    
       <View style={styles.bottomMenu}>
         {menuItems.map((item) => (
           <TouchableOpacity key={item.id} onPress={() => changeActiveItem(item.id)} style={item.id === 'search'? styles.searchIconWrapper : {}}>
