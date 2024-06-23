@@ -108,9 +108,13 @@ export default function HomePage({ navigation }) {
           <View style={styles.destinationInfo}>
             <Image source={popular1} style={styles.imageStyle} />
             <Text>Destination 1 Info</Text>
+            <Text>Destination 1 Info</Text>
+            <Text>Destination 1 Info</Text>
           </View>
           <View style={styles.destinationInfo}>
             <Image source={popular2} style={styles.imageStyle} />
+            <Text>Destination 2 Info</Text>
+            <Text>Destination 2 Info</Text>
             <Text>Destination 2 Info</Text>
           </View>
         </View>
@@ -120,18 +124,26 @@ export default function HomePage({ navigation }) {
           <View style={styles.trendInfo}>
             <Image source={trend1} style={styles.imageStyle} />
             <Text>Trend 1 Info</Text>
+            <Text>Trend 1 Info</Text>
+            <Text>Trend 1 Info</Text>
           </View>
           <View style={styles.trendInfo}>
             <Image source={trendingFood2} style={styles.imageStyle} />
+            <Text>Trend 2 Info</Text>
+            <Text>Trend 2 Info</Text>
             <Text>Trend 2 Info</Text>
           </View>
 
           <View style={styles.trendInfo}>
             <Image source={trendingFood2} style={styles.imageStyle} />
             <Text>Trend 3 Info</Text>
+            <Text>Trend 3 Info</Text>
+            <Text>Trend 3 Info</Text>
           </View>
           <View style={styles.trendInfo}>
             <Image source={trend1} style={styles.imageStyle} />
+            <Text>Trend 4 Info</Text>
+            <Text>Trend 4 Info</Text>
             <Text>Trend 4 Info</Text>
           </View>
         </View>
@@ -140,7 +152,7 @@ export default function HomePage({ navigation }) {
       <View style={styles.bottomMenu}>
         {menuItems.map((item) => (
           <TouchableOpacity key={item.id} onPress={() => changeActiveItem(item.id)} style={item.id === 'search'? styles.searchIconWrapper : {}}>
-            <Icon name={item.icon} size={item.id==='search'? 20:30} color={activeMenuItem === item.id? '#FF9F1C' : 'grey'}  backgroundColor={item.id==='search'? 'white':'transparent'} />
+            <Icon name={item.icon} size={item.id==='search'? 20:30} color={activeMenuItem === item.id? '#FF9F1C' : 'grey'} />
           </TouchableOpacity>
         ))}
       </View>
