@@ -129,9 +129,11 @@ export default function HomePage({ navigation }) {
           </View>
           <View style={styles.trendInfo}>
             <Image source={trendingFood2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
             <Text>Trend 2 Info</Text>
             <Text>Trend 2 Info</Text>
             <Text>Trend 2 Info</Text>
+            </View>
           </View>
 
           <View style={styles.trendInfo}>
