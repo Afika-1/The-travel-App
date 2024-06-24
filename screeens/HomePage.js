@@ -113,9 +113,11 @@ export default function HomePage({ navigation }) {
           </View>
           <View style={styles.destinationInfo}>
             <Image source={popular2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
             <Text>Destination 2 Info</Text>
             <Text>Destination 2 Info</Text>
             <Text>Destination 2 Info</Text>
+            </View>
           </View>
         </View>
 
