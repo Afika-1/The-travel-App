@@ -11,17 +11,6 @@ const trendingFood2 = require('../assets/images/pexels-gustavo-peres-7144272.jpg
 
 export default function HomePage({ navigation }) {
 
-
-  // const [activeMenuItem, setActiveMenuItem] = useState('home');
-
-  // const menuItems = [
-  //   { id: 'home', icon: 'home', label: 'Home' },
-  //   { id: 'calendar', icon: 'calendar', label: 'Calendar' },
-  //   { id: 'search', icon: 'search', label: 'Search' },
-  //   { id: 'favorites', icon: 'heart', label: 'Favorites' },
-  //   { id: 'settings', icon: 'cog', label: 'Settings' },
-  // ];
-
   const [activeMenuItem, setActiveMenuItem] = useState('home');
 
   const menuItems = [
