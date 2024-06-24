@@ -25,16 +25,6 @@ export default function HomePage({ navigation }) {
     setActiveMenuItem(id);
   };
 
-
-
-
-
-
-  // Example function to simulate changing the active menu item
-  // const changeActiveItem = (id) => {
-  //   setActiveMenuItem(id);
-  // };
-
   return (
     <SafeAreaView style={styles.container}>
       {/* Top Section */}
