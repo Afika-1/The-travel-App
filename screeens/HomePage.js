@@ -144,10 +144,12 @@ export default function HomePage({ navigation }) {
             
           </View>
           <View style={styles.trendInfo}>
-            <Image source={trend1} style={styles.imageStyle} />
+            <Image source={trend1} style={styles.imageStyle}/>
+            <View style={styles.imageContent}>
             <Text>Trend 4 Info</Text>
             <Text>Trend 4 Info</Text>
             <Text>Trend 4 Info</Text>
+            </View>
           </View>
         </View>
       </ScrollView>
