@@ -88,7 +88,7 @@ export default function HomePage({ navigation }) {
             <Image source={popular1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
             <Text style={styles.imageTexts1}>Destination 1 Info</Text>
-            <Text>Destination 1 Info</Text>
+            <Text style={styles.imageTexts2}>Destination 1 Info</Text>
             <Text>Destination 1 Info</Text>
             </View>
           </View>
@@ -96,7 +96,7 @@ export default function HomePage({ navigation }) {
             <Image source={popular2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
             <Text style={styles.imageTexts1}>Destination 2 Info</Text>
-            <Text>Destination 2 Info</Text>
+            <Text style={styles.imageTexts2}>Destination 2 Info</Text>
             <Text>Destination 2 Info</Text>
             </View>
           </View>
@@ -108,7 +108,7 @@ export default function HomePage({ navigation }) {
             <Image source={trend1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
             <Text style={styles.imageTexts1}>Trend 1 Info</Text>
-            <Text>Trend 1 Info</Text>
+            <Text style={styles.imageTexts2}>Trend 1 Info</Text>
             <Text>Trend 1 Info</Text>
             </View>
           </View>
@@ -116,7 +116,7 @@ export default function HomePage({ navigation }) {
             <Image source={trendingFood2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
             <Text style={styles.imageTexts1}>Trend 2 Info</Text>
-            <Text >Trend 2 Info</Text>
+            <Text style={styles.imageTexts2}>Trend 2 Info</Text>
             <Text>Trend 2 Info</Text>
             </View>
           </View>
@@ -125,7 +125,7 @@ export default function HomePage({ navigation }) {
             <Image source={trendingFood2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
             <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-            <Text>Trend 3 Info</Text>
+            <Text style={styles.imageTexts2}>Trend 3 Info</Text>
             <Text>Trend 3 Info</Text>
             </View>
             
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
   },
   imageTexts2:{
     fontWeight:'bold',
-    fontSize:8,
+    fontSize:10,
     color:'black'
       },
   trendImages: {
