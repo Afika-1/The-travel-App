@@ -134,7 +134,7 @@ export default function HomePage({ navigation }) {
             <Image source={trend1} style={styles.imageStyle}/>
             <View style={styles.imageContent}>
             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-            <Text>Trend 4 Info</Text>
+            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
             <Text>Trend 4 Info</Text>
             </View>
           </View>
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'flex-start',
     width: 170,
-    height: 150,
+    height: 180,
     marginTop: 10,
     marginBottom: 20,
     backgroundColor: 'rgba(0,0,0,0.2)',
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     width: 170,
-    height: 100,
+    height: 130,
     borderRadius: 20,
   },
   foodTrendsTitle: {
@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'flex-start',
     width: 170,
-    height: 150,
+    height: 180,
     marginTop: 10,
     marginBottom: 20,
     backgroundColor: 'rgba(0,0,0,0.2)',
