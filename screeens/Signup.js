@@ -45,6 +45,9 @@ function Signup({ navigation }) {
   const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState(true);
 
   useEffect(() => {
+    setIsButtonDisabled(
+          !isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
+        );
   }, [fullName, email, password, confirmPassword]);
 
 
@@ -65,15 +68,7 @@ function Signup({ navigation }) {
         </View>
 
         <View style={styles.inputContainer}>
-          {/* <TextInput
-            placeholder="Full Name"
-            placeholderTextColor="gray"
-            style={[styles.input, fullName? {borderColor: 'green'} : {borderColor: 'red'}]}
 
-            value={fullName}
-            onChangeText={(text) => setFullName(text)}
-
-          /> */}
           <TextInput
             placeholder="Full Name"
             placeholderTextColor="gray"
@@ -85,13 +80,7 @@ function Signup({ navigation }) {
               setFullName(text);
             }}
           />
-          {/* <TextInput
-            placeholder="Email Address"
-            placeholderTextColor="gray"
-            style={styles.input}
-            value={email}
-            onChangeText={(text) => setEmail(text)}
-          /> */}
+
           <TextInput
             placeholder="Email Address"
             placeholderTextColor="gray"
@@ -118,7 +107,7 @@ function Signup({ navigation }) {
            <TextInput
             placeholder="Confirm Password"
             placeholderTextColor="gray"
-            style={[styles.input, isConfirmPasswordValid?{borderColor:'green'}:{borderColor:'red'}]}
+            style={[styles.input, isConfirmPasswordValid?{borderColor:'white'}:{borderColor:'red'}]}
             secureTextEntry
             value={confirmPassword}
             onChangeText={(text) => {
