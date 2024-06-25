@@ -7,7 +7,7 @@ const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.j
 const popular1 = require('../assets/images/pexels-photo-2901215.jpeg')
 const popular2 = require('../assets/images/chill.jpeg')
 const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
-const trendingFood2 = require('../assets/images/pexels-gustavo-peres-7144272.jpg')
+const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
 
 export default function HomePage({ navigation }) {
 
@@ -87,17 +87,17 @@ export default function HomePage({ navigation }) {
           <View style={styles.destinationInfo}>
             <Image source={popular1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-            <Text style={styles.imageTexts1}>Destination 1 Info</Text>
-            <Text style={styles.imageTexts2}>Destination 1 Info</Text>
-            <Text>Destination 1 Info</Text>
+              <Text style={styles.imageTexts1}>Destination 1 Info</Text>
+              <Text style={styles.imageTexts2}>Destination 1 Info</Text>
+              <Text style={styles.imageTexts3}>Destination 1 Info</Text>
             </View>
           </View>
           <View style={styles.destinationInfo}>
             <Image source={popular2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-            <Text style={styles.imageTexts1}>Destination 2 Info</Text>
-            <Text style={styles.imageTexts2}>Destination 2 Info</Text>
-            <Text>Destination 2 Info</Text>
+              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts3}>Destination 2 Info</Text>
             </View>
           </View>
         </View>
@@ -107,44 +107,44 @@ export default function HomePage({ navigation }) {
           <View style={styles.trendInfo}>
             <Image source={trend1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-            <Text style={styles.imageTexts1}>Trend 1 Info</Text>
-            <Text style={styles.imageTexts2}>Trend 1 Info</Text>
-            <Text>Trend 1 Info</Text>
+              <Text style={styles.imageTexts1}>Trend 1 Info</Text>
+              <Text style={styles.imageTexts2}>Trend 1 Info</Text>
+              <Text style={styles.imageTexts3}>Trend 1 Info</Text>
             </View>
           </View>
           <View style={styles.trendInfo}>
             <Image source={trendingFood2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-            <Text style={styles.imageTexts1}>Trend 2 Info</Text>
-            <Text style={styles.imageTexts2}>Trend 2 Info</Text>
-            <Text>Trend 2 Info</Text>
+              <Text style={styles.imageTexts1}>Trend 2 Info</Text>
+              <Text style={styles.imageTexts2}>Trend 2 Info</Text>
+              <Text style={styles.imageTexts3}>Trend 2 Info</Text>
             </View>
           </View>
 
           <View style={styles.trendInfo}>
             <Image source={trendingFood2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-            <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-            <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-            <Text>Trend 3 Info</Text>
+              <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+              <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+              <Text style={styles.imageTexts3}>Trend 3 Info</Text>
             </View>
-            
+
           </View>
           <View style={styles.trendInfo}>
-            <Image source={trend1} style={styles.imageStyle}/>
+            <Image source={trend1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-            <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-            <Text>Trend 4 Info</Text>
+              <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+              <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+              <Text style={styles.imageTexts3}>Trend 4 Info</Text>
             </View>
           </View>
         </View>
       </ScrollView>
-    
+
       <View style={styles.bottomMenu}>
         {menuItems.map((item) => (
-          <TouchableOpacity key={item.id} onPress={() => changeActiveItem(item.id)} style={item.id === 'search'? styles.searchIconWrapper : {}}>
-            <Icon name={item.icon} size={item.id==='search'? 20:30} color={activeMenuItem === item.id? '#FF9F1C' : 'grey'} />
+          <TouchableOpacity key={item.id} onPress={() => changeActiveItem(item.id)} style={item.id === 'search' ? styles.searchIconWrapper : {}}>
+            <Icon name={item.icon} size={item.id === 'search' ? 20 : 30} color={activeMenuItem === item.id ? '#FF9F1C' : 'grey'} />
           </TouchableOpacity>
         ))}
       </View>
@@ -157,12 +157,12 @@ const styles = StyleSheet.create({
   searchIconWrapper: {
     borderRadius: 100,
     backgroundColor: '#fff',
-    height:40,
-    width:40,
-    justifyContent:'center',
-    alignItems:'center',
+    height: 40,
+    width: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  
+
   container: {
     paddingTop: 30,
     paddingBottom: 60,
@@ -261,13 +261,17 @@ const styles = StyleSheet.create({
     height: 180,
     marginTop: 10,
     marginBottom: 20,
-    backgroundColor: 'rgba(0,0,0,0.2)',
-    borderRadius: 20,
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    borderRadius: 30,
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.5)',
   },
   imageStyle: {
     width: 170,
     height: 130,
-    borderRadius: 20,
+    borderRadius: 30,
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.9)',
   },
   foodTrendsTitle: {
     marginHorizontal: 20,
@@ -281,11 +285,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'black'
   },
-  imageTexts2:{
-    fontWeight:'bold',
-    fontSize:10,
-    color:'black'
-      },
+  imageTexts2: {
+    fontWeight: 'bold',
+    fontSize: 10,
+    color: '#454040'
+  },
+  imageTexts3: {
+    fontWeight: '900',
+    fontSize: 11,
+    color: '#747474'
+  },
   trendImages: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -301,15 +310,18 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     width: 170,
     height: 180,
-    marginTop: 10,
+    marginTop: 5,
     marginBottom: 20,
-    backgroundColor: 'rgba(0,0,0,0.2)',
-    borderRadius: 20,
+    backgroundColor: '#B6B6B6',
+    borderRadius: 30,
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.5)',
   },
-imageContent:{
-paddingLeft:15,
-// fontSize:2,
-},
+  imageContent: {
+    paddingLeft: 20,
+    // lineHeight:1,
+    // fontSize:2,
+  },
 
   bottomMenu: {
     position: 'absolute',
