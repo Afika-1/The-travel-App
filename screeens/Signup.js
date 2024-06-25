@@ -28,17 +28,25 @@ function Signup({ navigation }) {
 
   const [errorMessage, setErrorMessage] = useState('');
 
-  useEffect(() => {
-    const isFullNameValid = fullName.trim() !== '';
-    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const isPasswordValid = password.length >= 6;
-    const isConfirmPasswordValid = confirmPassword === password;
+  // useEffect(() => {
+  //   const isFullNameValid = fullName.trim() !== '';
+  //   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  //   const isPasswordValid = password.length >= 6;
+  //   const isConfirmPasswordValid = confirmPassword === password;
 
-    // Update the disabled status of the button
-    setIsButtonDisabled(
-      !isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
-    );
+  //   setIsButtonDisabled(
+  //     !isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
+  //   );
+  // }, [fullName, email, password, confirmPassword]);
+
+  const [isFullNameValid, setIsFullNameValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState(true);
+
+  useEffect(() => {
   }, [fullName, email, password, confirmPassword]);
+
 
   if (!isLoaded) {
     return null;
@@ -48,6 +56,7 @@ function Signup({ navigation }) {
     <SafeAreaView style={styles.container}>
       <Image source={login} style={styles.image} />
       <View style={styles.contentContainer}>
+        <View style={styles.box}></View>
         <View style={styles.tabContainer}>
           <Text style={styles.orText} onPress={() => navigation.navigate('Login')}>
             Login
@@ -56,35 +65,68 @@ function Signup({ navigation }) {
         </View>
 
         <View style={styles.inputContainer}>
+          {/* <TextInput
+            placeholder="Full Name"
+            placeholderTextColor="gray"
+            style={[styles.input, fullName? {borderColor: 'green'} : {borderColor: 'red'}]}
+
+            value={fullName}
+            onChangeText={(text) => setFullName(text)}
+
+          /> */}
           <TextInput
             placeholder="Full Name"
             placeholderTextColor="gray"
-            style={styles.input}
+            style={[styles.input, isFullNameValid ? { borderColor: 'white' } : { borderColor: 'red' }]}
             value={fullName}
-            onChangeText={(text) => setFullName(text)}
+            onChangeText={(text) => {
+              const isFullNameValid = text.trim() !== '';
+              setIsFullNameValid(isFullNameValid);
+              setFullName(text);
+            }}
           />
-          <TextInput
+          {/* <TextInput
             placeholder="Email Address"
             placeholderTextColor="gray"
             style={styles.input}
             value={email}
             onChangeText={(text) => setEmail(text)}
+          /> */}
+          <TextInput
+            placeholder="Email Address"
+            placeholderTextColor="gray"
+            style={[styles.input, isEmailValid ? { borderColor: 'white' } : { borderColor: 'red' }]}
+            value={email}
+            onChangeText={(text) => {
+              const isEmailValid = text.trim() !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text);
+              setIsEmailValid(isEmailValid);
+              setEmail(text);
+            }}
           />
           <TextInput
             placeholder="Password"
             placeholderTextColor="gray"
-            style={styles.input}
+            style={[styles.input, isPasswordValid? { borderColor: 'white' } : { borderColor: 'red' }]}
             secureTextEntry
             value={password}
-            onChangeText={(text) => setPassword(text)}
+            onChangeText={(text) => {
+              const isPasswordValid = text.length >= 6;
+              setIsPasswordValid(isPasswordValid);
+              setPassword(text);
+            }}
           />
-          <TextInput
+           <TextInput
             placeholder="Confirm Password"
             placeholderTextColor="gray"
-            style={styles.input}
+            style={[styles.input, isConfirmPasswordValid?{borderColor:'green'}:{borderColor:'red'}]}
             secureTextEntry
             value={confirmPassword}
-            onChangeText={(text) => setConfirmPassword(text)}
+            onChangeText={(text) => {
+              const isConfirmPasswordValid = text === password;
+              setIsConfirmPasswordValid(isConfirmPasswordValid);
+              setConfirmPassword(text);
+              
+            }}
           />
         </View>
 
@@ -97,10 +139,10 @@ function Signup({ navigation }) {
         </View>
 
         {errorMessage && (
-  <Text style={{ color: 'red', marginBottom: 10 }}>
-    {errorMessage}
-  </Text>
-)}
+          <Text style={{ color: 'red', marginBottom: 10 }}>
+            {errorMessage}
+          </Text>
+        )}
 
         <TouchableOpacity
           style={[
@@ -113,13 +155,13 @@ function Signup({ navigation }) {
               // Perform signup logic here
 
               setErrorMessage("Signup failed. Please check your credentials.");
-      setTimeout(() => {
-        setErrorMessage(""); // Clear the error message after a few seconds
-      }, 3000);
+              setTimeout(() => {
+                setErrorMessage(""); // Clear the error message after a few seconds
+              }, 3000);
 
               navigation.navigate('Login');
             }
-            
+
           }}
           disabled={isButtonDisabled}
         >
@@ -154,6 +196,16 @@ const styles = StyleSheet.create({
     width: '100%',
     zIndex: -1,
     // backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  box: {
+    width: "100%",
+    height: 5,
+    shadowColor: "#b5b5b5",
+    // backgroundColor:'#fff',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    elevation: 5,
   },
   orText: {
     color: '#747474',
@@ -224,7 +276,7 @@ const styles = StyleSheet.create({
   },
   orContainer: {
     alignItems: 'center',
-    marginVertical: 10,
+    // marginVertical: 10,
   },
   socialButtonContainer: {
     flexDirection: 'row',

@@ -197,12 +197,12 @@ const styles = StyleSheet.create({
   box:{
     width:"100%",
     height:5,
-    // backgroundColor: "red",
-  shadowColor: "#b5b5b5",
+    shadowColor: "#b5b5b5",
+    // backgroundColor:'#fff',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 1,
     shadowRadius: 4,
-    elevation: 5, // This is for Android elevation
+    elevation: 5,
   },
 });
 
