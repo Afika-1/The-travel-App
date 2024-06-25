@@ -28,27 +28,27 @@ function Signup({ navigation }) {
 
   const [errorMessage, setErrorMessage] = useState('');
 
-  // useEffect(() => {
-  //   const isFullNameValid = fullName.trim() !== '';
-  //   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  //   const isPasswordValid = password.length >= 6;
-  //   const isConfirmPasswordValid = confirmPassword === password;
-
-  //   setIsButtonDisabled(
-  //     !isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
-  //   );
-  // }, [fullName, email, password, confirmPassword]);
-
-  const [isFullNameValid, setIsFullNameValid] = useState(true);
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const [isPasswordValid, setIsPasswordValid] = useState(true);
-  const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState(true);
-
   useEffect(() => {
+    const isFullNameValid = fullName.trim() !== '';
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPasswordValid = password.length >= 6;
+    const isConfirmPasswordValid = confirmPassword === password;
+
     setIsButtonDisabled(
-          !isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
-        );
+      !isFullNameValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
+    );
   }, [fullName, email, password, confirmPassword]);
+
+  const [isFullNameValid, setIsFullNameValid] = useState();
+  const [isEmailValid, setIsEmailValid] = useState();
+  const [isPasswordValid, setIsPasswordValid] = useState();
+  const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState();
+
+  // useEffect(() => {
+  //   setIsButtonDisabled(
+  //         !isFullNameValid|| !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
+  //       );
+  // }, [fullName, email, password, confirmPassword]);
 
 
   if (!isLoaded) {
