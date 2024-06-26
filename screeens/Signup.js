@@ -44,13 +44,6 @@ function Signup({ navigation }) {
   const [isPasswordValid, setIsPasswordValid] = useState();
   const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState();
 
-  // useEffect(() => {
-  //   setIsButtonDisabled(
-  //         !isFullNameValid|| !isEmailValid || !isPasswordValid || !isConfirmPasswordValid
-  //       );
-  // }, [fullName, email, password, confirmPassword]);
-
-
   if (!isLoaded) {
     return null;
   }
