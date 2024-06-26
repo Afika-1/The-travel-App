@@ -54,7 +54,7 @@ function Login({ navigation }) {
             placeholderTextColor="gray"
             style={styles.input}
             value={email}
-            onChangeText={handleEmailChange}
+            onChangeText={[handleEmailChange, isEmailValid?{borderColor:'white'}:{bordeColor:'red'}]}
           />
           <TextInput
             placeholder="Password"
@@ -62,7 +62,7 @@ function Login({ navigation }) {
             style={styles.input}
             secureTextEntry
             value={password}
-            onChangeText={handlePasswordChange}
+            onChangeText={[handlePasswordChange]}
           />
         </View>
 
