@@ -26,6 +26,11 @@ function Signup({ navigation }) {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
+  const [isFullNameValid, setIsFullNameValid] = useState();
+  const [isEmailValid, setIsEmailValid] = useState();
+  const [isPasswordValid, setIsPasswordValid] = useState();
+  const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState();
+
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
@@ -39,10 +44,6 @@ function Signup({ navigation }) {
     );
   }, [fullName, email, password, confirmPassword]);
 
-  const [isFullNameValid, setIsFullNameValid] = useState();
-  const [isEmailValid, setIsEmailValid] = useState();
-  const [isPasswordValid, setIsPasswordValid] = useState();
-  const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState();
 
   if (!isLoaded) {
     return null;
