@@ -26,10 +26,10 @@ function Signup({ navigation }) {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-  const [isFullNameValid, setIsFullNameValid] = useState();
-  const [isEmailValid, setIsEmailValid] = useState();
-  const [isPasswordValid, setIsPasswordValid] = useState();
-  const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState();
+  const [isFullNameValid, setIsFullNameValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const [isConfirmPasswordValid, setIsConfirmPasswordValid] = useState(true);
 
   const [errorMessage, setErrorMessage] = useState('');
 
