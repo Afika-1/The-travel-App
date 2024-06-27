@@ -35,13 +35,14 @@ export default function HomePage({ navigation }) {
         </View>
         <Image source={profile} style={styles.userImage} onPress={() => navigation.navigate('Login')} />
       </View>
+      <ScrollView>
 
       <Text style={styles.location}>Location</Text>
 
       <View style={styles.searchBar}>
         <TextInput placeholder="Search..." />
       </View>
-      <ScrollView>
+      
         <Text style={styles.categoriesTitle}>Categories</Text>
 
         {/* Menu Icons */}
@@ -164,7 +165,7 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    paddingTop: 30,
+    paddingTop: 50,
     paddingBottom: 60,
 
     flex: 1,
@@ -174,7 +175,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 20,
+    paddingHorizontal: 20,
   },
   userInfo: {
     flexDirection: 'row',
@@ -200,8 +201,8 @@ const styles = StyleSheet.create({
   },
   location: {
     marginHorizontal: 20,
-    marginTop: 10,
-    color: '#091834',
+    marginBottom: 15,
+    color: '#747474',
   },
   searchBar: {
     height: 40,
