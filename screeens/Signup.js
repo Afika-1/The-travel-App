@@ -128,7 +128,7 @@ function Signup({ navigation }) {
         )}
 
         <TouchableOpacity
-          style={[styles.button, isButtonDisabled ? styles.disabledButton : null,
+          style={[styles.button, isButtonDisabled ? styles.button: styles.disabledButton,
             { pointerEvents: isButtonDisabled ? 'none' : undefined },]}
           onPress={() => {if (!isButtonDisabled) {
               // Perform signup logic here
@@ -271,6 +271,17 @@ const styles = StyleSheet.create({
     width: '95%',
     borderRadius: 10,
     marginTop: 10,
+
+  },
+  disabledButton: {
+    height: 50,
+    backgroundColor: '#D9D9D9',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '95%',
+    borderRadius: 10,
+    borderBottomWidth:3,
+    borderBottomColor:'#FF9F1C',
 
   },
   customButtonText: {

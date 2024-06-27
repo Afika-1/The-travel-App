@@ -29,19 +29,6 @@ function Login({ navigation }) {
     );
   }, [email, password]);
 
-  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  // const handleEmailChange = (text) => {
-  //   setEmail(text);
-  //   setIsEmailValid(emailRegex.test(text));
-  // };
-
-  // const handlePasswordChange = (text) => {
-  //   setPassword(text);
-  //   setIsPasswordValid(text.length >= 6);
-  // };
-
-  // const isFormValid = isEmailValid && isPasswordValid;
 
   if (!isLoaded) {
     return null;
@@ -92,12 +79,8 @@ function Login({ navigation }) {
             <Image source={facebook} style={styles.socialIcon} />
           </View>
         </View>
-        {/* <TouchableOpacity style={[
-            styles.button,
-            isButtonDisabled ? styles.disabledButton : null,
-            { pointerEvents: isButtonDisabled ? 'none' : undefined },
-          ]}></TouchableOpacity> */}
-        <TouchableOpacity style={styles.button} disabled={isButtonDisabled} onPress={() => navigation.navigate('HomePage')}>
+       
+        <TouchableOpacity style={isButtonDisabled? styles.button: styles.disabledButton} disabled={isButtonDisabled} onPress={() => navigation.navigate('HomePage')}>
           <Text style={!isButtonDisabled ? styles.customButtonText : styles.disabledButtonText}>Login </Text>
         </TouchableOpacity>
       </View>
@@ -209,6 +192,18 @@ const styles = StyleSheet.create({
     width: '95%',
     borderRadius: 10,
     marginTop: '30%',
+
+  },
+  disabledButton: {
+    height: 50,
+    backgroundColor: '#D9D9D9',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '95%',
+    borderRadius: 10,
+    marginTop: '30%',
+    borderBottomWidth:3,
+    borderBottomColor:'#FF9F1C',
 
   },
   customButtonText: {
