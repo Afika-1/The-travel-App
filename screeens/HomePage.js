@@ -33,12 +33,13 @@ export default function HomePage({ navigation }) {
           <Text style={styles.name}>Hi,</Text>
           <Text style={styles.userGreeting}>Name</Text>
         </View>
+        
         <Image source={profile} style={styles.userImage} onPress={() => navigation.navigate('Login')} />
       </View>
-      <ScrollView>
+
 
       <Text style={styles.location}>Location</Text>
-
+      <ScrollView>
       <View style={styles.searchBar}>
         <TextInput placeholder="Search..." />
       </View>

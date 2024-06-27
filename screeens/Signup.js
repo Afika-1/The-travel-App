@@ -128,13 +128,9 @@ function Signup({ navigation }) {
         )}
 
         <TouchableOpacity
-          style={[
-            styles.button,
-            isButtonDisabled ? styles.disabledButton : null,
-            { pointerEvents: isButtonDisabled ? 'none' : undefined },
-          ]}
-          onPress={() => {
-            if (!isButtonDisabled) {
+          style={[styles.button, isButtonDisabled ? styles.disabledButton : null,
+            { pointerEvents: isButtonDisabled ? 'none' : undefined },]}
+          onPress={() => {if (!isButtonDisabled) {
               // Perform signup logic here
 
               setErrorMessage("Signup failed. Please check your credentials.");

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 
@@ -15,23 +15,33 @@ function Login({ navigation }) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
+
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  useEffect(() => {
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPasswordValid = password.length >= 6;
 
-  const handleEmailChange = (text) => {
-    setEmail(text);
-    setIsEmailValid(emailRegex.test(text));
-  };
+    setIsButtonDisabled(
+      !isEmailValid || !isPasswordValid
+    );
+  }, [email, password]);
 
-  const handlePasswordChange = (text) => {
-    setPassword(text);
-    setIsPasswordValid(text.length >= 6);
-  };
+  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const isFormValid = isEmailValid && isPasswordValid;
+  // const handleEmailChange = (text) => {
+  //   setEmail(text);
+  //   setIsEmailValid(emailRegex.test(text));
+  // };
+
+  // const handlePasswordChange = (text) => {
+  //   setPassword(text);
+  //   setIsPasswordValid(text.length >= 6);
+  // };
+
+  // const isFormValid = isEmailValid && isPasswordValid;
 
   if (!isLoaded) {
     return null;
@@ -55,7 +65,11 @@ function Login({ navigation }) {
             placeholderTextColor="gray"
             style={[styles.input, isEmailValid ? { borderColor: 'white' } : { borderColor: 'red' }]}
             value={email}
-            onChangeText={handleEmailChange}
+            onChangeText={(text) => {
+              const isEmailValid = text.trim() !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text);
+              setIsEmailValid(isEmailValid);
+              setEmail(text);
+            }}
           />
           <TextInput
             placeholder="Password"
@@ -63,7 +77,11 @@ function Login({ navigation }) {
             style={[styles.input, isPasswordValid ? { borderColor: 'white' } : { borderColor: 'red' }]}
             secureTextEntry
             value={password}
-            onChangeText={handlePasswordChange}
+            onChangeText={(text) => {
+              const isPasswordValid = text.length >= 6;
+              setIsPasswordValid(isPasswordValid);
+              setPassword(text);
+            }}
           />
         </View>
 
@@ -74,9 +92,13 @@ function Login({ navigation }) {
             <Image source={facebook} style={styles.socialIcon} />
           </View>
         </View>
-
-        <TouchableOpacity style={styles.button} disabled={!isFormValid}  onPress={() => navigation.navigate('HomePage')}>
-          <Text style={isFormValid ? styles.customButtonText : styles.disabledButtonText}>Login </Text>
+        {/* <TouchableOpacity style={[
+            styles.button,
+            isButtonDisabled ? styles.disabledButton : null,
+            { pointerEvents: isButtonDisabled ? 'none' : undefined },
+          ]}></TouchableOpacity> */}
+        <TouchableOpacity style={styles.button} disabled={isButtonDisabled} onPress={() => navigation.navigate('HomePage')}>
+          <Text style={!isButtonDisabled ? styles.customButtonText : styles.disabledButtonText}>Login </Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -93,18 +115,18 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: 'Inria-bold'
   },
-    
+
 
   container: {
     flex: 1,
-    justifyContent:'flex-end'
+    justifyContent: 'flex-end'
   },
   image: {
     height: 380,
     position: 'absolute',
     top: 0,
     left: 0,
-    width:'100%',
+    width: '100%',
     zIndex: -1,
   },
   orText: {
@@ -113,13 +135,13 @@ const styles = StyleSheet.create({
     fontFamily: 'Inria-bold',
 
   },
-  socialsLabel:{
+  socialsLabel: {
     color: 'white',
     fontSize: 20,
     fontFamily: 'inria-regular',
 
   },
-  orTextActive:{
+  orTextActive: {
     fontSize: 24,
     color: '#ff9f1c',
     textDecorationLine: 'underline',
@@ -142,26 +164,26 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical:15,
+    paddingVertical: 15,
 
   },
   inputContainer: {
     width: '100%',
-    alignItems:'center',
+    alignItems: 'center',
   },
   input: {
     // height: 50,
     width: '95%',
-    padding:15,
+    padding: 15,
     marginVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 30,
     borderWidth: 1,
     borderColor: 'white',
-    color:'white',
+    color: 'white',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     fontFamily: 'inria-regular',
-    fontSize:15,
+    fontSize: 15,
 
   },
   orContainer: {
@@ -169,15 +191,15 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   socialButtonContainer: {
-    display:'flex',
+    display: 'flex',
     flexDirection: 'row',
-    gap:20,
-    paddingTop:5,
+    gap: 20,
+    paddingTop: 5,
   },
-  socialIcon:{
-    height:30,
-    width:30,
-    borderRadius:50,
+  socialIcon: {
+    height: 30,
+    width: 30,
+    borderRadius: 50,
   },
   button: {
     height: 50,
@@ -195,9 +217,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Inria-bold',
 
   },
-  box:{
-    width:"100%",
-    height:5,
+  box: {
+    width: "100%",
+    height: 5,
     shadowColor: "#b5b5b5",
     // backgroundColor:'#fff',
     shadowOffset: { width: 0, height: 4 },
