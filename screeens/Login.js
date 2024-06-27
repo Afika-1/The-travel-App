@@ -15,8 +15,8 @@ function Login({ navigation }) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isEmailValid, setIsEmailValid] = useState(false);
-  const [isPasswordValid, setIsPasswordValid] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isPasswordValid, setIsPasswordValid] = useState(true);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -52,14 +52,14 @@ function Login({ navigation }) {
           <TextInput
             placeholder="Email Address"
             placeholderTextColor="gray"
-            style={styles.input}
+            style={[styles.input, isEmailValid ? { borderColor: 'white' } : { borderColor: 'red' }]}
             value={email}
             onChangeText={handleEmailChange}
           />
           <TextInput
             placeholder="Password"
             placeholderTextColor="gray"
-            style={styles.input}
+            style={[styles.input, isPasswordValid ? { borderColor: 'white' } : { borderColor: 'red' }]}
             secureTextEntry
             value={password}
             onChangeText={handlePasswordChange}
