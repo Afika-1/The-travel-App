@@ -1,4 +1,3 @@
-// import React from 'react';
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -27,7 +26,6 @@ export default function HomePage({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Top Section */}
       <View style={styles.topSection}>
         <View style={styles.userInfo}>
           <Text style={styles.name}>Hi,</Text>
