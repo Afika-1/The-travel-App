@@ -135,7 +135,7 @@ function Signup({ navigation }) {
 
               setErrorMessage("Signup failed. Please check your credentials.");
               setTimeout(() => {
-                setErrorMessage(""); // Clear the error message after a few seconds
+                setErrorMessage(""); 
               }, 3000);
 
               navigation.navigate('Login');
@@ -174,7 +174,6 @@ const styles = StyleSheet.create({
     left: 0,
     width: '100%',
     zIndex: -1,
-    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   box: {
     width: "100%",
