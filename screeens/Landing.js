@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   overlayContainer: {
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     borderRadius: 10,
-    marginTop: 'auto', // Move to the bottom
+    marginTop: 'auto', 
     marginBottom: 20,
     width: 390,
     height: 320,
