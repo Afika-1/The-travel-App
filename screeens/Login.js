@@ -155,7 +155,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
-    // height: 50,
     width: '95%',
     padding: 15,
     marginVertical: 12,
@@ -216,7 +215,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 5,
     shadowColor: "#b5b5b5",
-    // backgroundColor:'#fff',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 1,
     shadowRadius: 4,
