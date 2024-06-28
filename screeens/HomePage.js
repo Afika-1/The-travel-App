@@ -319,8 +319,7 @@ const styles = StyleSheet.create({
   },
   imageContent: {
     paddingLeft: 20,
-    // lineHeight:1,
-    // fontSize:2,
+
   },
 
   bottomMenu: {
