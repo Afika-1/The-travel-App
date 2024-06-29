@@ -53,23 +53,6 @@ export default function FoodHome({ navigation }) {
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Destination 1 Info</Text>
               <Text style={styles.imageTexts2}>Destination 1 Info</Text>
-              {/* <Text style={styles.imageTexts3}>Destination 1 Info</Text> */}
-            </View>
-          </View>
-          <View style={styles.destinationInfo}>
-            <Image source={popular2} style={styles.imageStyle} />
-            <View style={styles.imageContent}>
-              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
-              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
-              {/* <Text style={styles.imageTexts3}>Destination 2 Info</Text> */}
-            </View>
-          </View>
-          <View style={styles.destinationInfo}>
-            <Image source={popular2} style={styles.imageStyle} />
-            <View style={styles.imageContent}>
-              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
-              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
-              {/* <Text style={styles.imageTexts3}>Destination 2 Info</Text> */}
             </View>
           </View>
 
@@ -78,7 +61,22 @@ export default function FoodHome({ navigation }) {
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Destination 2 Info</Text>
               <Text style={styles.imageTexts2}>Destination 2 Info</Text>
-              {/* <Text style={styles.imageTexts3}>Destination 2 Info</Text> */}
+            </View>
+          </View>
+
+          <View style={styles.destinationInfo}>
+            <Image source={popular2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
+            </View>
+          </View>
+
+          <View style={styles.destinationInfo}>
+            <Image source={popular2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
             </View>
           </View>
         </ScrollView>
@@ -230,13 +228,7 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
 
   },
-//   categoriesTitle: {
-//     marginHorizontal: 20,
-//     marginTop: 20,
-//     fontSize: 24,
-//     color: '#091834',
-//     fontWeight: 'bold'
-//   },
+
   menuIcons: {
     flexDirection: 'row',
     justifyContent: 'space-around',
