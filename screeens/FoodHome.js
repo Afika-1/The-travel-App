@@ -8,7 +8,7 @@ const popular2 = require('../assets/images/chill.jpeg')
 const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
 const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
 
-export default function HomePage({ navigation }) {
+export default function FoodHome({ navigation }) {
 
   const [activeMenuItem, setActiveMenuItem] = useState('home');
 
