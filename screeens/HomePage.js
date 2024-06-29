@@ -48,7 +48,7 @@ export default function HomePage({ navigation }) {
         <View style={styles.menuIcons}>
 
           <View style={styles.menuItems}>
-            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => [console.log('Food'), navigation.navigate('HomePage')]}>
+            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => [console.log('Food'), navigation.navigate('FoodHome')]}>
               <Icon name="cutlery" size={30} color="#fff" />
 
             </TouchableOpacity>
@@ -92,6 +92,7 @@ export default function HomePage({ navigation }) {
               <Text style={styles.imageTexts3}>Destination 1 Info</Text>
             </View>
           </View>
+
           <View style={styles.destinationInfo}>
             <Image source={popular2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
