@@ -194,6 +194,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     fontFamily: 'inria-regular',
+    backgroundColor:'#fff',
 
   },
   socialIcon: {

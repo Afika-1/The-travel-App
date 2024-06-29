@@ -3,7 +3,7 @@ import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, S
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
-const popular1 = require('../assets/images/pexels-photo-2901215.jpeg')
+const popular1 = require('../assets/images/pexels-gustavo-peres-9200388.jpg')
 const popular2 = require('../assets/images/chill.jpeg')
 const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
 const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
@@ -43,43 +43,6 @@ export default function FoodHome({ navigation }) {
       </View>
       
         <Text style={styles.categoriesTitle}>Categories</Text>
-
-        {/* Menu Icons */}
-        {/* <View style={styles.menuIcons}>
-
-          <View style={styles.menuItems}>
-            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Food')}>
-              <Icon name="cutlery" size={30} color="#fff" />
-
-            </TouchableOpacity>
-            <Text>Food</Text>
-          </View>
-          <View style={styles.menuItems}>
-            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
-              <Icon name="bed" size={30} color="#fff" />
-
-            </TouchableOpacity>
-            <Text>Hotels</Text>
-          </View>
-
-          <View style={styles.menuItems}>
-            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
-              <Icon name="car" size={30} color="#fff" />
-
-            </TouchableOpacity>
-            <Text>Transport</Text>
-          </View>
-
-          <View style={styles.menuItems}>
-            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
-              <Icon name="gamepad" size={30} color="#fff" />
-
-            </TouchableOpacity>
-            <Text>Fun</Text>
-          </View>
-
-
-        </View> */}
 
         {/* Popular Destination */}
         <Text style={styles.popularDestinationTitle}>Popular Destination</Text>
@@ -147,7 +110,7 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts3}>Trend 4 Info</Text>
             </View>
           </View>
-          
+
           <View style={styles.trendInfo}>
             <Image source={trendingFood2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
