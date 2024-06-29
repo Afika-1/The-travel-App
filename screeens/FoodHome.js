@@ -43,17 +43,17 @@ export default function FoodHome({ navigation }) {
         <TextInput placeholder="Search..." />
       </View>
       
-        <Text style={styles.categoriesTitle}>Categories</Text>
+        {/* <Text style={styles.categoriesTitle}>Categories</Text> */}
 
         {/* Popular Destination */}
-        <Text style={styles.popularDestinationTitle}>Popular Destination</Text>
-        <View style={styles.destinationImages}>
+        <Text style={styles.popularDestinationTitle}>Special deals</Text>
+        <ScrollView horizontal={true}  style={styles.destinationImages}>
           <View style={styles.destinationInfo}>
             <Image source={popular1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Destination 1 Info</Text>
               <Text style={styles.imageTexts2}>Destination 1 Info</Text>
-              <Text style={styles.imageTexts3}>Destination 1 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Destination 1 Info</Text> */}
             </View>
           </View>
           <View style={styles.destinationInfo}>
@@ -61,7 +61,7 @@ export default function FoodHome({ navigation }) {
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Destination 2 Info</Text>
               <Text style={styles.imageTexts2}>Destination 2 Info</Text>
-              <Text style={styles.imageTexts3}>Destination 2 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Destination 2 Info</Text> */}
             </View>
           </View>
           <View style={styles.destinationInfo}>
@@ -69,10 +69,19 @@ export default function FoodHome({ navigation }) {
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Destination 2 Info</Text>
               <Text style={styles.imageTexts2}>Destination 2 Info</Text>
-              <Text style={styles.imageTexts3}>Destination 2 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Destination 2 Info</Text> */}
             </View>
           </View>
-        </View>
+
+          <View style={styles.destinationInfo}>
+            <Image source={popular2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Destination 2 Info</Text> */}
+            </View>
+          </View>
+        </ScrollView>
 
         <Text style={styles.foodTrendsTitle}>Food Trends</Text>
         <View style={styles.trendImages}>
@@ -221,13 +230,13 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
 
   },
-  categoriesTitle: {
-    marginHorizontal: 20,
-    marginTop: 20,
-    fontSize: 24,
-    color: '#091834',
-    fontWeight: 'bold'
-  },
+//   categoriesTitle: {
+//     marginHorizontal: 20,
+//     marginTop: 20,
+//     fontSize: 24,
+//     color: '#091834',
+//     fontWeight: 'bold'
+//   },
   menuIcons: {
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -259,24 +268,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 20,
-    marginTop: 10,
+    // marginTop: 100
   },
   destinationInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    width: 170,
-    height: 180,
+    width: 100,
+    height: 110,
     marginTop: 10,
     marginBottom: 20,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    borderRadius: 30,
+    // backgroundColor: 'rgba(0,0,0,0.3)',
+    borderRadius: 20,
     borderWidth:1,
-    borderColor:'rgba(0,0,0,0.5)',
+    borderColor:'rgba(0,0,0,0.07)',
   },
   imageStyle: {
-    width: 170,
-    height: 130,
-    borderRadius: 30,
+    width: 100,
+    height: 80,
+    borderRadius: 20,
     borderWidth:1,
     borderColor:'rgba(0,0,0,0.9)',
   },
@@ -289,12 +298,12 @@ const styles = StyleSheet.create({
   },
   imageTexts1: {
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 10,
     color: 'black'
   },
   imageTexts2: {
     fontWeight: 'bold',
-    fontSize: 10,
+    fontSize:7,
     color: '#454040'
   },
   imageTexts3: {
@@ -312,6 +321,7 @@ const styles = StyleSheet.create({
 
 
   },
+
   trendInfo: {
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -325,7 +335,7 @@ const styles = StyleSheet.create({
     borderColor:'rgba(0,0,0,0.5)',
   },
   imageContent: {
-    paddingLeft: 20,
+    paddingLeft: 5,
 
   },
 
