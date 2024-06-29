@@ -28,8 +28,9 @@ export default function FoodHome({ navigation }) {
     <SafeAreaView style={styles.container}>
       <View style={styles.topSection}>
         <View style={styles.userInfo}>
-          <Text style={styles.name}>Hi,</Text>
-          <Text style={styles.userGreeting}>Name</Text>
+          {/* <Text style={styles.name}>Hi,</Text> */}
+          <Icon name="arrow-left" size={15} color="#091834" />
+          <Text style={styles.pageTitle}>Food</Text>
         </View>
         
         <Image source={profile} style={styles.userImage} onPress={() => navigation.navigate('Login')} />
@@ -53,6 +54,14 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts1}>Destination 1 Info</Text>
               <Text style={styles.imageTexts2}>Destination 1 Info</Text>
               <Text style={styles.imageTexts3}>Destination 1 Info</Text>
+            </View>
+          </View>
+          <View style={styles.destinationInfo}>
+            <Image source={popular2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts3}>Destination 2 Info</Text>
             </View>
           </View>
           <View style={styles.destinationInfo}>
@@ -181,16 +190,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  name: {
+ 
+  pageTitle: {
     fontWeight: 'bold',
-
-    fontSize: 35,
-  },
-  userGreeting: {
-    fontWeight: 'bold',
+    color: '#091834',
 
     marginLeft: 10,
-    fontSize: 35,
+    fontSize: 25,
   },
   userImage: {
     width: 50,
