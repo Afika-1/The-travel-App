@@ -32,7 +32,7 @@ export default function HomePage({ navigation }) {
           <Text style={styles.userGreeting}>Name</Text>
         </View>
         
-        <Image source={profile} style={styles.userImage} onPress={() => navigation.navigate('Login')} />
+        <TouchableOpacity  onPress={() => navigation.navigate('Login')} ><Image source={profile} style={styles.userImage}/></TouchableOpacity>
       </View>
 
 
@@ -48,7 +48,7 @@ export default function HomePage({ navigation }) {
         <View style={styles.menuIcons}>
 
           <View style={styles.menuItems}>
-            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Food')}>
+            <TouchableOpacity style={styles.menuIconsContainer} onPress={() => [console.log('Food'), navigation.navigate('HomePage')]}>
               <Icon name="cutlery" size={30} color="#fff" />
 
             </TouchableOpacity>
