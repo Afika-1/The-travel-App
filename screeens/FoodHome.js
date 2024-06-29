@@ -138,6 +138,7 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts3}>Trend 4 Info</Text>
             </View>
           </View>
+
           <View style={styles.trendInfo}>
             <Image source={trend1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
@@ -145,6 +146,25 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts2}>Trend 4 Info</Text>
               <Text style={styles.imageTexts3}>Trend 4 Info</Text>
             </View>
+          </View>
+          
+          <View style={styles.trendInfo}>
+            <Image source={trendingFood2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+              <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+              <Text style={styles.imageTexts3}>Trend 3 Info</Text>
+            </View>
+
+          </View>
+          <View style={styles.trendInfo}>
+            <Image source={trendingFood2} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+              <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+              <Text style={styles.imageTexts3}>Trend 3 Info</Text>
+            </View>
+
           </View>
           <View style={styles.trendInfo}>
             <Image source={trend1} style={styles.imageStyle} />
@@ -154,6 +174,8 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts3}>Trend 4 Info</Text>
             </View>
           </View>
+          
+          
         </View>
       </ScrollView>
 
