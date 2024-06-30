@@ -43,11 +43,11 @@ export default function FoodHome({ navigation }) {
         <TextInput placeholder="Search..." />
       </View>
       
-        {/* <Text style={styles.categoriesTitle}>Categories</Text> */}
-
         {/* Popular Destination */}
         <Text style={styles.popularDestinationTitle}>Special deals</Text>
-        <ScrollView horizontal={true}  style={styles.destinationImages}>
+         <ScrollView  horizontal={true}>
+        <View  style={styles.destinationImages}>
+           
           <View style={styles.destinationInfo}>
             <Image source={popular1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
@@ -79,6 +79,7 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts2}>Destination 2 Info</Text>
             </View>
           </View>
+        </View>
         </ScrollView>
 
         <Text style={styles.foodTrendsTitle}>Food Trends</Text>
@@ -258,8 +259,9 @@ const styles = StyleSheet.create({
   },
   destinationImages: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     marginHorizontal: 20,
+    // width:500,
     // marginTop: 100
   },
   destinationInfo: {
@@ -268,6 +270,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 110,
     marginTop: 10,
+    marginRight: 10,
     marginBottom: 20,
     // backgroundColor: 'rgba(0,0,0,0.3)',
     borderRadius: 20,
