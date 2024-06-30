@@ -4,7 +4,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
 const popular1 = require('../assets/images/pexels-gustavo-peres-9200388.jpg')
-const popular2 = require('../assets/images/chill.jpeg')
+const popular2 = require('../assets/images/pexels-diamond-multimedia-9993754.jpg')
+const popular3 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
 const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
 const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
 
@@ -51,107 +52,107 @@ export default function FoodHome({ navigation }) {
           <View style={styles.destinationInfo}>
             <Image source={popular1} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-              <Text style={styles.imageTexts1}>Destination 1 Info</Text>
-              <Text style={styles.imageTexts2}>Destination 1 Info</Text>
+              <Text style={styles.imageTexts1}>Name of place</Text>
+              <Text style={styles.imageTexts2}>Deal description</Text>
             </View>
           </View>
 
           <View style={styles.destinationInfo}>
             <Image source={popular2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
-              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts1}>Name of place</Text>
+              <Text style={styles.imageTexts2}>Deal description</Text>
+            </View>
+          </View>
+
+          <View style={styles.destinationInfo}>
+            <Image source={popular3} style={styles.imageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Name of place</Text>
+              <Text style={styles.imageTexts2}>Deal description</Text>
             </View>
           </View>
 
           <View style={styles.destinationInfo}>
             <Image source={popular2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
-              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
-              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
-            </View>
-          </View>
-
-          <View style={styles.destinationInfo}>
-            <Image source={popular2} style={styles.imageStyle} />
-            <View style={styles.imageContent}>
-              <Text style={styles.imageTexts1}>Destination 2 Info</Text>
-              <Text style={styles.imageTexts2}>Destination 2 Info</Text>
+              <Text style={styles.imageTexts1}>Name of place</Text>
+              <Text style={styles.imageTexts2}>Deal description</Text>
             </View>
           </View>
         </View>
         </ScrollView>
 
-        <Text style={styles.foodTrendsTitle}>Food Trends</Text>
+        <Text style={styles.foodTrendsTitle}>Restaurants</Text>
         <View style={styles.trendImages}>
           <View style={styles.trendInfo}>
-            <Image source={trend1} style={styles.imageStyle} />
+            <Image source={trend1} style={styles.bigRestuarantImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 1 Info</Text>
               <Text style={styles.imageTexts2}>Trend 1 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 1 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 1 Info</Text> */}
             </View>
           </View>
-          <View style={styles.trendInfo}>
-            <Image source={trendingFood2} style={styles.imageStyle} />
+          <View style={styles.miniRestuarantContent}>
+            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 2 Info</Text>
               <Text style={styles.imageTexts2}>Trend 2 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 2 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 2 Info</Text> */}
             </View>
           </View>
 
-          <View style={styles.trendInfo}>
-            <Image source={trendingFood2} style={styles.imageStyle} />
+          <View style={styles.miniRestuarantContent}>
+            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 3 Info</Text>
               <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 3 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 3 Info</Text> */}
             </View>
 
           </View>
           <View style={styles.trendInfo}>
-            <Image source={trend1} style={styles.imageStyle} />
+            <Image source={trend1} style={styles.bigRestuarantImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 4 Info</Text>
               <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 4 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 4 Info</Text> */}
             </View>
           </View>
 
           <View style={styles.trendInfo}>
-            <Image source={trend1} style={styles.imageStyle} />
+            <Image source={trend1} style={styles.bigRestuarantImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 4 Info</Text>
               <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 4 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 4 Info</Text> */}
             </View>
           </View>
 
-          <View style={styles.trendInfo}>
-            <Image source={trendingFood2} style={styles.imageStyle} />
+          <View style={styles.miniRestuarantContent}>
+            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 3 Info</Text>
               <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 3 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 3 Info</Text> */}
             </View>
 
           </View>
-          <View style={styles.trendInfo}>
-            <Image source={trendingFood2} style={styles.imageStyle} />
+          <View style={styles.miniRestuarantContent}>
+            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 3 Info</Text>
               <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 3 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 3 Info</Text> */}
             </View>
 
           </View>
           <View style={styles.trendInfo}>
-            <Image source={trend1} style={styles.imageStyle} />
+            <Image source={trend1} style={styles.bigRestuarantImageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 4 Info</Text>
               <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-              <Text style={styles.imageTexts3}>Trend 4 Info</Text>
+              {/* <Text style={styles.imageTexts3}>Trend 4 Info</Text> */}
             </View>
           </View>
           
@@ -212,11 +213,12 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderColor: '#FF9F1C',
     borderWidth: 2,
+
   },
   location: {
     marginHorizontal: 20,
     marginBottom: 15,
-    color: '#747474',
+    // color: '#747474',
   },
   searchBar: {
     height: 40,
@@ -261,8 +263,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     marginHorizontal: 20,
-    // width:500,
-    // marginTop: 100
+    
   },
   destinationInfo: {
     flexDirection: 'column',
@@ -301,11 +302,11 @@ const styles = StyleSheet.create({
     fontSize:7,
     color: '#454040'
   },
-  imageTexts3: {
-    fontWeight: '900',
-    fontSize: 11,
-    color: '#747474'
-  },
+//   imageTexts3: {
+//     fontWeight: '900',
+//     fontSize: 11,
+//     color: '#747474'
+//   },
   trendImages: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -321,16 +322,53 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'flex-start',
     width: 170,
-    height: 180,
+    height: 160,
     marginTop: 5,
-    marginBottom: 20,
-    backgroundColor: '#B6B6B6',
+    // marginBottom: 20,
+    backgroundColor: 'rgba(0,0,0,0.02)',
     borderRadius: 30,
     borderWidth:1,
-    borderColor:'rgba(0,0,0,0.5)',
+    borderColor:'rgba(0,0,0,0.1)',
+  },
+//   miniRestuarantContent: {
+//     flexDirection: 'row',
+//     flexWrap: 'wrap',
+//     alignItems: 'center',
+//     justifyContent: 'space-between',
+//     marginHorizontal: 20,
+//     marginTop: 10,
+
+
+//   },
+bigRestuarantImageStyle: {
+    width: 170,
+    height: 130,
+    borderRadius: 20,
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.9)',
+  },
+
+miniRestuarantContent: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    width: 160,
+    height: 120,
+    marginTop: 5,
+    // marginBottom: 20,
+    backgroundColor: 'rgba(0,0,0,0.05)',
+    borderRadius: 30,
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.1)',
+  },
+  miniRestuarantContentImageStyle: {
+    width: 160,
+    height: 90,
+    borderRadius: 20,
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.9)',
   },
   imageContent: {
-    paddingLeft: 5,
+    paddingLeft: 15,
 
   },
 
