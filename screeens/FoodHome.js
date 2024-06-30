@@ -71,6 +71,8 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts1}>Name of place</Text>
               <Text style={styles.imageTexts2}>Deal description</Text>
             </View>
+
+            
           </View>
 
           <View style={styles.destinationInfo}>
@@ -79,6 +81,7 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts1}>Name of place</Text>
               <Text style={styles.imageTexts2}>Deal description</Text>
             </View>
+            
           </View>
         </View>
         </ScrollView>
@@ -92,6 +95,11 @@ export default function FoodHome({ navigation }) {
               <Text style={styles.imageTexts2}>Trend 1 Info</Text>
               {/* <Text style={styles.imageTexts3}>Trend 1 Info</Text> */}
             </View>
+
+            <View style={styles.textOverlay}>
+      <Text style={styles.overlayText}>Trend 1 Title</Text>
+    </View>
+
           </View>
           <View style={styles.miniRestuarantContent}>
             <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
@@ -340,6 +348,22 @@ const styles = StyleSheet.create({
 
 
 //   },
+
+textOverlay: {
+    position: 'absolute',
+    bottom: 27, // Adjust as needed
+    left: 0, // Adjust as needed
+    right: 0, // Adjust as needed
+    // borderRadius: 20,
+    borderBottomLeftRadius:20,
+    borderBottomRightRadius:20,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background to ensure text is readable
+  },
+  overlayText: {
+    color: '#B6B6B6', // White text color for contrast
+    textAlign: 'center', // Center the text
+    padding: 1, // Add some padding around the text
+  },
 bigRestuarantImageStyle: {
     width: 170,
     height: 130,
@@ -359,6 +383,8 @@ miniRestuarantContent: {
     borderRadius: 30,
     borderWidth:1,
     borderColor:'rgba(0,0,0,0.1)',
+    position: 'relative',
+
   },
   miniRestuarantContentImageStyle: {
     width: 160,
