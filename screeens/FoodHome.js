@@ -29,7 +29,6 @@ export default function FoodHome({ navigation }) {
         <SafeAreaView style={styles.container}>
             <View style={styles.topSection}>
                 <View style={styles.userInfo}>
-                    {/* <Text style={styles.name}>Hi,</Text> */}
                     <Icon name="arrow-left" size={15} color="#091834" />
                     <Text style={styles.pageTitle}>Food</Text>
                 </View>
@@ -95,7 +94,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 1 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 1 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 1 Info</Text> */}
                         </View>
 
                         <View style={styles.textOverlay}>
@@ -108,7 +106,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 2 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 2 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 2 Info</Text> */}
                         </View>
                         <View style={styles.textOverlay}>
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
@@ -121,7 +118,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 3 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 3 Info</Text> */}
                         </View>
                         <View style={styles.textOverlay}>
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
@@ -134,7 +130,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 4 Info</Text> */}
                         </View>
                         <View style={styles.textOverlay}>
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
@@ -147,7 +142,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 4 Info</Text> */}
                         </View>
                         <View style={styles.textOverlay}>
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
@@ -160,7 +154,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 3 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 3 Info</Text> */}
                         </View>
                         <View style={styles.textOverlay}>
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
@@ -173,7 +166,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 3 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 3 Info</Text> */}
                         </View>
                         <View style={styles.textOverlay}>
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
@@ -186,7 +178,6 @@ export default function FoodHome({ navigation }) {
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            {/* <Text style={styles.imageTexts3}>Trend 4 Info</Text> */}
                         </View>
                         <View style={styles.textOverlay}>
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
