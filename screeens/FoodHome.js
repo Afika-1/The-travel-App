@@ -6,8 +6,15 @@ const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.j
 const popular1 = require('../assets/images/pexels-gustavo-peres-9200388.jpg')
 const popular2 = require('../assets/images/pexels-diamond-multimedia-9993754.jpg')
 const popular3 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
+const popular4 = require('../assets/images/pexels-lucas-andrade-8066267.jpg')
+
 const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
 const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
+const trendingFood3 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
+const trendingFood4 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
+const trendingFood5 = require('../assets/images/pexels-chan-walrus-958545.jpg')
+const trendingFood6 = require('../assets/images/.jpg')
+
 
 export default function FoodHome({ navigation }) {
 
@@ -77,7 +84,7 @@ export default function FoodHome({ navigation }) {
                         </View>
 
                         <View style={styles.destinationInfo}>
-                            <Image source={popular2} style={styles.imageStyle} />
+                            <Image source={popular4} style={styles.imageStyle} />
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Name of place</Text>
                                 <Text style={styles.imageTexts2}>Deal description</Text>
@@ -114,7 +121,7 @@ export default function FoodHome({ navigation }) {
                     </View>
 
                     <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
+                        <Image source={trendingFood3} style={styles.miniRestuarantContentImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 3 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 3 Info</Text>
@@ -126,7 +133,7 @@ export default function FoodHome({ navigation }) {
 
                     </View>
                     <View style={styles.trendInfo}>
-                        <Image source={trend1} style={styles.bigRestuarantImageStyle} />
+                        <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 4 Info</Text>
@@ -138,7 +145,7 @@ export default function FoodHome({ navigation }) {
                     </View>
 
                     <View style={styles.trendInfo}>
-                        <Image source={trend1} style={styles.bigRestuarantImageStyle} />
+                        <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 4 Info</Text>
@@ -150,7 +157,7 @@ export default function FoodHome({ navigation }) {
                     </View>
 
                     <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
+                        <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 3 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 3 Info</Text>
