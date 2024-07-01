@@ -341,11 +341,7 @@ const styles = StyleSheet.create({
         fontSize: 7,
         color: '#454040'
     },
-    //   imageTexts3: {
-    //     fontWeight: '900',
-    //     fontSize: 11,
-    //     color: '#747474'
-    //   },
+    
     trendImages: {
         flexDirection: 'row',
         flexWrap: 'wrap',
@@ -369,22 +365,13 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.1)',
     },
-    //   miniRestuarantContent: {
-    //     flexDirection: 'row',
-    //     flexWrap: 'wrap',
-    //     alignItems: 'center',
-    //     justifyContent: 'space-between',
-    //     marginHorizontal: 20,
-    //     marginTop: 10,
-
-
-    //   },
+   
 
     textOverlay: {
         position: 'absolute',
-        bottom: 27, // Adjust as needed
-        left: 0, // Adjust as needed
-        right: 0, // Adjust as needed
+        bottom: 27,
+        left: 0, 
+        right: 0, 
         // borderRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
