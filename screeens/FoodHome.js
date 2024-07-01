@@ -372,15 +372,14 @@ const styles = StyleSheet.create({
         bottom: 27,
         left: 0, 
         right: 0, 
-        // borderRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background to ensure text is readable
+        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
     },
     overlayText: {
-        color: '#B6B6B6', // White text color for contrast
-        textAlign: 'center', // Center the text
-        padding: 1, // Add some padding around the text
+        color: '#B6B6B6', 
+        textAlign: 'center', 
+        padding: 1, 
     },
     bigRestuarantImageStyle: {
         width: 170,
@@ -396,7 +395,6 @@ const styles = StyleSheet.create({
         width: 160,
         height: 120,
         marginTop: 5,
-        // marginBottom: 20,
         backgroundColor: 'rgba(0,0,0,0.05)',
         borderRadius: 30,
         borderWidth: 1,
