@@ -13,7 +13,7 @@ const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jp
 const trendingFood3 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
 const trendingFood4 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
 const trendingFood5 = require('../assets/images/pexels-chan-walrus-958545.jpg')
-const trendingFood6 = require('../assets/images/.jpg')
+const trendingFood6 = require('../assets/images/pexels-mat-brown-1395967.jpg')
 
 
 export default function FoodHome({ navigation }) {
