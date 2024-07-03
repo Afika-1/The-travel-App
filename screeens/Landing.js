@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, ImageBackground, SafeAreaView, Touchable
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import COLORS from '../constants/colors';
+// import COLORS from '../constants/colors';
 
 const backgroundImg = require("../assets/ride.jpg");
 

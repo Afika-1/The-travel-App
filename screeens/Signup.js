@@ -238,7 +238,6 @@ const styles = StyleSheet.create({
     paddingVertical: '5%',
   },
   input: {
-    // height: 55,
     padding: 10,
     width: '100%',
     marginVertical: 8,
