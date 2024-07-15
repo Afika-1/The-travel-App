@@ -77,12 +77,15 @@ const styles = StyleSheet.create({
   },
   customButton: {
     flexDirection: 'row',
-    width: 150,
-    height: 50,
+    width: 200,
+    height: 60,
     backgroundColor: '#091834',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal:5,
     borderRadius: 50,
+    borderColor: '#FF9F1C',
+    borderWidth: 0.5,
     marginTop: 10,
   },
   customIcons: {
@@ -90,13 +93,16 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
     borderRadius: 50,
-    height: 40,
-    width: 40,
+    height: 50,
+    width:50,
+    backgroundColor:'black',
     borderColor: '#FF9F1C',
-    borderWidth: 2,
+    borderWidth: 0.5,
   },
   customButtonText: {
     color: 'white',
+    marginRight:25,
+    fontSize: 18,
 
   },
 });
