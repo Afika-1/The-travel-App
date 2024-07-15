@@ -29,7 +29,8 @@ export default function Landing({ navigation }) {
           <View style={styles.buttonContainer}>
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.customButton}>
               <View style={styles.customIcons}>
-                <Icon name="angle-right" size={30} color="#fff" /><Icon name="angle-right" size={30} color="#fff" />
+                <Icon name="angle-right" size={40} color="#fff" />
+                <Icon name="angle-right" size={40} color="#fff" />
               </View>
               <Text style={styles.customButtonText}>Get Started</Text>
             </TouchableOpacity>
@@ -97,8 +98,17 @@ const styles = StyleSheet.create({
     width:50,
     backgroundColor:'black',
     borderColor: '#FF9F1C',
-    borderWidth: 0.5,
+    borderWidth: 1,
+
+    shadowColor: "#FF9F1C",
+    shadowOffset: { width: 5, height: 0 },
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    elevation: 5,
   },
+  // customIconsArrows: {
+  //   height:10,
+  // },
   customButtonText: {
     color: 'white',
     marginRight:25,
