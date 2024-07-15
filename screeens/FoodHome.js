@@ -144,7 +144,7 @@ export default function FoodHome({ navigation }) {
 
                     </View>
 
-                    <View style={styles.trendInfo}>
+                    {/* <View style={styles.trendInfo}>
                         <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
@@ -154,10 +154,10 @@ export default function FoodHome({ navigation }) {
                             <Text style={styles.overlayText}>Trend 1 Title</Text>
                         </View>
 
-                    </View>
+                    </View> */}
 
-                    <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
+                    <View style={styles.trendInfo}>
+                        <Image source={trendingFood6} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 3 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 3 Info</Text>
@@ -172,7 +172,7 @@ export default function FoodHome({ navigation }) {
 
 
                 </View>
-                <Text style={styles.popularDestinationTitle}>Special deals</Text>
+                <Text style={styles.popularDestinationTitle}>Hot deals</Text>
 
                 <ScrollView horizontal={true}>
                     <View style={styles.destinationImages}>
@@ -214,7 +214,7 @@ export default function FoodHome({ navigation }) {
                     </View>
                 </ScrollView>
                 <Text style={styles.foodTrendsTitle}>Restaurants</Text>
-
+                <View style={styles.trendImages}>
                 <View style={styles.miniRestuarantContent}>
                     <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
                     <View style={styles.imageContent}>
@@ -238,7 +238,8 @@ export default function FoodHome({ navigation }) {
                     </View>
 
                 </View>
-
+                
+                </View>
             </ScrollView>
 
             <View style={styles.bottomMenu}>
@@ -336,7 +337,7 @@ const styles = StyleSheet.create({
     },
     popularDestinationTitle: {
         marginHorizontal: 20,
-        marginTop: 20,
+        marginTop: 5,
         fontSize: 24,
         color: '#091834',
         fontWeight: 'bold'
@@ -355,7 +356,7 @@ const styles = StyleSheet.create({
         height: 110,
         marginTop: 10,
         marginRight: 20,
-        marginBottom: 20,
+        // marginBottom: 20,
         // backgroundColor: 'rgba(0,0,0,0.3)',
         borderRadius: 20,
         borderWidth: 1,
@@ -392,7 +393,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         marginHorizontal: 20,
-        marginTop: 10,
+        marginVertical: 10,
 
 
     },
