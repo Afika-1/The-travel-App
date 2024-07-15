@@ -44,8 +44,8 @@ export default function FoodHome({ navigation }) {
             </View>
 
             <View style={styles.location}>
-            <Icon name="map-marker" size={15} color="#747474"/>
-          <Text style={paddingLeft=20}>Location</Text>
+                <Icon name="map-marker" size={15} color="#747474" />
+                <Text style={paddingLeft = 20}>Location</Text>
             </View>
             <ScrollView>
                 <View style={styles.searchBar}>
@@ -168,32 +168,74 @@ export default function FoodHome({ navigation }) {
 
 
                     </View>
-                    <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
 
 
+
+                </View>
+                <ScrollView horizontal={true}>
+                    <View style={styles.destinationImages}>
+
+                        <View style={styles.destinationInfo}>
+                            <Image source={popular1} style={styles.imageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Name of place</Text>
+                                <Text style={styles.imageTexts2}>Deal description</Text>
+                            </View>
+                        </View>
+
+                        <View style={styles.destinationInfo}>
+                            <Image source={popular2} style={styles.imageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Name of place</Text>
+                                <Text style={styles.imageTexts2}>Deal description</Text>
+                            </View>
+                        </View>
+
+                        <View style={styles.destinationInfo}>
+                            <Image source={popular3} style={styles.imageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Name of place</Text>
+                                <Text style={styles.imageTexts2}>Deal description</Text>
+                            </View>
+
+
+                        </View>
+
+                        <View style={styles.destinationInfo}>
+                            <Image source={popular4} style={styles.imageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Name of place</Text>
+                                <Text style={styles.imageTexts2}>Deal description</Text>
+                            </View>
+
+                        </View>
                     </View>
-                    <View style={styles.trendInfo}>
-                        <Image source={trend1} style={styles.bigRestuarantImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
+                </ScrollView>
 
+                <View style={styles.miniRestuarantContent}>
+                    <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
+                    <View style={styles.imageContent}>
+                        <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+                        <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+                    </View>
+                    <View style={styles.textOverlay}>
+                        <Text style={styles.overlayText}>Trend 1 Title</Text>
                     </View>
 
 
                 </View>
+                <View style={styles.trendInfo}>
+                    <Image source={trend1} style={styles.bigRestuarantImageStyle} />
+                    <View style={styles.imageContent}>
+                        <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+                        <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+                    </View>
+                    <View style={styles.textOverlay}>
+                        <Text style={styles.overlayText}>Trend 1 Title</Text>
+                    </View>
+
+                </View>
+
             </ScrollView>
 
             <View style={styles.bottomMenu}>
@@ -252,7 +294,7 @@ const styles = StyleSheet.create({
 
     },
     location: {
-        flexDirection:'row',
+        flexDirection: 'row',
         marginHorizontal: 20,
         marginBottom: 15,
         color: '#747474',
@@ -298,17 +340,18 @@ const styles = StyleSheet.create({
     },
     destinationImages: {
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-between',
         marginHorizontal: 20,
+        // width: 380,
 
     },
     destinationInfo: {
         flexDirection: 'column',
         alignItems: 'flex-start',
-        width: 100,
+        width: 110,
         height: 110,
         marginTop: 10,
-        marginRight: 10,
+        marginRight: 20,
         marginBottom: 20,
         // backgroundColor: 'rgba(0,0,0,0.3)',
         borderRadius: 20,
@@ -316,7 +359,7 @@ const styles = StyleSheet.create({
         borderColor: 'rgba(0,0,0,0.07)',
     },
     imageStyle: {
-        width: 100,
+        width: 110,
         height: 80,
         borderRadius: 20,
         borderWidth: 1,
@@ -339,7 +382,7 @@ const styles = StyleSheet.create({
         fontSize: 7,
         color: '#454040'
     },
-    
+
     trendImages: {
         flexDirection: 'row',
         flexWrap: 'wrap',
@@ -363,21 +406,21 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.1)',
     },
-   
+
 
     textOverlay: {
         position: 'absolute',
         bottom: 27,
-        left: 0, 
-        right: 0, 
+        left: 0,
+        right: 0,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
     },
     overlayText: {
-        color: '#B6B6B6', 
-        textAlign: 'center', 
-        padding: 1, 
+        color: '#B6B6B6',
+        textAlign: 'center',
+        padding: 1,
     },
     bigRestuarantImageStyle: {
         width: 170,
