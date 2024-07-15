@@ -2,6 +2,8 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ImageBackground, SafeAreaView, TouchableOpacity, Button, ScrollView } from 'react-native';
 import { useFonts } from 'expo-font';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import COLORS from '../constants/colors';
@@ -26,6 +28,9 @@ export default function Landing({ navigation }) {
           <Text style={styles.subtitleText}>The perfect travel companion for your next trip.</Text>
           <View style={styles.buttonContainer}>
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.customButton}>
+              <View style={styles.customIcons}>
+                <Icon name="angle-right" size={30} color="#fff" /><Icon name="angle-right" size={30} color="#fff" />
+              </View>
               <Text style={styles.customButtonText}>Get Started</Text>
             </TouchableOpacity>
           </View>
@@ -45,7 +50,7 @@ const styles = StyleSheet.create({
   overlayContainer: {
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     borderRadius: 10,
-    marginTop: 'auto', 
+    marginTop: 'auto',
     marginBottom: 20,
     width: 390,
     height: 320,
@@ -71,6 +76,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   customButton: {
+    flexDirection: 'row',
     width: 150,
     height: 50,
     backgroundColor: '#091834',
@@ -79,8 +85,18 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginTop: 10,
   },
+  customIcons: {
+    flexDirection: 'row',
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius: 50,
+    height: 40,
+    width: 40,
+    borderColor: '#FF9F1C',
+    borderWidth: 2,
+  },
   customButtonText: {
     color: 'white',
-    
+
   },
 });

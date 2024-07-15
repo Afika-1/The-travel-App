@@ -172,6 +172,8 @@ export default function FoodHome({ navigation }) {
 
 
                 </View>
+                <Text style={styles.popularDestinationTitle}>Special deals</Text>
+
                 <ScrollView horizontal={true}>
                     <View style={styles.destinationImages}>
 
@@ -211,6 +213,7 @@ export default function FoodHome({ navigation }) {
                         </View>
                     </View>
                 </ScrollView>
+                <Text style={styles.foodTrendsTitle}>Restaurants</Text>
 
                 <View style={styles.miniRestuarantContent}>
                     <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />

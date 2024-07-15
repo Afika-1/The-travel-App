@@ -31,17 +31,17 @@ export default function HomePage({ navigation }) {
           <Text style={styles.name}>Hi,</Text>
           <Text style={styles.userGreeting}>Name</Text>
         </View>
-        
-        <TouchableOpacity  onPress={() => navigation.navigate('Login')} ><Image source={profile} style={styles.userImage}/></TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Login')} ><Image source={profile} style={styles.userImage} /></TouchableOpacity>
       </View>
 
 
       <Text style={styles.location}>Location</Text>
       <ScrollView>
-      <View style={styles.searchBar}>
-        <TextInput placeholder="Search..." />
-      </View>
-      
+        <View style={styles.searchBar}>
+          <TextInput placeholder="Search..." />
+        </View>
+
         <Text style={styles.categoriesTitle}>Categories</Text>
 
         {/* Menu Icons */}
@@ -264,15 +264,15 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: 'rgba(0,0,0,0.3)',
     borderRadius: 30,
-    borderWidth:1,
-    borderColor:'rgba(0,0,0,0.5)',
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.5)',
   },
   imageStyle: {
     width: 170,
     height: 130,
     borderRadius: 30,
-    borderWidth:1,
-    borderColor:'rgba(0,0,0,0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.9)',
   },
   foodTrendsTitle: {
     marginHorizontal: 20,
@@ -315,8 +315,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: '#B6B6B6',
     borderRadius: 30,
-    borderWidth:1,
-    borderColor:'rgba(0,0,0,0.5)',
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.5)',
   },
   imageContent: {
     paddingLeft: 20,
