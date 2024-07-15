@@ -3,9 +3,9 @@ import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, S
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
-const popular1 = require('../assets/images/pexels-gustavo-peres-9200388.jpg')
-const popular2 = require('../assets/images/pexels-diamond-multimedia-9993754.jpg')
-const popular3 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
+const popular3 = require('../assets/images/pexels-gustavo-peres-9200388.jpg')
+const popular1 = require('../assets/images/pexels-diamond-multimedia-9993754.jpg')
+const popular2 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
 const popular4 = require('../assets/images/pexels-lucas-andrade-8066267.jpg')
 
 const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
