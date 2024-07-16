@@ -40,7 +40,7 @@ export default function FoodHome({ navigation }) {
                     <Text style={styles.pageTitle}>Food</Text>
                 </View>
 
-                <TouchableOpacity  onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
             </View>
 
             <View style={styles.location}>
@@ -218,31 +218,56 @@ export default function FoodHome({ navigation }) {
                 </ScrollView>
                 <Text style={styles.foodTrendsTitle}>Restaurants</Text>
                 <View style={styles.trendImages}>
+                    <View>
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
 
-                    <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+
                         </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood4} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
                         </View>
-
-
                     </View>
-                    <View style={styles.trendInfo}>
-                        <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
+                    <View>
+                        <View style={styles.trendInfo}>
+                            <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
                         </View>
 
+                         <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+
+                        </View>
                     </View>
-
                 </View>
             </ScrollView>
 
