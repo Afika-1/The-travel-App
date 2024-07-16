@@ -40,7 +40,7 @@ export default function RestuarantsPage({ navigation }) {
                     <Text style={styles.pageTitle}>Food</Text>
                 </View>
 
-                <Image source={profile} style={styles.userImage} onPress={() => navigation.navigate('Login')} />
+                <TouchableOpacity  onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
             </View>
 
             <View style={styles.location}>
