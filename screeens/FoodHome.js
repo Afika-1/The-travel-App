@@ -375,7 +375,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 20,
-        // width: 380,
 
     },
     destinationInfo: {
