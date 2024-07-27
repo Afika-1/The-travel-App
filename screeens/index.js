@@ -8,8 +8,8 @@ import RestuarantsPage from "./RestuarantsPage"
 
 
 export{
-    Login,
     Landing,
+    Login,
     Signup,
     HomePage,
     FoodHome,
