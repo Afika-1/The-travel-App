@@ -19,3 +19,5 @@ The overall user interface with all the categpries and screens
 #This the Fun UI experience. Fun home page shows a list of fun clubs, gaming shows and other places of fun activities. then the Club with a slide show  images 
 
 ![fun](./assets/ReadMe-images/fun.png)
+
+IN PROGRESS: Travel App that i'm currently building with React Native. This App should allow users to navigate their way in any city. The user will be able book accommodation,  see restaurants and fun activity offering places like clubs and game reserves. Lastly there'll be a transport category as well.
