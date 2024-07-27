@@ -8,7 +8,7 @@ The overall user interface with all the categpries and screens
 # The Landing Page, Sign Up, Login and Home Page
 ![login](./assets/ReadMe-images/landing.png)
  
-# ThE restuarant UI experience. 
+# The Restuarant UI experience. 
 All Restuarants home page, the Restuarant page, and the Dish page
 
 ![food](./assets/ReadMe-images/food.png)
@@ -18,7 +18,7 @@ Accomodations home page shows a list of Hotels available, then the hotel with sl
 
 ![hotels](./assets/ReadMe-images/hotel.png)
 
-# ThE Fun UI experience. 
+# The Fun UI experience. 
 
 Fun home page shows a list of fun clubs, gaming shows and other places of fun activities. then the Club with a slide show  images 
 
