@@ -58,7 +58,8 @@ export default function FoodHome({ navigation }) {
                     <View style={styles.destinationImages}>
 
                         <View style={styles.destinationInfo}>
-                            <Image source={popular1} style={styles.imageStyle} />
+                            <TouchableOpacity onPress={() => navigation.navigate('RestuarantsPage')}>
+                            <Image source={popular1} style={styles.imageStyle} /></TouchableOpacity>
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Name of place</Text>
                                 <Text style={styles.imageTexts2}>Deal description</Text>

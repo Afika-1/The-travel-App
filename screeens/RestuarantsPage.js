@@ -36,8 +36,8 @@ export default function RestuarantsPage({ navigation }) {
         <SafeAreaView style={styles.container}>
             <View style={styles.topSection}>
                 <View style={styles.userInfo}>
-                    <Icon name="arrow-left" size={15} color="#091834" />
-                    <Text style={styles.pageTitle}>Food</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Text style={styles.pageTitle}>Food</Text></TouchableOpacity>
                 </View>
 
                 <TouchableOpacity  onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
