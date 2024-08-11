@@ -352,7 +352,7 @@ const styles = StyleSheet.create({
     },
 
     trendInfo: {
-        flexDirection: 'column',
+        // flexDirection: 'column',
         alignItems: 'flex-start',
         width: 170,
         height: 160,
@@ -380,7 +380,7 @@ const styles = StyleSheet.create({
         padding: 1, 
     },
     bigRestuarantImageStyle: {
-        width: 170,
+        width: 300,
         height: 130,
         borderRadius: 20,
         borderWidth: 1,
