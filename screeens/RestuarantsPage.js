@@ -96,7 +96,7 @@ export default function RestuarantsPage({ navigation }) {
 
                 <Text style={styles.foodTrendsTitle}>Restaurants</Text>
                 <View style={styles.trendImages}>
-                    {/* <View style={styles.trendInfo}>
+                     <View style={styles.trendInfo}>
                         <Image source={trend1} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 1 Info</Text>
@@ -108,7 +108,7 @@ export default function RestuarantsPage({ navigation }) {
                         </View>
 
                     </View>
-                    <View style={styles.miniRestuarantContent}>
+                   {/* <View style={styles.miniRestuarantContent}>
                         <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 2 Info</Text>
