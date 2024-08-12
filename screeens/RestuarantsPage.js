@@ -8,12 +8,12 @@ const popular2 = require('../assets/images/pexels-diamond-multimedia-9993754.jpg
 const popular3 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
 const popular4 = require('../assets/images/pexels-lucas-andrade-8066267.jpg')
 
-const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
-// const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
-// const trendingFood3 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
-// const trendingFood4 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
-// const trendingFood5 = require('../assets/images/pexels-chan-walrus-958545.jpg')
-// const trendingFood6 = require('../assets/images/pexels-mat-brown-1395967.jpg')
+const trend1 = require('../assets/images/pexels-pixabay-262978.jpg')
+const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
+const trendingFood3 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
+const trendingFood4 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
+const trendingFood5 = require('../assets/images/pexels-chan-walrus-958545.jpg')
+const trendingFood6 = require('../assets/images/pexels-mat-brown-1395967.jpg')
 
 
 export default function RestuarantsPage({ navigation }) {
@@ -36,16 +36,16 @@ export default function RestuarantsPage({ navigation }) {
         <SafeAreaView style={styles.container}>
             <View style={styles.topSection}>
                 <View style={styles.userInfo}>
-                <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Text style={styles.pageTitle}>Food</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Text style={styles.pageTitle}>Food</Text></TouchableOpacity>
                 </View>
 
-                <TouchableOpacity  onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
             </View>
 
             <View style={styles.location}>
-            <Icon name="map-marker" size={15} color="#747474"/>
-          <Text style={paddingLeft=20}>Location</Text>
+                <Icon name="map-marker" size={15} color="#747474" />
+                <Text style={paddingLeft = 20}>Location</Text>
             </View>
             <ScrollView>
                 <View style={styles.searchBar}>
@@ -96,7 +96,7 @@ export default function RestuarantsPage({ navigation }) {
 
                 <Text style={styles.foodTrendsTitle}>Restaurants</Text>
                 <View style={styles.trendImages}>
-                     <View style={styles.trendInfo}>
+                    <View style={styles.trendInfo}>
                         <Image source={trend1} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 1 Info</Text>
@@ -108,31 +108,33 @@ export default function RestuarantsPage({ navigation }) {
                         </View>
 
                     </View>
-                   {/* <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 2 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 2 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
+                    <View style={styles.miniBoxStyle}>
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 2 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 2 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
                         </View>
 
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood3} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+
+                        </View>
                     </View>
-
-                    <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood3} style={styles.miniRestuarantContentImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
-
-
-                    </View>
-                    <View style={styles.trendInfo}>
+                    {/* <View style={styles.trendInfo}>
                         <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
@@ -252,7 +254,7 @@ const styles = StyleSheet.create({
 
     },
     location: {
-        flexDirection:'row',
+        flexDirection: 'row',
         marginHorizontal: 20,
         marginBottom: 15,
         color: '#747474',
@@ -339,9 +341,9 @@ const styles = StyleSheet.create({
         fontSize: 7,
         color: '#454040'
     },
-    
+
     trendImages: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -354,7 +356,7 @@ const styles = StyleSheet.create({
     trendInfo: {
         // flexDirection: 'column',
         alignItems: 'flex-start',
-        width: 170,
+        width: 370,
         height: 160,
         marginTop: 5,
         // marginBottom: 20,
@@ -363,34 +365,43 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.1)',
     },
-   
+
 
     textOverlay: {
         position: 'absolute',
         bottom: 27,
-        left: 0, 
-        right: 0, 
+        left: 0,
+        right: 0,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
     },
     overlayText: {
-        color: '#B6B6B6', 
-        textAlign: 'center', 
-        padding: 1, 
+        color: '#B6B6B6',
+        textAlign: 'center',
+        padding: 1,
     },
     bigRestuarantImageStyle: {
-        width: 300,
+        width: 370,
         height: 130,
         borderRadius: 20,
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.9)',
     },
 
+    miniBoxStyle:{
+        // flex:1,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        gap:20,
+
+
+        // flexWrap:'wrap'
+    },
     miniRestuarantContent: {
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        width: 160,
+        // flexDirection: 'column',
+        // alignItems: 'flex-start',
+        width: 170,
         height: 120,
         marginTop: 5,
         backgroundColor: 'rgba(0,0,0,0.05)',
@@ -398,15 +409,18 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.1)',
         position: 'relative',
+        // marginRight: 20,
 
     },
     miniRestuarantContentImageStyle: {
-        width: 160,
+        width: 170,
         height: 90,
         borderRadius: 20,
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.9)',
+        
     },
+
     imageContent: {
         paddingLeft: 15,
 
