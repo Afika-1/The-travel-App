@@ -99,8 +99,8 @@ export default function RestuarantsPage({ navigation }) {
                     <View style={styles.trendInfo}>
                         <Image source={trend1} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 1 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 1 Info</Text>
+                            <Text style={styles.imageTexts3}>Trend 1 Info</Text>
+                            <Text style={styles.imageTexts4}>Trend 1 Info</Text>
                         </View>
 
                         <View style={styles.textOverlay}>
@@ -112,8 +112,8 @@ export default function RestuarantsPage({ navigation }) {
                         <View style={styles.miniRestuarantContent}>
                             <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
                             <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 2 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 2 Info</Text>
+                                <Text style={styles.imageTexts3}>Trend 2 Info</Text>
+                                <Text style={styles.imageTexts4}>Trend 2 Info</Text>
                             </View>
                             <View style={styles.textOverlay}>
                                 <Text style={styles.overlayText}>Trend 1 Title</Text>
@@ -123,6 +123,70 @@ export default function RestuarantsPage({ navigation }) {
 
                         <View style={styles.miniRestuarantContent}>
                             <Image source={trendingFood3} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts3}>Trend 3 Info</Text>
+                                <Text style={styles.imageTexts4}>Trend 3 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+
+                        </View>
+                    </View>
+                    <View style={styles.trendInfo}>
+                        <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
+                        <View style={styles.imageContent}>
+                            <Text style={styles.imageTexts3}>Trend 4 Info</Text>
+                            <Text style={styles.imageTexts4}>Trend 4 Info</Text>
+                        </View>
+                        <View style={styles.textOverlay}>
+                            <Text style={styles.overlayText}>Trend 1 Title</Text>
+                        </View>
+
+                    </View>
+
+
+                    <View style={styles.miniBoxStyle}>
+
+                        {/* <View style={styles.trendInfo}>
+                            <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+                        </View> */}
+{/* 
+                        <View style={styles.trendInfo}>
+                            <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+                        </View> */}
+
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+
+                        </View>
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Trend 3 Info</Text>
                                 <Text style={styles.imageTexts2}>Trend 3 Info</Text>
@@ -134,65 +198,8 @@ export default function RestuarantsPage({ navigation }) {
 
                         </View>
                     </View>
-                    {/* <View style={styles.trendInfo}>
-                        <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
-
-                    </View>
-
-                    <View style={styles.trendInfo}>
-                        <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
-
-                    </View>
-
-                    <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
 
 
-                    </View>
-                    <View style={styles.miniRestuarantContent}>
-                        <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
-
-
-                    </View> */}
-                    <View style={styles.trendInfo}>
-                        <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
-
-                    </View>
 
 
                 </View>
@@ -341,14 +348,25 @@ const styles = StyleSheet.create({
         fontSize: 7,
         color: '#454040'
     },
+    imageTexts3: {
+        fontWeight: 'bold',
+        fontSize: 13,
+        color: 'black'
+    },
+    imageTexts4: {
+        fontWeight: 'bold',
+        fontSize: 10,
+        color: '#454040'
+    },
 
     trendImages: {
         flexDirection: 'column',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginHorizontal: 20,
+        // marginHorizontal: 20,
         marginTop: 10,
+        gap: 10,
 
 
     },
@@ -389,11 +407,11 @@ const styles = StyleSheet.create({
         borderColor: 'rgba(0,0,0,0.9)',
     },
 
-    miniBoxStyle:{
+    miniBoxStyle: {
         // flex:1,
-        flexDirection:'row',
-        justifyContent:'space-between',
-        gap:20,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        gap: 20,
 
 
         // flexWrap:'wrap'
@@ -418,7 +436,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.9)',
-        
+
     },
 
     imageContent: {
