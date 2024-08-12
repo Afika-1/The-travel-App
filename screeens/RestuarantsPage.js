@@ -3,15 +3,15 @@ import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, S
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
-const popular1 = require('../assets/images/pexels-gustavo-peres-9200388.jpg')
-const popular2 = require('../assets/images/pexels-diamond-multimedia-9993754.jpg')
-const popular3 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
+const popular1 = require('../assets/images/Rectangle.png')
+const popular2 = require('../assets/images/Rectangle2.png')
+const popular3 = require('../assets/images/pexels-rafael-quaty-14.jpg')
 const popular4 = require('../assets/images/pexels-lucas-andrade-8066267.jpg')
 
 const trend1 = require('../assets/images/pexels-pixabay-262978.jpg')
-const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
-const trendingFood3 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
-const trendingFood4 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
+const trendingFood2 = require('../assets/images/pexels-ali-dashti-16962424.jpg')
+const trendingFood3 = require('../assets/images/pexels-gustavo-peres-71.jpg')
+const trendingFood4 = require('../assets/images/pexels-photo-2.png')
 const trendingFood5 = require('../assets/images/pexels-chan-walrus-958545.jpg')
 const trendingFood6 = require('../assets/images/pexels-mat-brown-1395967.jpg')
 
@@ -183,7 +183,7 @@ export default function RestuarantsPage({ navigation }) {
 
                     </View> */}
                     <View style={styles.trendInfo}>
-                        <Image source={trend1} style={styles.bigRestuarantImageStyle} />
+                        <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
                         <View style={styles.imageContent}>
                             <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                             <Text style={styles.imageTexts2}>Trend 4 Info</Text>
@@ -402,7 +402,7 @@ const styles = StyleSheet.create({
         // flexDirection: 'column',
         // alignItems: 'flex-start',
         width: 170,
-        height: 120,
+        height: 150,
         marginTop: 5,
         backgroundColor: 'rgba(0,0,0,0.05)',
         borderRadius: 30,
@@ -414,7 +414,7 @@ const styles = StyleSheet.create({
     },
     miniRestuarantContentImageStyle: {
         width: 170,
-        height: 90,
+        height: 120,
         borderRadius: 20,
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.9)',
