@@ -367,8 +367,6 @@ const styles = StyleSheet.create({
         // marginHorizontal: 20,
         marginTop: 10,
         gap: 10,
-
-
     },
 
     trendInfo: {
@@ -387,7 +385,7 @@ const styles = StyleSheet.create({
 
     textOverlay: {
         position: 'absolute',
-        bottom: 27,
+        bottom: 37,
         left: 0,
         right: 0,
         borderBottomLeftRadius: 20,
@@ -420,9 +418,10 @@ const styles = StyleSheet.create({
         // flexDirection: 'column',
         // alignItems: 'flex-start',
         width: 170,
-        height: 150,
+        height: 160,
         marginTop: 5,
         backgroundColor: 'rgba(0,0,0,0.05)',
+        // paddingBottom:15,
         borderRadius: 30,
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.1)',
@@ -430,6 +429,7 @@ const styles = StyleSheet.create({
         // marginRight: 20,
 
     },
+    
     miniRestuarantContentImageStyle: {
         width: 170,
         height: 120,
