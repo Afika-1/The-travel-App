@@ -44,8 +44,8 @@ export default function FoodHome({ navigation }) {
             </View>
 
             <View style={styles.location}>
-                <Icon name="map-marker" size={15} color="#747474" />
-                <Text style={paddingLeft = 20}>Location</Text>
+                <Icon name="map-marker" size={13} color="#747474" />
+                <Text style={paddingLeft = 20}>  Location</Text>
             </View>
             <ScrollView>
                 <View style={styles.searchBar}>
@@ -329,6 +329,7 @@ const styles = StyleSheet.create({
     },
     location: {
         flexDirection: 'row',
+        alignItems:'center',
         marginHorizontal: 20,
         marginBottom: 15,
         color: '#747474',
