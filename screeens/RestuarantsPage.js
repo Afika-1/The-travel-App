@@ -17,9 +17,6 @@ const trendingFood6 = require('../assets/images/pexels-gustavo-peres-9200388.jpg
 const trendingFood7 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
 const trendingFood8 = require('../assets/images/pexels-photo-3.png')
 
-
-
-
 export default function RestuarantsPage({ navigation }) {
 
     const [activeMenuItem, setActiveMenuItem] = useState('home');
