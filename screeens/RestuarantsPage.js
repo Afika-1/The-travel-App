@@ -415,11 +415,8 @@ const styles = StyleSheet.create({
         gap: 20,
 
 
-        // flexWrap:'wrap'
     },
     miniRestuarantContent: {
-        // flexDirection: 'column',
-        // alignItems: 'flex-start',
         width: 170,
         height: 160,
         marginTop: 5,
@@ -428,7 +425,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.1)',
         position: 'relative',
-        // marginRight: 20,
 
     },
     
