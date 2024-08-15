@@ -371,12 +371,10 @@ const styles = StyleSheet.create({
     },
 
     trendInfo: {
-        // flexDirection: 'column',
         alignItems: 'flex-start',
         width: 370,
         height: 170,
         marginTop: 5,
-        // marginBottom: 20,
         backgroundColor: 'rgba(0,0,0,0.02)',
         borderRadius: 30,
         borderWidth: 1,
@@ -407,7 +405,6 @@ const styles = StyleSheet.create({
     },
 
     miniBoxStyle: {
-        // flex:1,
         maxWidth:500,
         flexDirection: 'row',
         flexWrap:'wrap',
