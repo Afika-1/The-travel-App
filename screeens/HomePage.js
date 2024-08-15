@@ -5,7 +5,12 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const profile = require('../assets/images/pexels-paulo-marcelo-martins-2412606.jpg')
 const popular1 = require('../assets/images/pexels-photo-2901215.jpeg')
 const popular2 = require('../assets/images/chill.jpeg')
+
 const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
+const trend2 = require('../assets/images/Rectangle.png')
+const trend3 = require('../assets/images/pexels-quang-nguyen-vinh-2165159.jpg')
+
+
 const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
 
 export default function HomePage({ navigation }) {
@@ -36,7 +41,10 @@ export default function HomePage({ navigation }) {
       </View>
 
 
-      <Text style={styles.location}>Location</Text>
+      <View style={styles.location}>
+                <Icon name="map-marker" size={13} color="#747474" />
+                <Text style={paddingLeft = 20}>  Location</Text>
+            </View>
       <ScrollView>
         <View style={styles.searchBar}>
           <TextInput placeholder="Search..." />
@@ -114,7 +122,7 @@ export default function HomePage({ navigation }) {
             </View>
           </View>
           <View style={styles.trendInfo}>
-            <Image source={trendingFood2} style={styles.imageStyle} />
+            <Image source={trend3} style={styles.imageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 2 Info</Text>
               <Text style={styles.imageTexts2}>Trend 2 Info</Text>
@@ -132,7 +140,7 @@ export default function HomePage({ navigation }) {
 
           </View>
           <View style={styles.trendInfo}>
-            <Image source={trend1} style={styles.imageStyle} />
+            <Image source={trend2} style={styles.imageStyle} />
             <View style={styles.imageContent}>
               <Text style={styles.imageTexts1}>Trend 4 Info</Text>
               <Text style={styles.imageTexts2}>Trend 4 Info</Text>
@@ -199,11 +207,14 @@ const styles = StyleSheet.create({
     borderColor: '#FF9F1C',
     borderWidth: 2,
   },
+
   location: {
+    flexDirection: 'row',
+    alignItems:'center',
     marginHorizontal: 20,
     marginBottom: 15,
     color: '#747474',
-  },
+},
   searchBar: {
     height: 40,
     borderColor: '#000',
