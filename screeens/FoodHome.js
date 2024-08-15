@@ -35,9 +35,9 @@ export default function FoodHome({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.topSection}>
-                <View style={styles.userInfo}>
-                    <Icon name="arrow-left" size={15} color="#091834" />
-                    <Text style={styles.pageTitle}>Food</Text>
+            <View style={styles.userInfo}>
+                    <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Text style={styles.pageTitle}>Food</Text></TouchableOpacity>
                 </View>
 
                 <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>

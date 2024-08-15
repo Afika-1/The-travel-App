@@ -38,7 +38,7 @@ export default function RestuarantsPage({ navigation }) {
             <View style={styles.topSection}>
                 <View style={styles.userInfo}>
                     <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Text style={styles.pageTitle}>Food</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('FoodHome')}><Text style={styles.pageTitle}>Restaurants</Text></TouchableOpacity>
                 </View>
 
                 <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
