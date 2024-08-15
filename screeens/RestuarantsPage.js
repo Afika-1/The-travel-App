@@ -149,31 +149,7 @@ export default function RestuarantsPage({ navigation }) {
 
                     <View style={styles.miniBoxStyle}>
 
-                        {/* <View style={styles.trendInfo}>
-                            <Image source={trendingFood4} style={styles.bigRestuarantImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-                        </View> */}
-
-                        <View style={styles.miniRestuarantContent}>
-                            <Image source={trendingFood5} style={styles.miniRestuarantContentImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-                        </View>
-
-                        <View style={styles.miniRestuarantContent}>
+                    <View style={styles.miniRestuarantContent}>
                             <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Trend 3 Info</Text>
@@ -185,6 +161,20 @@ export default function RestuarantsPage({ navigation }) {
 
 
                         </View>
+
+                        
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood5} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+                        </View>
+                        
                         <View style={styles.miniRestuarantContent}>
                             <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
                             <View style={styles.imageContent}>
@@ -197,6 +187,21 @@ export default function RestuarantsPage({ navigation }) {
 
 
                         </View>
+
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood4} style={styles.miniRestuarantContentImageStyle} />
+                            <View style={styles.imageContent}>
+                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
+                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
+                            </View>
+                            <View style={styles.textOverlay}>
+                                <Text style={styles.overlayText}>Trend 1 Title</Text>
+                            </View>
+
+                        </View>
+
+
+                       
                     </View>
 
 
