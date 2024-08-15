@@ -14,6 +14,8 @@ const trendingFood3 = require('../assets/images/pexels-gustavo-peres-71.jpg')
 const trendingFood4 = require('../assets/images/pexels-photo-2.png')
 const trendingFood5 = require('../assets/images/pexels-chan-walrus-958545.jpg')
 const trendingFood6 = require('../assets/images/pexels-mat-brown-1395967.jpg')
+const trendingFood7 = require('../assets/images/pexels-shameel-mukkath-5639459.jpg')
+
 
 
 export default function RestuarantsPage({ navigation }) {
@@ -164,7 +166,7 @@ export default function RestuarantsPage({ navigation }) {
 
                         
                         <View style={styles.miniRestuarantContent}>
-                            <Image source={trendingFood5} style={styles.miniRestuarantContentImageStyle} />
+                            <Image source={trendingFood7} style={styles.miniRestuarantContentImageStyle} />
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                                 <Text style={styles.imageTexts2}>Trend 4 Info</Text>
