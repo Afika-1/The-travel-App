@@ -160,9 +160,9 @@ export default function RestuarantsPage({ navigation }) {
                             </View>
 
                         </View> */}
-{/* 
-                        <View style={styles.trendInfo}>
-                            <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
+
+                        <View style={styles.miniRestuarantContent}>
+                            <Image source={trendingFood5} style={styles.miniRestuarantContentImageStyle} />
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Trend 4 Info</Text>
                                 <Text style={styles.imageTexts2}>Trend 4 Info</Text>
@@ -171,7 +171,7 @@ export default function RestuarantsPage({ navigation }) {
                                 <Text style={styles.overlayText}>Trend 1 Title</Text>
                             </View>
 
-                        </View> */}
+                        </View>
 
                         <View style={styles.miniRestuarantContent}>
                             <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
@@ -408,7 +408,9 @@ const styles = StyleSheet.create({
 
     miniBoxStyle: {
         // flex:1,
+        maxWidth:500,
         flexDirection: 'row',
+        flexWrap:'wrap',
         justifyContent: 'space-between',
         gap: 20,
 
