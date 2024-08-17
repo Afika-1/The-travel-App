@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const trend1 = require('../assets/images/pexels-chan-walrus-958545.jpg')
+const trend1 = require('../assets/images/pexels-marilena-baltzaki-15082384.jpg')
 const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
 
 export default function FoodOrdersScreen({ navigation }) {
@@ -25,23 +25,30 @@ export default function FoodOrdersScreen({ navigation }) {
 
       <ScrollView>
 
-        <View style={styles.trendImages}>
 
-          <View style={styles.trendInfo}>
+
+          <View style={styles.imageContainer}>
             <Image source={trend1} style={styles.bigRestuarantImageStyle} />
 
 
           </View>
-        </View>
+      
+
+        <View style={styles.description}>
+          <Text style={styles.overlayText}>Trend 1 Title</Text>
+        </View> 
+
+
         <View style={styles.imageContent}>
-          <Text style={styles.imageTexts1}>Trend 1 Info</Text>
+          <Text style={styles.imageTexts1}>vvuyvyuvyuyvvu</Text>
           <Text style={styles.imageTexts2}>Trend 1 Info</Text>
         </View>
 
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomePage')}>
+          <Text style={styles.customButtonText }>Order </Text>
+        </TouchableOpacity>
 
-        <View style={styles.textOverlay}>
-          <Text style={styles.overlayText}>Trend 1 Title</Text>
-        </View>
+        
       </ScrollView>
 
     </SafeAreaView>
@@ -80,24 +87,23 @@ const styles = StyleSheet.create({
   location: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginHorizontal: 20,
+    marginLeft: 30,
     marginBottom: 15,
     color: '#747474',
   },
  
 
   imageStyle: {
-    width: 110,
-    height: 80,
+    width: '100%',
+    height: 200,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.9)',
+    borderColor: 'rgba(0,0,0,1)',
   },
 
   imageTexts1: {
-    fontWeight: 'bold',
-    fontSize: 10,
-    color: 'black'
+    fontSize: 15,
+    color: '#091834',
   },
   imageTexts2: {
     fontWeight: 'bold',
@@ -105,49 +111,39 @@ const styles = StyleSheet.create({
     color: '#454040'
   },
 
-  trendImages: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginHorizontal: 20,
-    marginVertical: 10,
-
-
-  },
- 
-
-  trendInfo: {
+  imageContainer: {
     flexDirection: 'column',
-    alignItems: 'flex-start',
-    width: 170,
-    height: 160,
-    margin: 5,
-    // marginBottom: 20,
-    backgroundColor: 'rgba(0,0,0,0.02)',
+    alignItems: 'center',
+    // width: '100%',
+    height: 250,
+    marginHorizontal: 15,
+    // marginRight: 20,
+    backgroundColor: 'rgba(0,0,0,0.2)',
     borderRadius: 30,
     borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.1)',
+    // borderColor: 'rgba(0,0,0,0.1)',
   },
 
 
-  textOverlay: {
-    position: 'absolute',
-    bottom: 27,
-    left: 0,
-    right: 0,
+  description: {
+    // position: 'absolute',
+    // bottom: 27,
+    // left: 0,
+    // right: 0,
+    marginTop:10,
+    marginLeft:15,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
   },
   overlayText: {
-    color: '#B6B6B6',
-    textAlign: 'center',
-    padding: 1,
+    color: '#091834',
+    fontSize:20,
+    // textAlign: 'center',
+    marginLeft:15,
   },
   bigRestuarantImageStyle: {
-    width: 170,
-    height: 130,
+    width: '100%',
+    height: 250,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,0.9)',
@@ -156,6 +152,17 @@ const styles = StyleSheet.create({
  
   imageContent: {
     paddingLeft: 15,
+
+  },
+
+  button: {
+    height: 50,
+    backgroundColor: '#D9D9D9',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '95%',
+    borderRadius: 10,
+    marginTop: '30%',
 
   },
 
