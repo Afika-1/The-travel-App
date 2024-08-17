@@ -35,7 +35,7 @@ export default function FoodOrdersScreen({ navigation }) {
       
 
         <View style={styles.descriptionContainer}>
-          <Text style={styles.description}>Trend 1 Title</Text>
+          <Text style={styles.description}>The is the description of the dish displayed ...dsasashdjashdjhasdbajdbsajdsjadsbasddsfsafsafsafsafasfsafsafsafa</Text>
         </View> 
 
 
@@ -107,6 +107,9 @@ const styles = StyleSheet.create({
     color: '#091834',
     fontSize:20,
     marginLeft:15,
+
+
+    flexWrap:'wrap',    //remember to check if this worling as desired
   },
 
   // imageStyle: {
