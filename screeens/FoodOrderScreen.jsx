@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
 
   container: {
     paddingTop: 50,
-    paddingBottom: 60,
+    paddingHorizontal:20,
 
     flex: 1,
     backgroundColor: '#D9D9D9',
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
   },
   userInfo: {
     flexDirection: 'row',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   location: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: 30,
+    // marginLeft: 30,
     marginBottom: 15,
     color: '#747474',
   },
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // width: '100%',
     height: 250,
-    marginHorizontal: 15,
+    // marginHorizontal: 15,
     // marginRight: 20,
     backgroundColor: 'rgba(0,0,0,0.2)',
     borderRadius: 30,
@@ -157,12 +157,18 @@ const styles = StyleSheet.create({
 
   button: {
     height: 50,
-    backgroundColor: '#D9D9D9',
+    backgroundColor: '#091834',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '95%',
+    width: '100%',
     borderRadius: 10,
-    marginTop: '30%',
+    marginTop: '80%',
+
+  },
+  customButtonText: {
+    color: '#fff',
+    fontSize: 20,
+    fontFamily: 'inria-regular',
 
   },
 
