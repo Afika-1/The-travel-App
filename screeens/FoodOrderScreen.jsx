@@ -34,8 +34,8 @@ export default function FoodOrdersScreen({ navigation }) {
           </View>
       
 
-        <View style={styles.description}>
-          <Text style={styles.overlayText}>Trend 1 Title</Text>
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.description}>Trend 1 Title</Text>
         </View> 
 
 
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    // paddingHorizontal: 20,
+ 
   },
   userInfo: {
     flexDirection: 'row',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   location: {
     flexDirection: 'row',
     alignItems: 'center',
-    // marginLeft: 30,
+
     marginBottom: 15,
     color: '#747474',
   },
@@ -114,31 +114,24 @@ const styles = StyleSheet.create({
   imageContainer: {
     flexDirection: 'column',
     alignItems: 'center',
-    // width: '100%',
     height: 250,
-    // marginHorizontal: 15,
-    // marginRight: 20,
+
     backgroundColor: 'rgba(0,0,0,0.2)',
     borderRadius: 30,
     borderWidth: 1,
-    // borderColor: 'rgba(0,0,0,0.1)',
+
   },
 
 
-  description: {
-    // position: 'absolute',
-    // bottom: 27,
-    // left: 0,
-    // right: 0,
+  descriptionContainer: {
     marginTop:10,
     marginLeft:15,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
-  overlayText: {
+  description: {
     color: '#091834',
     fontSize:20,
-    // textAlign: 'center',
     marginLeft:15,
   },
   bigRestuarantImageStyle: {
