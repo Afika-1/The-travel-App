@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, FlatList, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, Image,  TouchableOpacity, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const trend1 = require('../assets/images/pexels-marilena-baltzaki-15082384.jpg')
@@ -39,9 +39,9 @@ export default function FoodOrdersScreen({ navigation }) {
         </View> 
 
 
-        <View style={styles.imageContent}>
-          <Text style={styles.imageTexts1}>vvuyvyuvyuyvvu</Text>
-          <Text style={styles.imageTexts2}>Trend 1 Info</Text>
+        <View style={styles.priceContainer}>
+          <Text style={styles.imageTexts1}>Price</Text>
+          <Text style={styles.imageTexts2}>R123.45</Text>
         </View>
 
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomePage')}>
@@ -92,23 +92,39 @@ const styles = StyleSheet.create({
     color: '#747474',
   },
  
+  
 
-  imageStyle: {
-    width: '100%',
-    height: 200,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: 'rgba(0,0,0,1)',
+  descriptionContainer: {
+    marginTop:10,
+    // marginLeft:15,
+    // borderBottomLeftRadius: 20,
+    // borderBottomRightRadius: 20,
+    flexDirection:'column',
+    justifyContent:'space-between',
+    
+  },
+  description: {
+    color: '#091834',
+    fontSize:20,
+    marginLeft:15,
   },
 
+  // imageStyle: {
+  //   width: '100%',
+  //   height: 200,
+  //   borderRadius: 20,
+  //   borderWidth: 1,
+  //   borderColor: 'rgba(0,0,0,1)',
+  // },
+
   imageTexts1: {
-    fontSize: 15,
+    fontSize: 20,
     color: '#091834',
   },
   imageTexts2: {
     fontWeight: 'bold',
-    fontSize: 7,
-    color: '#454040'
+    fontSize: 20,
+    color: '#091834'
   },
 
   imageContainer: {
@@ -122,18 +138,6 @@ const styles = StyleSheet.create({
 
   },
 
-
-  descriptionContainer: {
-    marginTop:10,
-    marginLeft:15,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-  },
-  description: {
-    color: '#091834',
-    fontSize:20,
-    marginLeft:15,
-  },
   bigRestuarantImageStyle: {
     width: '100%',
     height: 250,
@@ -143,8 +147,10 @@ const styles = StyleSheet.create({
   },
 
  
-  imageContent: {
-    paddingLeft: 15,
+  priceContainer: {
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center'
 
   },
 
