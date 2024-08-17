@@ -18,20 +18,6 @@ const trendingFood6 = require('../assets/images/pexels-pablo-macedo-845808.jpg')
 
 export default function FoodOrdersScreen({ navigation }) {
 
-  const [activeMenuItem, setActiveMenuItem] = useState('home');
-
-  const menuItems = [
-    { id: 'home', icon: 'home', label: 'Home' },
-    { id: 'calendar', icon: 'calendar', label: 'Calendar' },
-    { id: 'search', icon: 'search', label: 'Search' },
-    { id: 'favorites', icon: 'heart', label: 'Favorites' },
-    { id: 'settings', icon: 'cog', label: 'Settings' },
-  ];
-
-  const changeActiveItem = (id) => {
-    setActiveMenuItem(id);
-  };
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.topSection}>
@@ -40,7 +26,6 @@ export default function FoodOrdersScreen({ navigation }) {
           <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Text style={styles.pageTitle}>Dish name</Text></TouchableOpacity>
         </View>
 
-        {/* <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity> */}
       </View>
 
       <View style={styles.location}>
