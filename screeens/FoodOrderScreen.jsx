@@ -16,7 +16,7 @@ const trendingFood5 = require('../assets/images/pexels-chan-walrus-958545.jpg')
 const trendingFood6 = require('../assets/images/pexels-pablo-macedo-845808.jpg')
 
 
-export default function FoodOrder({ navigation }) {
+export default function FoodOrdersScreen({ navigation }) {
 
     const [activeMenuItem, setActiveMenuItem] = useState('home');
 
@@ -37,10 +37,10 @@ export default function FoodOrder({ navigation }) {
             <View style={styles.topSection}>
             <View style={styles.userInfo}>
                     <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Text style={styles.pageTitle}>Food</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Text style={styles.pageTitle}>Dish name</Text></TouchableOpacity>
                 </View>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity>
+                {/* <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity> */}
             </View>
 
             <View style={styles.location}>

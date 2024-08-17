@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Signup, Landing, Login, HomePage, FoodHome, RestuarantsPage } from './screeens';
+import FoodOrdersScreen from './screeens/FoodOrderScreen';
 
 const Stack = createNativeStackNavigator()
 
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name='HomePage' component={HomePage} options={{ headerShown: false }} />
         <Stack.Screen name='FoodHome'component={FoodHome} options={{headerShown:false}}/>
         <Stack.Screen name='RestuarantsPage'component={RestuarantsPage} options={{headerShown:false}}/>
+        <Stack.Screen name='FoodOrders'component={FoodOrdersScreen} options={{headerShown:false}}/>
 
       </Stack.Navigator>
     </NavigationContainer>
