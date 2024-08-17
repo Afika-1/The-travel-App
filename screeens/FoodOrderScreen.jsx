@@ -18,503 +18,294 @@ const trendingFood6 = require('../assets/images/pexels-pablo-macedo-845808.jpg')
 
 export default function FoodOrdersScreen({ navigation }) {
 
-    const [activeMenuItem, setActiveMenuItem] = useState('home');
+  const [activeMenuItem, setActiveMenuItem] = useState('home');
 
-    const menuItems = [
-        { id: 'home', icon: 'home', label: 'Home' },
-        { id: 'calendar', icon: 'calendar', label: 'Calendar' },
-        { id: 'search', icon: 'search', label: 'Search' },
-        { id: 'favorites', icon: 'heart', label: 'Favorites' },
-        { id: 'settings', icon: 'cog', label: 'Settings' },
-    ];
+  const menuItems = [
+    { id: 'home', icon: 'home', label: 'Home' },
+    { id: 'calendar', icon: 'calendar', label: 'Calendar' },
+    { id: 'search', icon: 'search', label: 'Search' },
+    { id: 'favorites', icon: 'heart', label: 'Favorites' },
+    { id: 'settings', icon: 'cog', label: 'Settings' },
+  ];
 
-    const changeActiveItem = (id) => {
-        setActiveMenuItem(id);
-    };
+  const changeActiveItem = (id) => {
+    setActiveMenuItem(id);
+  };
 
-    return (
-        <SafeAreaView style={styles.container}>
-            <View style={styles.topSection}>
-            <View style={styles.userInfo}>
-                    <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Text style={styles.pageTitle}>Dish name</Text></TouchableOpacity>
-                </View>
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.topSection}>
+        <View style={styles.userInfo}>
+          <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Text style={styles.pageTitle}>Dish name</Text></TouchableOpacity>
+        </View>
 
-                {/* <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity> */}
+        {/* <TouchableOpacity onPress={() => navigation.navigate('Landing')}><Image source={profile} style={styles.userImage} /></TouchableOpacity> */}
+      </View>
+
+      <View style={styles.location}>
+        <Icon name="map-marker" size={13} color="#747474" />
+        <Text style={paddingLeft = 20}>  Location</Text>
+      </View>
+      <ScrollView>
+
+        <View style={styles.trendImages}>
+
+          <View style={styles.trendInfo}>
+            <Image source={trend1} style={styles.bigRestuarantImageStyle} />
+            <View style={styles.imageContent}>
+              <Text style={styles.imageTexts1}>Trend 1 Info</Text>
+              <Text style={styles.imageTexts2}>Trend 1 Info</Text>
             </View>
 
-            <View style={styles.location}>
-                <Icon name="map-marker" size={13} color="#747474" />
-                <Text style={paddingLeft = 20}>  Location</Text>
-            </View>
-            <ScrollView>
-                <View style={styles.searchBar}>
-                    <TextInput placeholder="Search..." />
-                </View>
-
-                {/* Popular Destination */}
-                <Text style={styles.popularDestinationTitle}>Special deals</Text>
-                <ScrollView horizontal={true}>
-                    <View style={styles.destinationImages}>
-
-                        <View style={styles.destinationInfo}>
-                            <TouchableOpacity onPress={() => navigation.navigate('RestuarantsPage')}>
-                            <Image source={popular1} style={styles.imageStyle} /></TouchableOpacity>
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-                        </View>
-
-                        <View style={styles.destinationInfo}>
-                            <Image source={popular2} style={styles.imageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-                        </View>
-
-                        <View style={styles.destinationInfo}>
-                            <Image source={popular3} style={styles.imageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-
-
-                        </View>
-
-                        <View style={styles.destinationInfo}>
-                            <Image source={popular4} style={styles.imageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-
-                        </View>
-                    </View>
-                </ScrollView>
-
-                <Text style={styles.foodTrendsTitle}>Restaurants</Text>
-                <View style={styles.trendImages}>
-                    <View>
-                        <View style={styles.trendInfo}>
-                            <Image source={trend1} style={styles.bigRestuarantImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 1 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 1 Info</Text>
-                            </View>
-
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-                        </View>
-                        <View style={styles.trendInfo}>
-                            <Image source={trendingFood2} style={styles.bigRestuarantImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 2 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 2 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-                        </View>
-
-                        <View style={styles.trendInfo}>
-                            <Image source={trendingFood3} style={styles.bigRestuarantImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-
-                        </View>
-
-
-                    </View>
-                    <View>
-                        <View style={styles.miniRestuarantContent}>
-                            <Image source={trendingFood4} style={styles.miniRestuarantContentImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-                        </View>
-
-                        {/* <View style={styles.trendInfo}>
-                        <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
-                        <View style={styles.imageContent}>
-                            <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                            <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                        </View>
-                        <View style={styles.textOverlay}>
-                            <Text style={styles.overlayText}>Trend 1 Title</Text>
-                        </View>
-
-                    </View> */}
-
-                        <View style={styles.miniRestuarantContent}>
-                            <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-
-                        </View>
-                    </View>
-                </View>
-                <Text style={styles.popularDestinationTitle}>Hot deals</Text>
-
-                <ScrollView horizontal={true}>
-                    <View style={styles.destinationImages}>
-
-                        <View style={styles.destinationInfo}>
-                            <Image source={popular1} style={styles.imageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-                        </View>
-
-                        <View style={styles.destinationInfo}>
-                            <Image source={popular2} style={styles.imageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-                        </View>
-
-                        <View style={styles.destinationInfo}>
-                            <Image source={popular3} style={styles.imageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-
-
-                        </View>
-
-                        <View style={styles.destinationInfo}>
-                            <Image source={popular4} style={styles.imageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Name of place</Text>
-                                <Text style={styles.imageTexts2}>Deal description</Text>
-                            </View>
-
-                        </View>
-                    </View>
-                </ScrollView>
-                <Text style={styles.foodTrendsTitle}>Restaurants</Text>
-                <View style={styles.trendImages}>
-                    <View>
-                        <View style={styles.miniRestuarantContent}>
-                            <Image source={trendingFood2} style={styles.miniRestuarantContentImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-
-                        </View>
-                        <View style={styles.miniRestuarantContent}>
-                            <Image source={trendingFood4} style={styles.miniRestuarantContentImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-                        </View>
-                    </View>
-                    <View>
-                        <View style={styles.trendInfo}>
-                            <Image source={trendingFood5} style={styles.bigRestuarantImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 4 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 4 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-                        </View>
-
-                         <View style={styles.miniRestuarantContent}>
-                            <Image source={trendingFood6} style={styles.miniRestuarantContentImageStyle} />
-                            <View style={styles.imageContent}>
-                                <Text style={styles.imageTexts1}>Trend 3 Info</Text>
-                                <Text style={styles.imageTexts2}>Trend 3 Info</Text>
-                            </View>
-                            <View style={styles.textOverlay}>
-                                <Text style={styles.overlayText}>Trend 1 Title</Text>
-                            </View>
-
-
-                        </View>
-                    </View>
-                </View>
-            </ScrollView>
-
-            <View style={styles.bottomMenu}>
-                {menuItems.map((item) => (
-                    <TouchableOpacity key={item.id} onPress={() => changeActiveItem(item.id)} style={item.id === 'search' ? styles.searchIconWrapper : {}}>
-                        <Icon name={item.icon} size={item.id === 'search' ? 20 : 30} color={activeMenuItem === item.id ? '#FF9F1C' : 'grey'} />
-                    </TouchableOpacity>
-                ))}
+            <View style={styles.textOverlay}>
+              <Text style={styles.overlayText}>Trend 1 Title</Text>
             </View>
 
-        </SafeAreaView>
-    );
+          </View>
+
+
+
+
+
+        </View>
+      </ScrollView>
+
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
-    searchIconWrapper: {
-        borderRadius: 100,
-        backgroundColor: '#fff',
-        height: 40,
-        width: 40,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+  searchIconWrapper: {
+    borderRadius: 100,
+    backgroundColor: '#fff',
+    height: 40,
+    width: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 
-    container: {
-        paddingTop: 50,
-        paddingBottom: 60,
+  container: {
+    paddingTop: 50,
+    paddingBottom: 60,
 
-        flex: 1,
-        backgroundColor: '#D9D9D9',
-    },
-    topSection: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 20,
-    },
-    userInfo: {
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
+    flex: 1,
+    backgroundColor: '#D9D9D9',
+  },
+  topSection: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
+  userInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
 
-    pageTitle: {
-        fontWeight: 'bold',
-        color: '#091834',
+  pageTitle: {
+    fontWeight: 'bold',
+    color: '#091834',
 
-        marginLeft: 10,
-        fontSize: 25,
-    },
-    userImage: {
-        width: 50,
-        height: 50,
-        borderRadius: 25,
-        borderColor: '#FF9F1C',
-        borderWidth: 2,
+    marginLeft: 10,
+    fontSize: 25,
+  },
+  userImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    borderColor: '#FF9F1C',
+    borderWidth: 2,
 
-    },
-    location: {
-        flexDirection: 'row',
-        alignItems:'center',
-        marginHorizontal: 20,
-        marginBottom: 15,
-        color: '#747474',
-    },
-    searchBar: {
-        height: 40,
-        borderColor: '#000',
-        borderWidth: 1,
-        borderRadius: 20,
-        marginHorizontal: 20,
-        marginTop: 10,
-        backgroundColor: '#fff',
-        paddingLeft: 20,
+  },
+  location: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: 20,
+    marginBottom: 15,
+    color: '#747474',
+  },
+  searchBar: {
+    height: 40,
+    borderColor: '#000',
+    borderWidth: 1,
+    borderRadius: 20,
+    marginHorizontal: 20,
+    marginTop: 10,
+    backgroundColor: '#fff',
+    paddingLeft: 20,
 
-    },
+  },
 
-    menuIcons: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        marginHorizontal: 20,
-        marginTop: 10,
-    },
-    menuItems: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+  menuIcons: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginHorizontal: 20,
+    marginTop: 10,
+  },
+  menuItems: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 
-    menuIconsContainer: {
-        borderRadius: 50,
-        backgroundColor: '#091834',
-        height: 60,
-        width: 60,
-        justifyContent: 'center',
-        alignItems: 'center',
+  menuIconsContainer: {
+    borderRadius: 50,
+    backgroundColor: '#091834',
+    height: 60,
+    width: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
 
-    },
-    popularDestinationTitle: {
-        marginHorizontal: 20,
-        marginTop: 5,
-        fontSize: 24,
-        color: '#091834',
-        fontWeight: 'bold'
-    },
-    destinationImages: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginHorizontal: 20,
+  },
+  popularDestinationTitle: {
+    marginHorizontal: 20,
+    marginTop: 5,
+    fontSize: 24,
+    color: '#091834',
+    fontWeight: 'bold'
+  },
+  destinationImages: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
 
-    },
-    destinationInfo: {
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        width: 110,
-        height: 110,
-        marginTop: 10,
-        marginRight: 20,
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.07)',
-    },
-    imageStyle: {
-        width: 110,
-        height: 80,
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.9)',
-    },
-    foodTrendsTitle: {
-        marginHorizontal: 20,
-        marginTop: 20,
-        fontSize: 24,
-        color: '#091834',
-        fontWeight: 'bold'
-    },
-    imageTexts1: {
-        fontWeight: 'bold',
-        fontSize: 10,
-        color: 'black'
-    },
-    imageTexts2: {
-        fontWeight: 'bold',
-        fontSize: 7,
-        color: '#454040'
-    },
+  },
+  destinationInfo: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    width: 110,
+    height: 110,
+    marginTop: 10,
+    marginRight: 20,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.07)',
+  },
+  imageStyle: {
+    width: 110,
+    height: 80,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.9)',
+  },
+  foodTrendsTitle: {
+    marginHorizontal: 20,
+    marginTop: 20,
+    fontSize: 24,
+    color: '#091834',
+    fontWeight: 'bold'
+  },
+  imageTexts1: {
+    fontWeight: 'bold',
+    fontSize: 10,
+    color: 'black'
+  },
+  imageTexts2: {
+    fontWeight: 'bold',
+    fontSize: 7,
+    color: '#454040'
+  },
 
-    trendImages: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginHorizontal: 20,
-        marginVertical: 10,
-
-
-    },
-    trendColumns: {
-        flexDirection: 'column',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-        // marginHorizontal: 20,
-        marginVertical: 10,
-    },
-
-    trendInfo: {
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        width: 170,
-        height: 160,
-        margin: 5,
-        // marginBottom: 20,
-        backgroundColor: 'rgba(0,0,0,0.02)',
-        borderRadius: 30,
-        borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.1)',
-    },
+  trendImages: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    marginVertical: 10,
 
 
-    textOverlay: {
-        position: 'absolute',
-        bottom: 27,
-        left: 0,
-        right: 0,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
-    },
-    overlayText: {
-        color: '#B6B6B6',
-        textAlign: 'center',
-        padding: 1,
-    },
-    bigRestuarantImageStyle: {
-        width: 170,
-        height: 130,
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.9)',
-    },
+  },
+  trendColumns: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // marginHorizontal: 20,
+    marginVertical: 10,
+  },
 
-    miniRestuarantContent: {
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        width: 160,
-        height: 200,
-        marginVertical: 15,
-        backgroundColor: 'rgba(0,0,0,0.05)',
-        borderRadius: 30,
-        borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.1)',
-        position: 'relative',
+  trendInfo: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    width: 170,
+    height: 160,
+    margin: 5,
+    // marginBottom: 20,
+    backgroundColor: 'rgba(0,0,0,0.02)',
+    borderRadius: 30,
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.1)',
+  },
 
-    },
-    miniRestuarantContentImageStyle: {
-        width: 160,
-        height: 170,
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.9)',
-    },
-    imageContent: {
-        paddingLeft: 15,
 
-    },
+  textOverlay: {
+    position: 'absolute',
+    bottom: 27,
+    left: 0,
+    right: 0,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+  },
+  overlayText: {
+    color: '#B6B6B6',
+    textAlign: 'center',
+    padding: 1,
+  },
+  bigRestuarantImageStyle: {
+    width: 170,
+    height: 130,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.9)',
+  },
 
-    bottomMenu: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 60,
-        backgroundColor: '#091834',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+  miniRestuarantContent: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    width: 160,
+    height: 200,
+    marginVertical: 15,
+    backgroundColor: 'rgba(0,0,0,0.05)',
+    borderRadius: 30,
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.1)',
+    position: 'relative',
 
-        paddingVertical: 10,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
+  },
+  miniRestuarantContentImageStyle: {
+    width: 160,
+    height: 170,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.9)',
+  },
+  imageContent: {
+    paddingLeft: 15,
 
-    },
-    menuItem: {
-        marginRight: 15,
-        paddingHorizontal: 20,
+  },
 
-    },
+  bottomMenu: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 60,
+    backgroundColor: '#091834',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+
+    paddingVertical: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+
+  },
+  menuItem: {
+    marginRight: 15,
+    paddingHorizontal: 20,
+
+  },
 });
 
