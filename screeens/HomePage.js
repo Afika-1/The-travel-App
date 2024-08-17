@@ -80,7 +80,7 @@ export default function HomePage({ navigation }) {
 
           <View style={styles.menuItems}>
             <TouchableOpacity style={styles.menuIconsContainer} onPress={() => console.log('Hotels')}>
-              <Icon name="dartboard-o" size={30} color="#fff" />
+              <Icon name="gamepad" size={30} color="#fff" />
 
             </TouchableOpacity>
             <Text>Fun</Text>
