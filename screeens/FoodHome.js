@@ -36,7 +36,7 @@ export default function FoodHome({ navigation }) {
         <SafeAreaView style={styles.container}>
             <View style={styles.topSection}>
             <View style={styles.userInfo}>
-                    <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
+                    <TouchableOpacity onPress={() => [navigation.navigate('HomePage'), console.log('Home Screen')]}><Icon name="arrow-left" size={15} color="#091834" /></TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation.navigate('HomePage')}><Text style={styles.pageTitle}>Food</Text></TouchableOpacity>
                 </View>
 
@@ -58,7 +58,7 @@ export default function FoodHome({ navigation }) {
                     <View style={styles.destinationImages}>
 
                         <View style={styles.destinationInfo}>
-                            <TouchableOpacity onPress={() => navigation.navigate('RestuarantsPage')}>
+                            <TouchableOpacity onPress={() => [navigation.navigate('RestuarantsPage'),console.log('Restuarants Screen')]}>
                             <Image source={popular1} style={styles.imageStyle} /></TouchableOpacity>
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Name of place</Text>
