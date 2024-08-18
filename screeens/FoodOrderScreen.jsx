@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image,  TouchableOpacity, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const trend1 = require('../assets/images/pexels-marilena-baltzaki-15082384.jpg')
@@ -26,28 +26,30 @@ export default function FoodOrdersScreen({ navigation }) {
 
 
 
-          <View style={styles.imageContainer}>
-            <Image source={trend1} style={styles.bigRestuarantImageStyle} />
+        <View style={styles.imageContainer}>
+          <Image source={trend1} style={styles.bigRestuarantImageStyle} />
 
 
-          </View>
-      
+        </View>
+
 
         <View style={styles.descriptionContainer}>
           <Text style={styles.description}>The is the description of the dish displayed ...dsasashdjashdjhasdbajdbsajdsjadsbasddsfsafsafsafsafasfsafsafsafa</Text>
-        </View> 
 
-
-        <View style={styles.priceContainer}>
-          <Text style={styles.imageTexts1}>Price</Text>
-          <Text style={styles.imageTexts2}>R123.45</Text>
+          <View style={styles.priceContainer}>
+            <Text style={styles.imageTexts1}>Price</Text>
+            <Text style={styles.imageTexts2}>R123.45</Text>
+          </View>
         </View>
 
+
+
+
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomePage')}>
-          <Text style={styles.customButtonText }>Order </Text>
+          <Text style={styles.customButtonText}>Order </Text>
         </TouchableOpacity>
 
-        
+
       </ScrollView>
 
     </SafeAreaView>
@@ -55,11 +57,11 @@ export default function FoodOrdersScreen({ navigation }) {
 };
 
 const styles = StyleSheet.create({
- 
+
 
   container: {
     paddingTop: 50,
-    paddingHorizontal:20,
+    paddingHorizontal: 20,
 
     flex: 1,
     backgroundColor: '#D9D9D9',
@@ -68,7 +70,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
- 
+
   },
   userInfo: {
     flexDirection: 'row',
@@ -90,27 +92,27 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     color: '#747474',
   },
- 
-  
+
+
 
   descriptionContainer: {
-    marginTop:10,
+    marginTop: 20,
     // marginLeft:15,
     // borderBottomLeftRadius: 20,
     // borderBottomRightRadius: 20,
-    flexDirection:'column',
-    justifyContent:'space-between',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     paddingHorizontal:10,
-    height:250,
-    
+    height: 310,
+
   },
   description: {
     color: '#091834',
-    fontSize:20,
+    fontSize: 20,
     // marginLeft:15,
 
 
-    flexWrap:'wrap',    //remember to check if this worling as desired
+    flexWrap: 'wrap',    //remember to check if this worling as desired
   },
 
   // imageStyle: {
@@ -150,11 +152,11 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(0,0,0,0.9)',
   },
 
- 
+
   priceContainer: {
-    flexDirection:'row',
-    justifyContent:'space-between',
-    alignItems:'center'
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
 
   },
 
@@ -165,7 +167,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '100%',
     borderRadius: 10,
-    marginTop: '80%',
+    marginTop: '15%',
 
   },
   customButtonText: {
