@@ -20,7 +20,7 @@ export default function App() {
         <Stack.Screen name='HomePage' component={HomePage} options={{ headerShown: false }} />
         <Stack.Screen name='FoodHome'component={FoodHome} options={{headerShown:false}}/>
         <Stack.Screen name='RestuarantsPage'component={RestuarantsPage} options={{headerShown:false}}/>
-        <Stack.Screen name='FoodOrders'component={FoodOrdersScreen} options={{headerShown:false}}/>
+        <Stack.Screen name='FoodOrdersScreen'component={FoodOrdersScreen} options={{headerShown:false}}/>
 
       </Stack.Navigator>
     </NavigationContainer>

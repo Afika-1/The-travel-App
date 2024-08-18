@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, Image,  TouchableOpacity, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const trend1 = require('../assets/images/pexels-marilena-baltzaki-15082384.jpg')
-const trendingFood2 = require('../assets/images/pexels-antony-trivet-13354567.jpg')
 
 export default function FoodOrdersScreen({ navigation }) {
 
@@ -101,12 +100,14 @@ const styles = StyleSheet.create({
     // borderBottomRightRadius: 20,
     flexDirection:'column',
     justifyContent:'space-between',
+    paddingHorizontal:10,
+    height:250,
     
   },
   description: {
     color: '#091834',
     fontSize:20,
-    marginLeft:15,
+    // marginLeft:15,
 
 
     flexWrap:'wrap',    //remember to check if this worling as desired

@@ -59,7 +59,7 @@ export default function RestuarantsPage({ navigation }) {
                     <View style={styles.destinationImages}>
 
                         <View style={styles.destinationInfo}>
-                        <TouchableOpacity onPress={() =>[ navigation.navigate('FoodOrders'),console.log('Food Order Screen')]}><Image source={popular1} style={styles.imageStyle} /></TouchableOpacity>
+                        <TouchableOpacity onPress={() =>[ navigation.navigate('FoodOrdersScreen'),console.log('Food Order Screen')]}><Image source={popular1} style={styles.imageStyle} /></TouchableOpacity>
                             <View style={styles.imageContent}>
                                 <Text style={styles.imageTexts1}>Name of place</Text>
                                 <Text style={styles.imageTexts2}>Deal description</Text>
