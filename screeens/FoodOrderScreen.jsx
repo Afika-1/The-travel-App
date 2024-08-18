@@ -97,9 +97,6 @@ const styles = StyleSheet.create({
 
   descriptionContainer: {
     marginTop: 20,
-    // marginLeft:15,
-    // borderBottomLeftRadius: 20,
-    // borderBottomRightRadius: 20,
     flexDirection: 'column',
     justifyContent: 'space-between',
     paddingHorizontal:10,
@@ -109,19 +106,8 @@ const styles = StyleSheet.create({
   description: {
     color: '#091834',
     fontSize: 20,
-    // marginLeft:15,
-
-
-    flexWrap: 'wrap',    //remember to check if this worling as desired
+    flexWrap: 'wrap',
   },
-
-  // imageStyle: {
-  //   width: '100%',
-  //   height: 200,
-  //   borderRadius: 20,
-  //   borderWidth: 1,
-  //   borderColor: 'rgba(0,0,0,1)',
-  // },
 
   imageTexts1: {
     fontSize: 20,
